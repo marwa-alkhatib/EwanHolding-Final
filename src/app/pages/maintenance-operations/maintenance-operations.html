@@ -1,0 +1,408 @@
+<header>
+  <section class="pages-navbar">
+    <div class="pages-navbar-brand">
+      <img class="pages-navbar-logo" src="/photos/ewan_logo.png" alt="Ewan Holding Logo" />
+
+      <p class="pages-navbar-name">
+        <a href="/">
+          {{ 'Ewan' | tr }} <b>{{ 'Holding' | tr }}</b>
+        </a>
+      </p>
+    </div>
+
+    <nav class="pages-navbar-links">
+      <a href="/about" target="_blank">{{ 'About' | tr }}</a>
+
+      <a href="/companies" target="_blank">{{ 'Companies' | tr }}</a>
+
+      <a href="/investment" target="_blank">{{ 'Investment' | tr }}</a>
+
+      <a href="/news" target="_blank">{{ 'News' | tr }}</a>
+
+      <a href="/contact" target="_blank">{{ 'Contact' | tr }}</a>
+    </nav>
+
+    <app-language-toggle></app-language-toggle>
+
+    <img class="pages-navbar-menu" src="/photos/menu.png" alt="Open navigation menu" />
+  </section>
+</header>
+
+<main>
+  <section class="maintenance-hero">
+    <div class="maintenance-hero-background">
+      <img src="/photos/mainHero.png" alt="Ewan Maintenance and Operations" />
+    </div>
+
+    <div class="maintenance-hero-content">
+      <p class="maintenance-hero-label">
+        {{ 'BUILT TO KEEP' | tr }} <br />
+        {{ 'TOMORROW RUNNING' | tr }}
+      </p>
+
+      <h1 class="maintenance-hero-title">
+        {{ 'Ewan' | tr }} <br />
+        {{ 'Maintenance &' | tr }} <br />
+        {{ 'Operations' | tr }}
+      </h1>
+
+      <span class="maintenance-hero-line"></span>
+
+      <p class="maintenance-hero-description">
+        {{
+          'Integrated maintenance and operations solutions that ensure performance, safety and long-term value.'
+            | tr
+        }}
+      </p>
+
+      <a href="#maintenance-overview" target="_blank" class="maintenance-hero-scroll">
+        <span>{{ 'Scroll' | tr }}</span>
+
+        <div>↓</div>
+      </a>
+    </div>
+
+    <div class="maintenance-hero-note">
+      <span>{{ 'PEOPLE' | tr }}</span>
+      <i></i>
+      <span>{{ 'SYSTEMS' | tr }}</span>
+      <i></i>
+      <span>{{ 'SUSTAINABILITY' | tr }}</span>
+    </div>
+  </section>
+
+  <section class="maintenance-overview" id="maintenance-overview">
+    <div class="maintenance-overview-content">
+      <p class="maintenance-overview-label">{{ '01 — OVERVIEW' | tr }}</p>
+
+      <h2 class="maintenance-overview-title">
+        {{ 'Keeping Progress' | tr }} <br />
+        {{ 'in Motion' | tr }}
+      </h2>
+
+      <p class="maintenance-overview-description">
+        {{
+          'Ewan Maintenance & Operations delivers trading and operations solutions built around your project, not a standard package.'
+            | tr
+        }}
+      </p>
+
+      <p class="maintenance-overview-description">
+        {{
+          'Every engagement is grounded in excellence, safety and innovation, so results consistently exceed what was expected going in.'
+            | tr
+        }}
+      </p>
+
+      <span class="maintenance-overview-line"></span>
+
+      <a href="contact.html" class="maintenance-overview-link" target="_blank">
+        {{ 'View on map' | tr }}
+        <span>→</span>
+      </a>
+    </div>
+
+    <div class="maintenance-overview-visual">
+      <div class="maintenance-overview-image">
+        <img src="/photos/main1.png" alt="Ewan Maintenance and Operations services" />
+      </div>
+
+      <div class="maintenance-overview-note">
+        <span>{{ 'RELIABLE' | tr }}</span>
+        <span>{{ 'FACILITIES' | tr }}</span>
+        <span>{{ 'STRONGER' | tr }}</span>
+        <span>{{ 'TOMORROWS' | tr }}</span>
+        <i></i>
+      </div>
+    </div>
+  </section>
+
+  <section class="maintenance-services">
+    <div class="maintenance-services-head">
+      <div>
+        <p class="maintenance-services-label">{{ '02 — OUR SERVICES' | tr }}</p>
+
+        <h2 class="maintenance-services-title">{{ 'What we deliver' | tr }}</h2>
+      </div>
+
+      <p class="maintenance-services-intro">
+        {{
+          "Comprehensive solutions across maintenance, trading and operations, supporting every stage of your project's lifecycle."
+            | tr
+        }}
+      </p>
+    </div>
+
+    <div class="maintenance-services-grid">
+      <div class="maintenance-service">
+        <div class="maintenance-service-icon">
+          <i class="bi bi-gear"></i>
+        </div>
+
+        <span class="maintenance-service-number"> 01 </span>
+
+        <h3>
+          {{ 'Procurement' | tr }} <br />
+          {{ 'Management' | tr }}
+        </h3>
+
+        <p>
+          {{
+            "Our team runs every stage of a project's supply chain — planning, scheduling, execution and delivery — with an eye on quality, efficiency and cost, so the work finishes on time and within budget."
+              | tr
+          }}
+        </p>
+      </div>
+
+      <div class="maintenance-service">
+        <div class="maintenance-service-icon">
+          <i class="bi bi-box"></i>
+        </div>
+
+        <span class="maintenance-service-number"> 02 </span>
+
+        <h3>{{ 'General Trading' | tr }}</h3>
+
+        <p>
+          {{
+            'A full-service trading operation covering sourcing, procurement and logistics, with the range to support anything from commercial buildings to residential complexes.'
+              | tr
+          }}
+        </p>
+      </div>
+
+      <div class="maintenance-service">
+        <div class="maintenance-service-icon">
+          <i class="bi bi-cone-striped"></i>
+        </div>
+
+        <span class="maintenance-service-number"> 03 </span>
+
+        <h3>{{ 'Civil Engineering' | tr }}</h3>
+
+        <p>
+          {{
+            'Infrastructure development, road construction and utility installation, handled with close attention to detail and a commitment to sustainable outcomes.'
+              | tr
+          }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="maintenance-standard">
+    <div class="maintenance-standard-visual">
+      <img src="/photos/main2.png" alt="Ewan Maintenance and Operations" />
+
+      <div class="maintenance-standard-overlay"></div>
+
+      <div class="maintenance-standard-image-text">
+        <span>{{ 'MAINTAIN' | tr }}</span>
+        <span>{{ 'OPERATE' | tr }}</span>
+        <span>{{ 'IMPROVE' | tr }}</span>
+        <i></i>
+      </div>
+    </div>
+
+    <div class="maintenance-standard-content">
+      <div class="maintenance-standard-head">
+        <p class="maintenance-standard-label">{{ '03 — WHY CHOOSE US' | tr }}</p>
+
+        <h2 class="maintenance-standard-title">
+          {{ 'The Maintenance' | tr }} <br />
+          <span>{{ 'standard' | tr }}</span>
+        </h2>
+
+        <p class="maintenance-standard-description">
+          {{
+            'Built on experience, precision and a commitment to keeping every operation performing at its best.'
+              | tr
+          }}
+        </p>
+      </div>
+
+      <div class="maintenance-standard-list">
+        <div class="maintenance-standard-item">
+          <span class="maintenance-standard-number"> 01 </span>
+
+          <div>
+            <h3>{{ 'Expertise' | tr }}</h3>
+
+            <p>
+              {{
+                'Decades of combined experience across maintenance, operations and project management.'
+                  | tr
+              }}
+            </p>
+          </div>
+        </div>
+
+        <div class="maintenance-standard-item">
+          <span class="maintenance-standard-number"> 02 </span>
+
+          <div>
+            <h3>{{ 'Quality Assurance' | tr }}</h3>
+
+            <p>
+              {{
+                'Every project follows rigorous standards designed to deliver reliable and consistent results.'
+                  | tr
+              }}
+            </p>
+          </div>
+        </div>
+
+        <div class="maintenance-standard-item">
+          <span class="maintenance-standard-number"> 03 </span>
+
+          <div>
+            <h3>{{ 'Customer Satisfaction' | tr }}</h3>
+
+            <p>
+              {{
+                'Solutions shaped around real client needs, backed by responsive support and long-term partnerships.'
+                  | tr
+              }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="maintenance-companies">
+    <div class="maintenance-companies-head">
+      <div>
+        <p class="maintenance-companies-label">{{ '04 — OUR GROUP' | tr }}</p>
+
+        <h2 class="maintenance-companies-title">{{ 'Other companies' | tr }}</h2>
+      </div>
+
+      <a href="/companies" class="maintenance-companies-link" target="_blank">
+        {{ 'VIEW ALL COMPANIES' | tr }}
+        <span>→</span>
+      </a>
+    </div>
+
+    <div class="maintenance-companies-grid">
+      <a href="/technical-contracting" class="maintenance-company-card" target="_blank">
+        <div class="maintenance-company-image">
+          <img src="/photos/main3.png" alt="Ewan Technical Contracting" />
+        </div>
+
+        <div class="maintenance-company-content">
+          <span class="maintenance-company-number">01</span>
+
+          <p class="maintenance-company-category">{{ 'CONTRACTING' | tr }}</p>
+
+          <h3>
+            {{ 'Ewan Technical' | tr }} <br />
+            {{ 'Contracting' | tr }}
+          </h3>
+
+          <span class="maintenance-company-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="/logistics" target="_blank" class="maintenance-company-card">
+        <div class="maintenance-company-image">
+          <img src="/photos/main4.png" alt="Ewan Logistics" />
+        </div>
+
+        <div class="maintenance-company-content">
+          <span class="maintenance-company-number">02</span>
+
+          <p class="maintenance-company-category">{{ 'LOGISTICS' | tr }}</p>
+
+          <h3>{{ 'Ewan Logistics' | tr }}</h3>
+
+          <span class="maintenance-company-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="/human-resources" target="_blank" class="maintenance-company-card">
+        <div class="maintenance-company-image">
+          <img src="/photos/main5.png" alt="Ewan Human Resources" />
+        </div>
+
+        <div class="maintenance-company-content">
+          <span class="maintenance-company-number">03</span>
+
+          <p class="maintenance-company-category">{{ 'HUMAN CAPITAL' | tr }}</p>
+
+          <h3>
+            {{ 'Ewan Human' | tr }} <br />
+            {{ 'Resources' | tr }}
+          </h3>
+
+          <span class="maintenance-company-arrow">→</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="maintenance-cta">
+    <div class="maintenance-cta-background">
+      <img src="/photos/main6.png" alt="Ewan Maintenance and Operations" />
+    </div>
+
+    <div class="maintenance-cta-content">
+      <p class="maintenance-cta-label">
+        {{ "LET'S BUILD" | tr }} <br />
+        {{ 'A MORE EFFICIENT TOMORROW' | tr }}
+      </p>
+
+      <h2>
+        {{ 'Get in' | tr }} <span>{{ 'touch' | tr }}</span>
+      </h2>
+
+      <span class="maintenance-cta-line"></span>
+
+      <p class="maintenance-cta-description">
+        {{
+          'Whether you have a project in mind or just want to explore possibilities, our team is ready to support you.'
+            | tr
+        }}
+      </p>
+
+      <a href="/contact" target="_blank" class="maintenance-cta-button">
+        {{ 'Contact us' | tr }}
+        <span>→</span>
+      </a>
+    </div>
+
+    <div class="maintenance-cta-note">
+      <span>{{ 'PROJECTS' | tr }}</span>
+      <i></i>
+      <span>{{ 'PARTNERSHIPS' | tr }}</span>
+      <i></i>
+      <span>{{ 'PROGRESS' | tr }}</span>
+    </div>
+  </section>
+
+  <section class="pages-newsletter">
+    <div class="container col-lg-10">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-7">
+          <div class="pages-newsletter-content">
+            <h2>{{ 'Join our newsletter' | tr }}</h2>
+
+            <p>
+              {{ 'Company news and investment updates, a few times a year — nothing more.' | tr }}
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <form class="pages-newsletter-form">
+            <input type="email" [placeholder]="'Your email address' | tr" />
+
+            <button type="submit">{{ 'Subscribe' | tr }}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-site-footer></app-site-footer>

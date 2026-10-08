@@ -1,0 +1,255 @@
+<div [class.investment-ar]="lang.language() === 'ar'">
+  <header>
+    <section class="pages-navbar" [class.navbar-ar]="lang.language() === 'ar'">
+      <div class="pages-navbar-brand">
+        <img class="pages-navbar-logo" src="/photos/ewan_logo.png" alt="Ewan Holding Logo" />
+
+        <p class="pages-navbar-name">
+          <a href="/">
+            {{ 'Ewan' | tr }} <b>{{ 'Holding' | tr }}</b>
+          </a>
+        </p>
+      </div>
+
+      <nav class="pages-navbar-links">
+        <a href="/about" target="_blank">{{ 'About' | tr }}</a>
+
+        <a href="/companies" target="_blank">{{ 'Companies' | tr }}</a>
+
+        <a href="/investment" target="_blank">{{ 'Investment' | tr }}</a>
+
+        <a href="/news" target="_blank">{{ 'News' | tr }}</a>
+
+        <a href="/contact" target="_blank">{{ 'Contact' | tr }}</a>
+      </nav>
+
+      <app-language-toggle></app-language-toggle>
+
+      <img class="pages-navbar-menu" src="/photos/menu.png" alt="Open navigation menu" />
+    </section>
+  </header>
+
+  <main>
+    <section class="investment-hero">
+      <div class="investment-hero-content">
+        <p class="investment-breadcrumb">
+          <a href="/">{{ 'Home' | tr }}</a>
+          {{ '/ Investment Opportunities' | tr }}
+        </p>
+
+        <h1 class="investment-hero-title">
+          {{ 'Invest alongside' | tr }} <br />
+          {{ 'a group built' | tr }} <br />
+          {{ 'for' | tr }} <span>{{ 'growth.' | tr }}</span>
+        </h1>
+
+        <p class="investment-hero-description">
+          {{
+            "Ewan Holding welcomes investment partners across our current portfolio and the new markets we're entering next."
+              | tr
+          }}
+        </p>
+
+        <a href="#investment-opportunities" class="investment-hero-link">
+          {{ 'Our approach' | tr }}
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="investment-hero-visual">
+        <img src="/photos/investmentHero.png" alt="Ewan Holding Investment Opportunities" />
+
+        <div class="investment-hero-message">
+          <span>{{ 'PEOPLE' | tr }}</span>
+          <span>{{ 'IDEAS' | tr }}</span>
+          <span>{{ 'INDUSTRIES' | tr }}</span>
+          <span>{{ 'A BRIGHTER TOMORROW' | tr }}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="investment-opportunities" id="investment-opportunities">
+      <div class="investment-opportunities-head">
+        <div class="investment-opportunities-heading">
+          <p class="investment-opportunities-label">{{ '01 — OPPORTUNITIES' | tr }}</p>
+
+          <h2 class="investment-opportunities-title">
+            {{ 'Where opportunity' | tr }}
+            <span>{{ 'meets impact.' | tr }}</span>
+          </h2>
+        </div>
+
+        <div class="investment-opportunities-intro">
+          <p>
+            {{
+              "We invest in sectors that shape stronger communities and brighter futures. Whether you're looking to expand, collaborate or bring a new idea to life, we're open to partnerships that create long-term value."
+                | tr
+            }}
+          </p>
+        </div>
+
+        <div class="investment-opportunities-note">
+          <span>{{ 'INVEST' | tr }}</span>
+          <span>{{ 'GROW' | tr }}</span>
+          <span>{{ 'TOGETHER' | tr }}</span>
+        </div>
+      </div>
+
+      <div class="investment-opportunities-grid">
+        @for (item of opportunities; track item.id; let i = $index) {
+          <article class="investment-opportunity-card">
+            <div class="investment-opportunity-content">
+              <span class="investment-opportunity-number">{{
+                i + 1 < 10 ? '0' + (i + 1) : i + 1
+              }}</span>
+              <h3>{{ lang.pick(item.title_Ar, item.title_En) }}</h3>
+              <p>{{ lang.pick(item.description_Ar, item.description_En) }}</p>
+            </div>
+            <div class="investment-opportunity-arrow">→</div>
+            <div class="investment-opportunity-image">
+              <img
+                [src]="i % 2 === 0 ? '/photos/invest1.png' : '/photos/invest2.png'"
+                [alt]="lang.pick(item.title_Ar, item.title_En)"
+              />
+            </div>
+          </article>
+        }
+
+        <!-- Contact -->
+
+        <article class="investment-opportunity-card">
+          <div class="investment-opportunity-content">
+            <span class="investment-opportunity-number"> 03 </span>
+
+            <h3>{{ 'Contact us' | tr }}</h3>
+
+            <p>
+              {{
+                'Interested in exploring an investment opportunity with Ewan Holding? Our team is ready to talk through current projects, investment criteria and next steps.'
+                  | tr
+              }}
+            </p>
+
+            <a href="/contact" target="_blank"> {{ 'Get in touch' | tr }} </a>
+          </div>
+
+          <div class="investment-opportunity-arrow">→</div>
+
+          <div class="investment-opportunity-image">
+            <img src="/photos/invest3.png" alt="Contact Ewan Holding" />
+          </div>
+        </article>
+
+        <!-- Careers -->
+
+        <article class="investment-opportunity-card">
+          <div class="investment-opportunity-content">
+            <span class="investment-opportunity-number"> 04 </span>
+
+            <h3>{{ 'Careers' | tr }}</h3>
+
+            <p>
+              {{
+                "Build your career with Ewan. We're a collaborative team committed to continuous learning — if you thrive in a supportive environment, we'd like to hear from you."
+                  | tr
+              }}
+            </p>
+
+            <a href="#"> {{ 'Explore careers' | tr }} </a>
+          </div>
+
+          <div class="investment-opportunity-arrow">→</div>
+
+          <div class="investment-opportunity-image">
+            <img src="/photos/invest4.png" alt="Careers at Ewan Holding" />
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="investment-stats">
+      <div class="investment-stat">
+        <h3>6</h3>
+
+        <p>{{ 'Core Companies' | tr }}</p>
+      </div>
+
+      <div class="investment-stat">
+        <h3>5+</h3>
+
+        <p>{{ 'Sectors of Growth' | tr }}</p>
+      </div>
+
+      <div class="investment-stat">
+        <h3>20+</h3>
+
+        <p>{{ 'Years of Experience' | tr }}</p>
+      </div>
+
+      <div class="investment-stat">
+        <h3>1</h3>
+
+        <p>{{ 'Shared Vision' | tr }}</p>
+      </div>
+    </section>
+
+    <section class="investment-partner">
+      <div class="investment-partner-background">
+        <img src="/photos/investFinal.png" alt="Investment partnership with Ewan Holding" />
+      </div>
+
+      <div class="investment-partner-content">
+        <p class="investment-partner-label">{{ "LET'S BUILD WHAT'S NEXT" | tr }}</p>
+
+        <h2 class="investment-partner-title">
+          {{ 'Partner for' | tr }} <br />
+          {{ 'a stronger' | tr }} <span>{{ 'tomorrow.' | tr }}</span>
+        </h2>
+
+        <p class="investment-partner-description">
+          {{
+            "We're always open to conversations with aligned partners, investors and forward-thinking businesses."
+              | tr
+          }}
+        </p>
+
+        <a href="/contact" target="_blank" class="investment-partner-link">
+          {{ 'Get in touch' | tr }}
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="investment-partner-note">
+        <span>{{ 'OPPORTUNITIES' | tr }}</span>
+        <span>{{ 'PEOPLE' | tr }}</span>
+        <span>{{ 'PROGRESS' | tr }}</span>
+      </div>
+    </section>
+
+    <section class="pages-newsletter">
+      <div class="container col-lg-10">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-7">
+            <div class="pages-newsletter-content">
+              <h2>{{ 'Join our newsletter' | tr }}</h2>
+
+              <p>
+                {{ 'Company news and investment updates, a few times a year — nothing more.' | tr }}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <form class="pages-newsletter-form">
+              <input type="email" [placeholder]="'Your email address' | tr" />
+
+              <button type="submit">{{ 'Subscribe' | tr }}</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <app-site-footer></app-site-footer>
+</div>

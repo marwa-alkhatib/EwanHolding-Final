@@ -1,0 +1,169 @@
+<div [class.about-ar]="lang.language() === 'ar'">
+  <header>
+    <section class="pages-navbar" [class.navbar-ar]="lang.language() === 'ar'">
+      <div class="pages-navbar-brand">
+        <img class="pages-navbar-logo" src="/photos/ewan_logo.png" alt="Ewan Holding Logo" />
+        <p class="pages-navbar-name">
+          <a routerLink="/"
+            >{{ 'Ewan' | tr }} <b>{{ 'Holding' | tr }}</b></a
+          >
+        </p>
+      </div>
+
+      <nav class="pages-navbar-links">
+        <a routerLink="/about">{{ 'About' | tr }}</a>
+        <a routerLink="/companies">{{ 'Companies' | tr }}</a>
+        <a routerLink="/investment">{{ 'Investment' | tr }}</a>
+        <a routerLink="/news">{{ 'News' | tr }}</a>
+        <a routerLink="/contact">{{ 'Contact' | tr }}</a>
+      </nav>
+
+      <!-- <app-language-toggle></app-language-toggle> -->
+      <app-language-toggle variant="pages"></app-language-toggle>
+      <img class="pages-navbar-menu" src="/photos/menu.png" alt="Open navigation menu" />
+    </section>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <div class="col-lg-6">
+        <p class="about-breadcrumb">
+          <a routerLink="/">{{ 'Home' | tr }}</a> {{ '/ About' | tr }}
+        </p>
+        <p class="about-hero-title">{{ 'Excellence assurance. Advancing progress.' | tr }}</p>
+        <p class="about-hero-description">
+          {{
+            'A leading Saudi group of companies committed to surpassing expectations across every sector we operate in.'
+              | tr
+          }}
+        </p>
+      </div>
+    </section>
+
+    <section class="about-story">
+      <div>
+        <p class="about-story-label">
+          <i>{{ 'Who we are' | tr }}</i>
+        </p>
+        <p class="about-story-title">{{ 'Established in 1999, built for the long term.' | tr }}</p>
+        <p class="about-story-text">
+          {{
+            'Ewan Holdings Group brings together a portfolio of Saudi companies, each held to the same standard: innovative solutions and superior service, tailored to the needs of every client we serve.'
+              | tr
+          }}
+        </p>
+        <p class="about-story-text">
+          {{
+            "Since our founding we've built a track record exceeding one billion Saudi Riyals in completed projects across maintenance and operations, human resources, technical contracting, security services, logistics and furnished apartments."
+              | tr
+          }}
+        </p>
+      </div>
+      <img src="/photos/5e3fe9487ca0abb0f70d36ce407dd659-1-scaled.jpeg" alt="" />
+    </section>
+
+    <section class="about-vision">
+      <div class="col-lg-6">
+        <p class="about-vision-label">
+          <i>{{ 'Our vision' | tr }}</i>
+        </p>
+        <p class="about-vision-title">{{ 'Shaping a sustainable future.' | tr }}</p>
+        <p class="about-vision-text">
+          {{
+            'We aim to lead sustainable development across our sectors — expanding our capabilities, adopting new technologies, and adapting as markets change, so we stay at the forefront of every field we work in.'
+              | tr
+          }}
+        </p>
+      </div>
+    </section>
+
+    <section class="about-principles">
+      <div class="col-lg-5">
+        <p class="about-principles-label">
+          <i>{{ 'Why choose us' | tr }}</i>
+        </p>
+        <p class="about-principles-title">{{ 'What holds our companies together.' | tr }}</p>
+      </div>
+
+      <div class="container about-principles-container">
+        <div class="row about-principles-grid">
+          <div class="col-lg-5 col-md-12 about-principle-card m-3 ms-0">
+            <p class="about-principle-title">{{ 'Excellence' | tr }}</p>
+            <p>
+              {{
+                'A continuous pursuit of quality and innovation in every part of the business.' | tr
+              }}
+            </p>
+          </div>
+          <div class="col-lg-5 col-md-12 col about-principle-card m-3 ms-0">
+            <p class="about-principle-title">{{ 'Integrity' | tr }}</p>
+            <p>
+              {{ 'A steadfast commitment to the highest ethical standards and transparency.' | tr }}
+            </p>
+          </div>
+          <div class="col-lg-5 col-md-12 about-principle-card m-3 ms-0">
+            <p class="about-principle-title">{{ 'Empowerment' | tr }}</p>
+            <p>
+              {{
+                'A culture of creativity, diversity and inclusion where our people can thrive.' | tr
+              }}
+            </p>
+          </div>
+          <div class="col-lg-5 col-md-12 about-principle-card m-3 ms-0">
+            <p class="about-principle-title">{{ 'Collaboration' | tr }}</p>
+            <p>
+              {{ 'Close teamwork with clients and partners, working toward shared success.' | tr }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-local-investment">
+      <div>
+        <p class="about-investment-label">
+          <i>{{ 'Local investment' | tr }}</i>
+        </p>
+        <p class="about-investment-title">
+          {{ 'Empowering local talent, supporting our community.' | tr }}
+        </p>
+        <p class="about-investment-text">
+          {{
+            'We prioritize local content in our operations, sourcing goods and services from Saudi companies wherever possible, and invest heavily in training, mentoring and career development for the next generation of Saudi talent.'
+              | tr
+          }}
+        </p>
+        <p class="about-investment-text">
+          {{
+            'This commitment to progressive thinking and continuous expansion keeps us responsive to change, quick to adopt new technologies and business models, and firmly positioned as a trusted partner across the industries we serve.'
+              | tr
+          }}
+        </p>
+      </div>
+      <img src="/photos/Rectangle-68-1.png" alt="" />
+    </section>
+
+    <section class="pages-newsletter">
+      <div class="container col-lg-10">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-7">
+            <div class="pages-newsletter-content">
+              <h2>{{ 'Join our newsletter' | tr }}</h2>
+              <p>
+                {{ 'Company news and investment updates, a few times a year — nothing more.' | tr }}
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <form class="pages-newsletter-form">
+              <input type="email" [placeholder]="'Your email address' | tr" />
+              <button type="submit">{{ 'Subscribe' | tr }}</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <app-site-footer></app-site-footer>
+</div>

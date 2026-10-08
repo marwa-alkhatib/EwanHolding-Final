@@ -1,0 +1,308 @@
+<header>
+  <section class="pages-navbar">
+    <div class="pages-navbar-brand">
+      <img class="pages-navbar-logo" src="/photos/ewan_logo.png" alt="Ewan Holding Logo" />
+
+      <p class="pages-navbar-name">
+        <a href="/">
+          {{ 'Ewan' | tr }} <b>{{ 'Holding' | tr }}</b>
+        </a>
+      </p>
+    </div>
+
+    <nav class="pages-navbar-links">
+      <a href="/about" target="_blank">{{ 'About' | tr }}</a>
+
+      <a href="/companies" target="_blank">{{ 'Companies' | tr }}</a>
+
+      <a href="/investment" target="_blank">{{ 'Investment' | tr }}</a>
+
+      <a href="/news" target="_blank">{{ 'News' | tr }}</a>
+
+      <a href="/contact" target="_blank">{{ 'Contact' | tr }}</a>
+    </nav>
+
+    <app-language-toggle></app-language-toggle>
+
+    <img class="pages-navbar-menu" src="/photos/menu.png" alt="Open navigation menu" />
+  </section>
+</header>
+
+<main>
+  <section class="furnished-hero">
+    <div class="col-lg-6">
+      <p class="furnished-breadcrumb">
+        <a href="/">{{ 'Home' | tr }}</a> /
+        <a href="/companies" target="_blank">{{ 'Companies' | tr }}</a>
+        {{ '/ Ewan Furnished Apartments' | tr }}
+      </p>
+
+      <p class="furnished-hero-title">{{ 'Ewan Furnished Apartments' | tr }}</p>
+
+      <p class="furnished-hero-description">
+        {{
+          "Premium furnished apartments for comfortable, convenient stays — whether you're here for a week or much longer."
+            | tr
+        }}
+      </p>
+    </div>
+  </section>
+
+  <section class="furnished-overview">
+    <div class="furnished-overview-content">
+      <div class="furnished-overview-text">
+        <p class="furnished-overview-label">{{ '01 — OVERVIEW' | tr }}</p>
+
+        <h2 class="furnished-overview-title">
+          {{ 'More than' | tr }} <br />
+          {{ 'a place to stay' | tr }}
+        </h2>
+
+        <p class="furnished-overview-description">
+          {{
+            'Ewan Furnished Apartments offers a complete stay experience, with modern amenities and personalized service for both business and leisure travelers.'
+              | tr
+          }}
+        </p>
+
+        <p class="furnished-overview-description">
+          {{
+            'From stylish studios to spacious multi-room units, every apartment is tastefully finished and fully equipped from day one.'
+              | tr
+          }}
+        </p>
+
+        <a href="/contact" target="_blank" class="furnished-overview-link">
+          {{ 'View on map →' | tr }}
+        </a>
+      </div>
+
+      <div class="furnished-overview-image">
+        <img src="/photos/furnature.png" alt="Ewan Furnished Apartment" />
+
+        <div class="furnished-overview-image-text">
+          <span>{{ 'YOUR' | tr }}</span>
+          <span>{{ 'COMFORT' | tr }}</span>
+          <span>{{ 'OUR PRIORITY' | tr }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="furnished-services">
+    <div class="furnished-services-head">
+      <div>
+        <p class="furnished-services-label">{{ '02 — OUR SERVICES' | tr }}</p>
+
+        <h2 class="furnished-services-title">{{ 'What we deliver' | tr }}</h2>
+      </div>
+
+      <p class="furnished-services-intro">
+        {{
+          'Fully furnished apartments that combine comfort, convenience and flexibility — designed for the way you live and travel today.'
+            | tr
+        }}
+      </p>
+    </div>
+
+    <div class="furnished-services-grid">
+      <div class="furnished-service-card">
+        <div class="furnished-service-icon">🛏</div>
+
+        <h3>{{ 'Furnished Apartments' | tr }}</h3>
+
+        <p>
+          {{
+            'A portfolio spanning studios to spacious multi-room units, each fitted out with furniture, appliances and everything needed for a comfortable stay.'
+              | tr
+          }}
+        </p>
+      </div>
+
+      <div class="furnished-service-card">
+        <div class="furnished-service-icon">◉</div>
+
+        <h3>{{ 'Personalized Service' | tr }}</h3>
+
+        <p>
+          {{
+            'A dedicated team to ensure a smooth and hassle-free experience from booking to departure.'
+              | tr
+          }}
+        </p>
+      </div>
+
+      <div class="furnished-service-card">
+        <div class="furnished-service-icon">⌖</div>
+
+        <h3>{{ 'Prime Locations' | tr }}</h3>
+
+        <p>
+          {{
+            'Close to business districts, transport, dining, shopping and key entertainment destinations.'
+              | tr
+          }}
+        </p>
+      </div>
+
+      <div class="furnished-service-card">
+        <div class="furnished-service-icon">◫</div>
+
+        <h3>{{ 'Flexible Stays' | tr }}</h3>
+
+        <p>
+          {{ 'Rental options that fit your plans — a few days, a few weeks, or longer.' | tr }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="furnished-standard">
+    <div class="furnished-standard-content">
+      <div class="furnished-standard-text">
+        <p class="furnished-standard-label">{{ '03 — WHY CHOOSE US' | tr }}</p>
+
+        <h2 class="furnished-standard-title">{{ 'The Furnished Standard' | tr }}</h2>
+
+        <p class="furnished-standard-description">
+          {{ 'More than accommodation — a better way to stay.' | tr }}
+        </p>
+
+        <div class="furnished-standard-grid">
+          <div class="furnished-standard-card">
+            <h3>{{ 'Comfort' | tr }}</h3>
+
+            <p>
+              {{
+                'Thoughtfully designed spaces to help you feel at home from the moment you arrive.'
+                  | tr
+              }}
+            </p>
+          </div>
+
+          <div class="furnished-standard-card">
+            <h3>{{ 'Convenience' | tr }}</h3>
+
+            <p>
+              {{ 'Easy access to transport, dining, shopping and entertainment.' | tr }}
+            </p>
+          </div>
+
+          <div class="furnished-standard-card">
+            <h3>{{ 'Flexibility' | tr }}</h3>
+
+            <p>
+              {{ 'Stay options that adapt to your needs, with support always on hand.' | tr }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="furnished-standard-image">
+        <img src="/photos/furnature2.png" alt="Luxury furnished apartment" />
+
+        <div class="furnished-standard-image-text">
+          <span>{{ 'STAY' | tr }}</span>
+          <span>{{ 'WORK' | tr }}</span>
+          <span>{{ 'EXPLORE' | tr }}</span>
+          <span>{{ 'BELONG' | tr }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="furnished-companies">
+    <div class="furnished-companies-head">
+      <div>
+        <p class="furnished-companies-label">{{ '04 — COMPANIES' | tr }}</p>
+
+        <h2 class="furnished-companies-title">
+          {{ 'Explore our other companies' | tr }}
+        </h2>
+      </div>
+
+      <a href="/companies" class="furnished-companies-all" target="_blank">
+        {{ 'View all companies →' | tr }}
+      </a>
+    </div>
+
+    <div class="furnished-companies-grid">
+      <div class="furnished-company-card">
+        <div class="furnished-company-image">
+          <img src="/photos/EW1.png" alt="Ewan Security Services" />
+        </div>
+
+        <h3>{{ 'Ewan Security Services' | tr }}</h3>
+
+        <p>
+          {{
+            "Unarmed guarding, patrol, surveillance and access control for sites that can't afford surprises."
+              | tr
+          }}
+        </p>
+
+        <a href="/security-services" target="_blank"> {{ 'Read more →' | tr }} </a>
+      </div>
+
+      <div class="furnished-company-card">
+        <div class="furnished-company-image">
+          <img src=".//photos/EW2.png" alt="Ewan Maintenance and Operations" />
+        </div>
+
+        <h3>{{ 'Ewan Maintenance & Operations' | tr }}</h3>
+
+        <p>
+          {{
+            'Procurement, general trading and civil engineering delivered with measured, dependable rigor.'
+              | tr
+          }}
+        </p>
+
+        <a href="/maintenance-operations" target="_blank"> {{ 'Read more →' | tr }} </a>
+      </div>
+
+      <div class="furnished-company-card">
+        <div class="furnished-company-image">
+          <img src="/photos/EW3.png" alt="Ewan Technical Contracting" />
+        </div>
+
+        <h3>{{ 'Ewan Technical Contracting' | tr }}</h3>
+
+        <p>
+          {{
+            'Construction management and general contracting for projects that need to hold their shape.'
+              | tr
+          }}
+        </p>
+
+        <a href="/technical-contracting" target="_blank"> {{ 'Read more →' | tr }} </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pages-newsletter">
+    <div class="container col-lg-10">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-7">
+          <div class="pages-newsletter-content">
+            <h2>{{ 'Join our newsletter' | tr }}</h2>
+
+            <p>
+              {{ 'Company news and investment updates, a few times a year — nothing more.' | tr }}
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <form class="pages-newsletter-form">
+            <input type="email" [placeholder]="'Your email address' | tr" />
+
+            <button type="submit">{{ 'Subscribe' | tr }}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-site-footer></app-site-footer>

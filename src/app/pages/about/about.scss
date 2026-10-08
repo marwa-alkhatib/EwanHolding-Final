@@ -1,0 +1,1523 @@
+.pages-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 10rem;
+
+  background-color: #0e1a33;
+  border-bottom: 1px solid #b4884b;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  z-index: 1000;
+
+  .pages-navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .pages-navbar-logo {
+      width: 22px;
+      height: 27px;
+    }
+
+    .pages-navbar-name {
+      margin: 0;
+
+      a {
+        color: #f8f7f6;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 20px;
+
+        text-decoration: none;
+
+        b {
+          color: #dcb679;
+        }
+      }
+    }
+  }
+
+  .pages-navbar-links {
+    display: flex;
+    align-items: center;
+
+    padding-right: 7rem;
+
+    a {
+      color: #e4e0d2;
+
+      text-decoration: none;
+
+      padding: 18px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #dcb679;
+      }
+    }
+  }
+
+  .pages-navbar-contact {
+    width: 90px;
+    height: 50px;
+
+    background-color: transparent;
+
+    border: 1px solid #dcb679;
+
+    a {
+      color: #dcb679;
+
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: #dcb679;
+
+      a {
+        color: #0e1a33;
+      }
+    }
+  }
+
+  .pages-navbar-menu {
+    display: none;
+
+    width: 30px;
+    height: 25px;
+
+    cursor: pointer;
+  }
+}
+
+.about-hero {
+  background-color: #0e1a33;
+  font-family: 'Cormorant Garamond', serif;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 8rem 5rem;
+    padding-left: 12rem;
+
+    .about-breadcrumb {
+      color: #a8adc583;
+      font-size: 20px;
+
+      a {
+        font-size: 20px;
+        color: #a8adc583;
+        text-decoration: none;
+
+        &:hover {
+          color: #dcb679;
+        }
+      }
+    }
+
+    .about-hero-title {
+      color: white;
+      font-size: 60px;
+      line-height: 70px;
+      padding: 10px 0;
+    }
+
+    .about-hero-description {
+      color: #a8adc583;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+.about-story {
+  display: flex;
+  gap: 5rem;
+  padding: 3rem 12rem;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #f7f3ea;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* padding: 1rem 10rem; */
+
+    .about-story-label {
+      i {
+        font-size: 20px;
+        color: #c2a06b;
+      }
+    }
+
+    .about-story-title {
+      font-size: 50px;
+      line-height: 50px;
+      color: #0a1628;
+    }
+
+    .about-story-text {
+      font-size: 17px;
+      line-height: 25px;
+      color: #0a1628;
+    }
+  }
+
+  img {
+    width: 600px;
+  }
+}
+
+.about-vision {
+  background-color: #0a1628;
+  font-family: 'Cormorant Garamond', serif;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 4rem 0;
+    padding-top: 5rem;
+    padding-left: 11rem;
+    /* background-color: #b4884b; */
+    gap: 4px;
+
+    .about-vision-label {
+      i {
+        font-size: 17px;
+        color: #c2a06b;
+      }
+    }
+
+    .about-vision-title {
+      font-size: 55px;
+      line-height: 50px;
+      color: #ffffff;
+    }
+
+    .about-vision-text {
+      color: #a8adc583;
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+}
+
+.about-principles {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #f7f3ea;
+  padding: 4rem 11rem;
+
+  div {
+    .about-principles-label {
+      font-size: 17px;
+      /* color: #c2a06b; */
+      color: #b4884b;
+    }
+
+    .about-principles-title {
+      font-size: 55px;
+      line-height: 45px;
+      color: #0a1628;
+      /* color: #b4884b; */
+    }
+  }
+
+  .about-principles-container {
+    display: flex;
+
+    .about-principle-card {
+      display: flex;
+      flex-wrap: wrap;
+
+      .about-principle-title {
+        color: #b4884b;
+        /* color: #0a1628; */
+        font-size: 25px;
+      }
+
+      p {
+        font-size: 18px;
+        color: #4d5a70;
+      }
+    }
+  }
+}
+
+.about-local-investment {
+  display: flex;
+  gap: 5rem;
+  padding: 3rem 12rem;
+  font-family: 'Cormorant Garamond', serif;
+  /* background-color: #f2e6c8; */
+  background-color: #e8e3d9;
+  align-items: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* padding: 1rem 10rem; */
+
+    .about-investment-label {
+      i {
+        font-size: 20px;
+        color: #c2a06b;
+      }
+    }
+
+    .about-investment-title {
+      font-size: 50px;
+      line-height: 50px;
+      color: #0a1628;
+    }
+
+    .about-investment-text {
+      font-size: 17px;
+      line-height: 25px;
+      color: #0a1628;
+    }
+  }
+
+  img {
+    width: 600px;
+  }
+}
+
+.pages-newsletter {
+  background-color: #0e1a33;
+  padding: 35px 5rem;
+
+  border-bottom: 1px solid #b4884b;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  .pages-newsletter-content {
+    h2 {
+      color: #f7f3ea;
+
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 700;
+
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #7c879a;
+
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+
+      margin: 0;
+    }
+  }
+
+  .pages-newsletter-form {
+    display: flex;
+
+    width: 100%;
+
+    input {
+      flex: 1;
+
+      background-color: transparent;
+
+      border: 1px solid #28405f;
+      border-right: none;
+
+      padding: 16px 20px;
+
+      color: #f7f3ea;
+
+      outline: none;
+
+      font-family: 'Montserrat', sans-serif;
+
+      &::placeholder {
+        color: #7c879a;
+      }
+    }
+
+    button {
+      background-color: #c6a15b;
+
+      color: #0a1628;
+
+      border: none;
+
+      padding: 16px 30px;
+
+      font-family: 'Montserrat', sans-serif;
+
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #e2c98a;
+      }
+    }
+  }
+}
+
+.pages-footer {
+  background-color: #0e1a33;
+  padding: 5rem 12rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+
+  .pages-footer-content {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1.4fr 1fr;
+    gap: 5rem;
+    padding-bottom: 4rem;
+
+    .pages-footer-brand {
+      h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 42px;
+        font-weight: 400;
+        color: #f3f0e7;
+        margin-bottom: 25px;
+
+        span {
+          font-family: 'Cormorant Garamond', serif;
+          color: #dcb679;
+        }
+      }
+
+      p {
+        color: #e4e0d2;
+        font-size: 14px;
+        line-height: 1.9;
+        margin: 0;
+        max-width: 370px;
+      }
+    }
+
+    .pages-footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+
+      h3 {
+        color: #dcb679;
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      a {
+        color: #e4e0d2;
+        font-size: 14px;
+        text-decoration: none;
+
+        position: relative;
+
+        transition: color 0.3s ease;
+
+        &::after {
+          content: '';
+          position: absolute;
+
+          left: 0;
+          bottom: -5px;
+
+          width: 0;
+          height: 1px;
+
+          background-color: #dcb679;
+
+          transition: width 0.3s ease;
+        }
+
+        &:hover {
+          color: #dcb679;
+
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .pages-footer-office {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+
+      h3 {
+        color: #dcb679;
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      a {
+        color: #e4e0d2;
+        font-size: 14px;
+        text-decoration: none;
+
+        position: relative;
+
+        transition: color 0.3s ease;
+
+        &::after {
+          content: '';
+          position: absolute;
+
+          left: 0;
+          bottom: -5px;
+
+          width: 0;
+          height: 1px;
+
+          background-color: #dcb679;
+
+          transition: width 0.3s ease;
+        }
+
+        &:hover {
+          color: #dcb679;
+
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+
+      p {
+        color: #e4e0d2;
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0;
+      }
+    }
+  }
+
+  .pages-footer-bottom {
+    border-top: 1px solid rgba(228, 224, 210, 0.15);
+    padding-top: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      color: rgba(228, 224, 210, 0.4);
+      font-size: 12px;
+      margin: 0;
+    }
+
+    a {
+      color: rgba(228, 224, 210, 0.4);
+      font-size: 12px;
+      text-decoration: none;
+
+      position: relative;
+
+      transition: color 0.3s ease;
+
+      &::after {
+        content: '';
+        position: absolute;
+
+        left: 0;
+        bottom: -5px;
+
+        width: 0;
+        height: 1px;
+
+        background-color: #dcb679;
+
+        transition: width 0.3s ease;
+      }
+
+      &:hover {
+        color: #dcb679;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .pages-navbar {
+    padding: 10px 2rem;
+
+    .pages-navbar-brand {
+      flex-shrink: 0;
+      gap: 10px;
+
+      .pages-navbar-logo {
+        width: 22px;
+        height: 27px;
+      }
+
+      .pages-navbar-name {
+        white-space: nowrap;
+
+        a {
+          font-size: 19px;
+        }
+      }
+    }
+
+    .pages-navbar-links {
+      margin-right: 0;
+      /* margin-left: 1rem; */
+      padding-left: 4rem;
+
+      a {
+        padding: 10px;
+        font-size: 13px;
+        white-space: nowrap;
+      }
+    }
+
+    .pages-navbar-contact {
+      width: 80px;
+      height: 43px;
+      flex-shrink: 0;
+
+      a {
+        font-size: 13px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .about-hero {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #b4884b; */
+
+    div {
+      padding: 4rem 5rem;
+      padding-top: 8rem;
+      .about-breadcrumb {
+        font-size: 15px;
+
+        a {
+          font-size: 15px;
+        }
+      }
+
+      .about-hero-title {
+        font-size: 50px;
+        line-height: 60px;
+        /* padding: 10px 0; */
+      }
+
+      .about-hero-description {
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .about-story {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    div {
+      gap: 10px;
+      .about-story-label {
+        i {
+          font-size: 25px;
+        }
+      }
+
+      .about-story-title {
+        font-size: 58px;
+      }
+
+      .about-story-text {
+        font-size: 19px;
+      }
+    }
+
+    img {
+      width: 650px;
+    }
+  }
+
+  .about-vision {
+    div {
+      padding: 4rem 4rem;
+    }
+  }
+
+  .about-principles {
+    padding: 4rem 6rem;
+    div {
+      .about-principles-title {
+        font-size: 55px;
+      }
+    }
+
+    .about-principles-container {
+      padding: 0;
+    }
+  }
+
+  .about-local-investment {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+
+    div {
+      gap: 10px;
+
+      .about-investment-label {
+        i {
+          font-size: 25px;
+        }
+      }
+
+      .about-investment-title {
+        font-size: 58px;
+      }
+
+      .about-investment-text {
+        font-size: 19px;
+      }
+    }
+
+    img {
+      width: 600px;
+    }
+  }
+
+  .pages-newsletter {
+    padding: 35px 3rem;
+
+    .pages-newsletter-content {
+      h2 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 23px;
+      }
+    }
+
+    .pages-newsletter-form {
+      input {
+        padding: 14px 16px;
+
+        font-size: 14px;
+      }
+
+      button {
+        padding: 14px 22px;
+
+        font-size: 14px;
+      }
+    }
+  }
+
+  .pages-footer {
+    padding: 4rem 4rem 2rem;
+
+    .pages-footer-content {
+      grid-template-columns: 1.3fr 1fr;
+      gap: 3.5rem 5rem;
+      padding-bottom: 3.5rem;
+
+      .pages-footer-brand {
+        h2 {
+          font-size: 38px;
+        }
+
+        p {
+          font-size: 13px;
+          line-height: 1.8;
+          max-width: 330px;
+        }
+      }
+
+      .pages-footer-links {
+        gap: 16px;
+
+        h3 {
+          font-size: 14px;
+          margin-bottom: 7px;
+        }
+
+        a {
+          font-size: 13px;
+        }
+      }
+
+      .pages-footer-office {
+        gap: 16px;
+
+        h3 {
+          font-size: 14px;
+          margin-bottom: 7px;
+        }
+
+        a {
+          font-size: 13px;
+        }
+
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .pages-footer-bottom {
+      p,
+      a {
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .pages-navbar {
+    padding: 8px 1.5rem;
+
+    .pages-navbar-brand {
+      gap: 10px;
+
+      .pages-navbar-logo {
+        width: 22px;
+        height: 27px;
+      }
+
+      .pages-navbar-name {
+        a {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .pages-navbar-contact {
+      display: none;
+    }
+
+    .pages-navbar-menu {
+      display: block;
+
+      width: 30px;
+      height: 25px;
+
+      cursor: pointer;
+    }
+
+    .pages-navbar-links {
+      display: none;
+
+      &.menu-open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        position: absolute;
+
+        top: 100%;
+        right: 18px;
+
+        width: 220px;
+
+        margin: 0;
+        padding: 15px 0;
+
+        background-color: #0e1a33;
+
+        border: 1px solid #28405f;
+
+        a {
+          width: 100%;
+
+          padding: 12px 20px;
+
+          font-size: 15px;
+
+          &:hover {
+            color: #dcb679;
+          }
+        }
+      }
+    }
+  }
+
+  .about-hero {
+    div {
+      padding: 3rem 2rem;
+      padding-top: 7rem;
+      /* padding-bottom: 2rem; */
+
+      .about-breadcrumb {
+        font-size: 15px;
+        a {
+          font-size: 15px;
+        }
+      }
+
+      .about-hero-title {
+        font-size: 35px;
+        line-height: 40px;
+        padding: 8px 0;
+      }
+
+      .about-hero-description {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .about-story {
+    padding: 3rem 2rem;
+    gap: 15px;
+
+    div {
+      gap: 0;
+      .about-story-label {
+        i {
+          font-size: 18px;
+        }
+      }
+
+      .about-story-title {
+        font-size: 38px;
+        line-height: 35px;
+      }
+
+      .about-story-text {
+        font-size: 13px;
+        line-height: 20px;
+        padding-top: 5px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+
+  .about-vision {
+    div {
+      padding: 4rem 2rem;
+      .about-vision-label {
+        i {
+          font-size: 17px;
+        }
+      }
+
+      .about-vision-title {
+        font-size: 45px;
+        line-height: 45px;
+      }
+
+      .about-vision-text {
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .about-principles {
+    padding: 3rem 2rem;
+    gap: 10px;
+
+    div {
+      .about-principles-label {
+        font-size: 18px;
+      }
+
+      .about-principles-title {
+        font-size: 45px;
+        line-height: 40px;
+      }
+    }
+
+    .about-principles-container {
+      .about-principle-card {
+        .about-principle-title {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 17px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  .about-local-investment {
+    padding: 3rem 2rem;
+    div {
+      .about-investment-label {
+        i {
+          font-size: 18px;
+        }
+      }
+
+      .about-investment-title {
+        font-size: 43px;
+        line-height: 40px;
+      }
+
+      .about-investment-text {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+
+  .pages-newsletter {
+    padding: 30px 1.5rem;
+
+    .pages-newsletter-content {
+      h2 {
+        font-size: 27px;
+
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    .pages-newsletter-form {
+      flex-direction: column;
+
+      width: 100%;
+
+      gap: 10px;
+
+      input {
+        width: 100%;
+
+        padding: 14px 15px;
+
+        border: 1px solid #28405f;
+
+        font-size: 14px;
+      }
+
+      button {
+        width: 100%;
+
+        padding: 14px 20px;
+
+        font-size: 14px;
+      }
+    }
+  }
+
+  .pages-footer {
+    padding: 3rem 2rem 2rem;
+
+    .pages-footer-content {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding-bottom: 3rem;
+
+      .pages-footer-brand {
+        h2 {
+          font-size: 34px;
+          margin-bottom: 18px;
+        }
+
+        p {
+          font-size: 13px;
+          line-height: 1.8;
+          max-width: 100%;
+        }
+      }
+
+      .pages-footer-links {
+        gap: 14px;
+
+        h3 {
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+
+        a {
+          font-size: 13px;
+        }
+      }
+
+      .pages-footer-office {
+        gap: 14px;
+
+        h3 {
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+
+        a {
+          font-size: 13px;
+        }
+
+        p {
+          font-size: 13px;
+          line-height: 1.7;
+        }
+      }
+    }
+
+    .pages-footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+
+      p,
+      a {
+        font-size: 11px;
+      }
+    }
+  }
+}
+/* ==================================================
+   ABOUT PAGE - ARABIC ONLY
+================================================== */
+
+.about-ar {
+  /* ==================================================
+     HERO
+  ================================================== */
+
+  .about-hero {
+    > div {
+      direction: rtl;
+      text-align: right;
+
+      /* ننقل بلوك الكلام للناحية اليمين */
+      margin-left: auto;
+      margin-right: 0;
+
+      padding-left: 5rem;
+      padding-right: 12rem;
+    }
+
+    .about-breadcrumb,
+    .about-hero-title,
+    .about-hero-description {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .about-hero-title {
+      line-height: 1.25;
+    }
+
+    .about-hero-description {
+      line-height: 1.8;
+    }
+  }
+
+  /* ==================================================
+     STORY
+     الكلام يمين - الصورة شمال
+  ================================================== */
+
+  .about-story {
+    direction: rtl;
+
+    > div {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .about-story-label,
+    .about-story-title,
+    .about-story-text {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .about-story-title {
+      line-height: 1.25;
+    }
+
+    .about-story-text {
+      line-height: 1.8;
+    }
+
+    img {
+      flex-shrink: 0;
+    }
+  }
+
+  /* ==================================================
+     VISION
+  ================================================== */
+
+  .about-vision {
+    > div {
+      direction: rtl;
+      text-align: right;
+
+      margin-left: auto;
+      margin-right: 0;
+
+      padding-left: 0;
+      padding-right: 11rem;
+    }
+
+    .about-vision-label,
+    .about-vision-title,
+    .about-vision-text {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .about-vision-title {
+      line-height: 1.25;
+    }
+
+    .about-vision-text {
+      line-height: 1.8;
+    }
+  }
+
+  /* ==================================================
+   PRINCIPLES
+================================================== */
+
+  .about-principles {
+    direction: rtl;
+
+    > div:first-child {
+      margin-left: auto;
+      margin-right: 0;
+      direction: rtl;
+      text-align: right;
+    }
+
+    .about-principles-label,
+    .about-principles-title {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .about-principles-title {
+      line-height: 1.25;
+    }
+
+    .about-principles-container {
+      direction: rtl;
+    }
+
+    .about-principles-grid {
+      direction: rtl;
+    }
+
+    .about-principle-card {
+      direction: rtl;
+      text-align: right;
+
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+
+      .about-principle-title {
+        direction: rtl;
+        text-align: right;
+
+        display: block;
+        width: 100%;
+
+        margin-bottom: 12px;
+      }
+
+      > p:not(.about-principle-title) {
+        direction: rtl;
+        text-align: right;
+
+        display: block;
+        width: 100%;
+
+        margin: 0;
+        line-height: 1.8;
+      }
+    }
+  }
+  /* ==================================================
+     LOCAL INVESTMENT
+     الكلام يمين - الصورة شمال
+  ================================================== */
+
+  .about-local-investment {
+    direction: rtl;
+
+    > div {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .about-investment-label,
+    .about-investment-title,
+    .about-investment-text {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .about-investment-title {
+      line-height: 1.25;
+    }
+
+    .about-investment-text {
+      line-height: 1.8;
+    }
+
+    img {
+      flex-shrink: 0;
+    }
+  }
+
+  /* ==================================================
+     NEWSLETTER
+  ================================================== */
+
+  .pages-newsletter {
+    direction: rtl;
+
+    .row {
+      direction: rtl;
+    }
+
+    .pages-newsletter-content {
+      direction: rtl;
+      text-align: right;
+
+      h2,
+      p {
+        direction: rtl;
+        text-align: right;
+      }
+    }
+
+    .pages-newsletter-form {
+      direction: rtl;
+
+      input {
+        direction: rtl;
+        text-align: right;
+
+        border-right: 1px solid #28405f;
+        border-left: none;
+      }
+    }
+  }
+
+  /* ==================================================
+     FOOTER
+  ================================================== */
+
+  .pages-footer {
+    direction: rtl;
+
+    .pages-footer-content {
+      direction: rtl;
+    }
+
+    .pages-footer-brand,
+    .pages-footer-links,
+    .pages-footer-office {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .pages-footer-links,
+    .pages-footer-office {
+      align-items: flex-start;
+    }
+
+    .pages-footer-brand p,
+    .pages-footer-links a,
+    .pages-footer-office a,
+    .pages-footer-office p {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .pages-footer-bottom {
+      direction: rtl;
+    }
+  }
+}
+
+/* ==================================================
+   ABOUT ARABIC - TABLET
+================================================== */
+
+@media (max-width: 992px) {
+  .about-ar {
+    .about-hero {
+      > div {
+        padding: 8rem 5rem 4rem;
+      }
+    }
+
+    .about-vision {
+      > div {
+        padding: 4rem;
+      }
+    }
+
+    .about-story,
+    .about-local-investment {
+      direction: rtl;
+
+      > div {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        max-width: 650px;
+      }
+    }
+  }
+}
+
+/* ==================================================
+   ABOUT ARABIC - PHONE
+================================================== */
+
+@media (max-width: 767px) {
+  .about-ar {
+    .about-hero {
+      > div {
+        padding: 7rem 2rem 3rem;
+      }
+    }
+
+    .about-story {
+      direction: rtl;
+
+      > div {
+        order: 1;
+      }
+
+      img {
+        order: 2;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+    }
+
+    .about-vision {
+      > div {
+        padding: 4rem 2rem;
+      }
+    }
+
+    .about-principles {
+      direction: rtl;
+      padding: 3rem 2rem;
+
+      .about-principles-container {
+        padding: 0;
+      }
+    }
+
+    .about-local-investment {
+      direction: rtl;
+
+      > div {
+        order: 1;
+      }
+
+      img {
+        order: 2;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+    }
+
+    .pages-newsletter {
+      .pages-newsletter-form {
+        input {
+          border: 1px solid #28405f;
+        }
+      }
+    }
+
+    .pages-footer {
+      .pages-footer-bottom {
+        align-items: flex-start;
+        text-align: right;
+      }
+    }
+  }
+}
+/* About Arabic tablet spacing */
+@media (min-width: 768px) and (max-width: 992px) {
+  .about-ar {
+    .about-story,
+    .about-local-investment {
+      padding: 45px 5% !important;
+      gap: 25px !important;
+    }
+
+    .about-story-title,
+    .about-investment-title {
+      font-size: 50px !important;
+      line-height: 1.4 !important;
+      margin-bottom: 20px !important;
+    }
+
+    .about-story-text,
+    .about-investment-text {
+      font-size: 18px !important;
+      line-height: 1.8 !important;
+    }
+
+    .about-principles {
+      padding: 50px 5% !important;
+    }
+
+    .about-principles-container {
+      gap: 25px !important;
+    }
+  }
+  .about-ar .about-local-investment img {
+    display: block;
+    width: 85% !important;
+    max-width: 750px !important;
+    height: auto !important;
+    margin: 30px auto 0 !important;
+    object-fit: cover;
+  }
+}

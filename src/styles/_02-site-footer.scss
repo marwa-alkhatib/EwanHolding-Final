@@ -1,0 +1,155 @@
+/* main footer ============================================================ */
+.site-footer {
+  padding: 80px 12% 35px;
+  font-family: 'Cormorant Garamond', serif;
+
+  background-color: #0e1a33;
+  color: #f3f0e7;
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 0.9fr;
+    gap: 80px;
+
+    padding-bottom: 70px;
+
+    .footer-brand {
+      h2 {
+        margin-bottom: 25px;
+
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 30px;
+
+        color: #f3f0e7;
+
+        span {
+          color: #dcb679;
+        }
+      }
+
+      p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        line-height: 1.8;
+
+        color: #e4e0d2;
+      }
+    }
+
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+
+      h3 {
+        margin-bottom: 5px;
+
+        color: #dcb679;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      a {
+        position: relative;
+
+        color: #e4e0d2;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+
+        text-decoration: none;
+
+        transition: color 0.3s ease;
+
+        &::after {
+          content: '';
+
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+
+          width: 0;
+          height: 1px;
+
+          background-color: #dcb679;
+
+          transition: width 0.3s ease;
+        }
+
+        &:hover {
+          color: #dcb679;
+
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    padding-top: 30px;
+
+    border-top: 1px solid rgba(228, 224, 210, 0.12);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      color: rgba(228, 224, 210, 0.4);
+
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+    }
+  }
+}
+/* Arabic footer */
+.site-footer.footer-ar {
+  .footer-content {
+    direction: rtl;
+
+    .footer-brand {
+      direction: rtl;
+      text-align: right;
+
+      h2,
+      p {
+        direction: rtl;
+        text-align: right;
+      }
+    }
+
+    .footer-column {
+      direction: rtl;
+      text-align: right;
+      align-items: flex-start;
+
+      h3 {
+        width: 100%;
+        text-align: right;
+      }
+
+      a {
+        text-align: right;
+
+        &::after {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    direction: rtl;
+
+    p {
+      direction: rtl;
+      text-align: right;
+    }
+  }
+}

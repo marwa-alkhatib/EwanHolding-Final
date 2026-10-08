@@ -1,0 +1,23 @@
+@import 'bootstrap/scss/bootstrap';
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+app-root {
+  display: block;
+  width: 100%;
+}
+
+/* ORIGINAL EWAN DESIGN */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap');
+/* font-family: "Cormorant Garamond", serif; */
+/* font-family: "Montserrat", sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,194 @@
+<div class="contact-page" [class.contact-ar]="lang.language() === 'ar'">
+  <header>
+    <section class="pages-navbar" [class.navbar-ar]="lang.language() === 'ar'">
+      <div class="pages-navbar-brand">
+        <img class="pages-navbar-logo" src="/photos/ewan_logo.png" alt="Ewan Holding Logo" />
+
+        <p class="pages-navbar-name">
+          <a href="/">
+            {{ 'Ewan' | tr }} <b>{{ 'Holding' | tr }}</b>
+          </a>
+        </p>
+      </div>
+
+      <nav
+        id="contact-navigation"
+        class="pages-navbar-links"
+        [class.menu-open]="menuOpen"
+        (keydown.escape)="menuOpen = false"
+      >
+        <a routerLink="/about" (click)="menuOpen = false">
+          {{ 'About' | tr }}
+        </a>
+
+        <a routerLink="/companies" (click)="menuOpen = false">
+          {{ 'Companies' | tr }}
+        </a>
+
+        <a routerLink="/investment" (click)="menuOpen = false">
+          {{ 'Investment' | tr }}
+        </a>
+
+        <a routerLink="/news" (click)="menuOpen = false">
+          {{ 'News' | tr }}
+        </a>
+
+        <a routerLink="/contact" (click)="menuOpen = false">
+          {{ 'Contact' | tr }}
+        </a>
+      </nav>
+
+      <app-language-toggle></app-language-toggle>
+
+      <button
+        class="contact-menu-button"
+        type="button"
+        (click)="menuOpen = !menuOpen"
+        [attr.aria-expanded]="menuOpen"
+        aria-controls="contact-navigation"
+        [attr.aria-label]="lang.language() === 'ar' ? 'قائمة التنقل' : 'Navigation menu'"
+      >
+        <img src="/photos/menu.png" alt="" />
+      </button>
+    </section>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="col-lg-6">
+        <p class="contact-breadcrumb">
+          <a href="/">{{ 'Home' | tr }}</a>
+          {{ '/ Contact Us' | tr }}
+        </p>
+
+        <p class="contact-hero-title">
+          {{ 'Do you have any questions? Contact us.' | tr }}
+        </p>
+
+        <p class="contact-hero-description">
+          {{ 'We love to communicate — reach us directly, or send a message below.' | tr }}
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h2>{{ 'Reach us directly' | tr }}</h2>
+
+            <form class="contact-form" (submit)="send($event)">
+              <input
+                type="text"
+                [placeholder]="'Name' | tr"
+                [attr.aria-label]="'Name' | tr"
+                name="fullName"
+                [(ngModel)]="form.fullName"
+                autocomplete="name"
+                required
+              />
+
+              <input
+                type="tel"
+                [placeholder]="'Phone' | tr"
+                [attr.aria-label]="'Phone' | tr"
+                name="phone"
+                [(ngModel)]="form.phone"
+                autocomplete="tel"
+                required
+              />
+
+              <input
+                type="email"
+                [placeholder]="'Email' | tr"
+                [attr.aria-label]="'Email' | tr"
+                name="email"
+                [(ngModel)]="form.email"
+                autocomplete="email"
+                required
+              />
+
+              <input
+                type="text"
+                [placeholder]="'Subject' | tr"
+                [attr.aria-label]="'Subject' | tr"
+                name="subject"
+                [(ngModel)]="form.subject"
+                required
+              />
+
+              <textarea
+                [placeholder]="'Message' | tr"
+                [attr.aria-label]="'Message' | tr"
+                name="message"
+                [(ngModel)]="form.message"
+                required
+              ></textarea>
+
+              <button type="submit" [disabled]="sending">
+                {{ sending ? 'Sending...' : ('Send message' | tr) }}
+              </button>
+
+              @if (sent) {
+                <p class="contact-success" role="status">
+                  {{ 'Message sent successfully.' | tr }}
+                </p>
+              }
+
+              @if (sendError) {
+                <p class="contact-error" role="alert">
+                  {{ sendError }}
+                </p>
+              }
+            </form>
+          </div>
+
+          <div class="contact-map">
+            <iframe
+              title="Ewan Holding location"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d282290.0724457231!2d46.652087!3d24.762074!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee37b5a9d5399%3A0xb2976a5314098400!2sEwan%20Human%20Resources%20Company!5e1!3m2!1sen!2slb!4v1789411775771!5m2!1sen!2slb"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pages-newsletter">
+      <div class="container col-lg-10">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-7">
+            <div class="pages-newsletter-content">
+              <h2>{{ 'Join our newsletter' | tr }}</h2>
+
+              <p>
+                {{ 'Company news and investment updates, a few times a year — nothing more.' | tr }}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <form class="pages-newsletter-form">
+              <input
+                type="email"
+                [placeholder]="'Your email address' | tr"
+                [attr.aria-label]="'Your email address' | tr"
+              />
+
+              <button type="submit">
+                {{ 'Subscribe' | tr }}
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <app-site-footer></app-site-footer>
+</div>

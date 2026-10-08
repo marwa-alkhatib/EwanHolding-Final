@@ -1,0 +1,76 @@
+/* pages newsletter ================================================================== */
+.pages-newsletter {
+  background-color: #0e1a33;
+  padding: 35px 5rem;
+
+  border-bottom: 1px solid #b4884b;
+
+  font-family: "Cormorant Garamond", serif;
+
+  .pages-newsletter-content {
+    h2 {
+      color: #f7f3ea;
+
+      font-family: "Cormorant Garamond", serif;
+      font-size: 32px;
+      font-weight: 700;
+
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #7c879a;
+
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+
+      margin: 0;
+    }
+  }
+
+  .pages-newsletter-form {
+    display: flex;
+
+    width: 100%;
+
+    input {
+      flex: 1;
+
+      background-color: transparent;
+
+      border: 1px solid #28405f;
+      border-right: none;
+
+      padding: 16px 20px;
+
+      color: #f7f3ea;
+
+      outline: none;
+
+      font-family: "Montserrat", sans-serif;
+
+      &::placeholder {
+        color: #7c879a;
+      }
+    }
+
+    button {
+      background-color: #c6a15b;
+
+      color: #0a1628;
+
+      border: none;
+
+      padding: 16px 30px;
+
+      font-family: "Montserrat", sans-serif;
+
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #e2c98a;
+      }
+    }
+  }
+}
+

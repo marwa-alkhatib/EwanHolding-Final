@@ -1,0 +1,128 @@
+<div class="news-page" [class.news-page-ar]="lang.language() === 'ar'">
+  <header>
+    <section class="pages-navbar" [class.navbar-ar]="lang.language() === 'ar'">
+      <div class="pages-navbar-brand">
+        <img class="pages-navbar-logo" src="/photos/ewan_logo.png" alt="Ewan Holding" />
+
+        <p class="pages-navbar-name">
+          <a routerLink="/">
+            {{ 'Ewan' | tr }} <b>{{ 'Holding' | tr }}</b>
+          </a>
+        </p>
+      </div>
+
+      <nav
+        id="news-navigation"
+        class="pages-navbar-links"
+        [class.menu-open]="menuOpen"
+        (keydown.escape)="menuOpen = false"
+      >
+        <a routerLink="/about" (click)="menuOpen = false">
+          {{ 'About' | tr }}
+        </a>
+        <a routerLink="/companies" (click)="menuOpen = false">
+          {{ 'Companies' | tr }}
+        </a>
+        <a routerLink="/investment" (click)="menuOpen = false">
+          {{ 'Investment' | tr }}
+        </a>
+        <a routerLink="/news" (click)="menuOpen = false">
+          {{ 'News' | tr }}
+        </a>
+        <a routerLink="/contact" (click)="menuOpen = false">
+          {{ 'Contact' | tr }}
+        </a>
+      </nav>
+
+      <button
+        class="pages-navbar-contact"
+        type="button"
+        (click)="lang.toggle(); menuOpen = false"
+        [attr.aria-label]="lang.language() === 'ar' ? 'Switch to English' : 'التبديل إلى العربية'"
+      >
+        {{ lang.language() === 'ar' ? 'EN' : 'عربي' }}
+      </button>
+
+      <button
+        class="news-menu-button"
+        type="button"
+        (click)="menuOpen = !menuOpen"
+        [attr.aria-expanded]="menuOpen"
+        aria-controls="news-navigation"
+        [attr.aria-label]="lang.language() === 'ar' ? 'قائمة التنقل' : 'Navigation menu'"
+      >
+        <img src="/photos/menu.png" alt="" />
+      </button>
+    </section>
+  </header>
+
+  <!-- باقي الصفحة بداية من main يفضل موجود هنا -->
+  <main>
+    <section class="news-hero">
+      <div class="news-hero-background"><img src="/photos/newshero.png" alt="Ewan Holding" /></div>
+      <div class="news-hero-content">
+        <p class="news-breadcrumb">
+          <a routerLink="/">{{ 'Home' | tr }}</a> {{ '/ News' | tr }}
+        </p>
+        <div class="news-hero-label">
+          <span></span>
+          <p>{{ 'NEWS / 2026' | tr }}</p>
+        </div>
+        <h1 class="news-hero-title">
+          {{ 'Stories from' | tr }} <br />
+          {{ 'across' | tr }} <span>{{ 'Ewan.' | tr }}</span>
+        </h1>
+        <p class="news-hero-description">
+          {{ 'Updates, achievements, and perspectives from our growing family of companies.' | tr }}
+        </p>
+      </div>
+    </section>
+    <section class="news-stories">
+      @for (item of items; track item.id; let i = $index) {
+        <article class="news-story" [class.news-story-reverse]="i % 2 === 1">
+          <div class="news-story-image">
+            <img [src]="api.image(item)" [alt]="lang.pick(item.title_Ar, item.title_En)" />
+          </div>
+          <div class="news-story-content">
+            <div class="news-story-top">
+              <span class="news-story-number">{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span
+              ><span class="news-story-line"></span>
+            </div>
+            <p class="news-story-date">{{ item.publishDate | date: 'MMMM d, y' }}</p>
+            <h2>{{ lang.pick(item.title_Ar, item.title_En) }}</h2>
+            <p class="news-story-description">
+              {{ lang.pick(item.description_Ar, item.description_En) }}
+            </p>
+            <a [routerLink]="['/news', item.id]">{{ 'Read more' | tr }} <span>→</span></a>
+          </div>
+        </article>
+      }
+    </section>
+  </main>
+  <section class="pages-newsletter">
+    <div class="container col-lg-10">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-7">
+          <div class="pages-newsletter-content">
+            <h2>{{ 'Join our newsletter' | tr }}</h2>
+
+            <p>
+              {{ 'Company news and investment updates, a few times a year — nothing more.' | tr }}
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <form class="pages-newsletter-form">
+            <input type="email" [placeholder]="'Your email address' | tr" />
+
+            <button type="submit">
+              {{ 'Subscribe' | tr }}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-site-footer></app-site-footer>
+</div>

@@ -1,0 +1,570 @@
+/* ==================================================
+   CONTACT PAGE — ARABIC
+================================================== */
+
+.contact-ar {
+  .contact-hero {
+    direction: rtl;
+    text-align: right;
+
+    > div {
+      margin-left: auto;
+      margin-right: 0;
+      transform: translateX(-5rem);
+    }
+
+    .contact-breadcrumb,
+    .contact-hero-title,
+    .contact-hero-description {
+      direction: rtl;
+      text-align: right;
+    }
+  }
+
+  .contact-wrapper {
+    direction: rtl;
+
+    .contact-info {
+      direction: rtl;
+      text-align: right;
+
+      h2 {
+        text-align: right;
+      }
+    }
+
+    .contact-form {
+      direction: rtl;
+
+      input,
+      textarea {
+        direction: rtl;
+        text-align: right;
+      }
+
+      button {
+        direction: rtl;
+      }
+    }
+  }
+
+  .pages-newsletter {
+    direction: rtl;
+
+    .row {
+      direction: rtl;
+    }
+
+    .pages-newsletter-content {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .pages-newsletter-form {
+      direction: rtl;
+
+      input {
+        direction: rtl;
+        text-align: right;
+      }
+    }
+  }
+
+  .pages-footer-content {
+    direction: rtl;
+
+    .pages-footer-brand,
+    .pages-footer-links,
+    .pages-footer-office {
+      direction: rtl;
+      text-align: right;
+    }
+  }
+
+  .pages-footer-bottom {
+    direction: rtl;
+  }
+}
+
+/* زر المنيو البديل */
+.contact-page .contact-menu-button {
+  display: none;
+}
+
+.contact-success {
+  margin-top: 12px;
+}
+
+/* ==================================================
+   CONTACT PAGE — PHONE ONLY
+================================================== */
+
+@media (max-width: 767px) {
+  .contact-page {
+    width: 100%;
+    min-width: 0;
+
+    /* NAVBAR */
+    .pages-navbar {
+      position: fixed !important;
+      inset: 0 0 auto !important;
+      z-index: 1000;
+
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      align-items: center !important;
+
+      width: 100% !important;
+      height: auto !important;
+      min-height: 72px !important;
+      padding: 12px 18px !important;
+      margin: 0 !important;
+      gap: 10px;
+      border-radius: 0 !important;
+      background: #0e1a33 !important;
+
+      .pages-navbar-brand {
+        display: flex !important;
+        align-items: center;
+        gap: 8px;
+        min-width: 0;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      .pages-navbar-logo {
+        width: 22px !important;
+        height: 30px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        object-fit: contain;
+      }
+
+      .pages-navbar-name {
+        margin: 0 !important;
+        padding: 0 !important;
+
+        a {
+          font-size: 17px !important;
+          line-height: 1.5;
+          white-space: nowrap;
+          text-decoration: none;
+          color: #f7f3ea;
+        }
+
+        b {
+          color: #dcb679;
+        }
+      }
+
+      > app-language-toggle {
+        display: flex !important;
+        align-items: center;
+        flex: 0 0 auto;
+        margin: 0 !important;
+        margin-inline-start: auto !important;
+      }
+
+      > .contact-menu-button {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 40px;
+
+        width: 40px;
+        height: 40px;
+        padding: 7px;
+        margin: 0;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+
+        img {
+          display: block;
+          width: 26px;
+          height: 26px;
+          object-fit: contain;
+        }
+      }
+
+      > .pages-navbar-links {
+        display: none !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: auto !important;
+        right: 18px !important;
+
+        width: min(260px, calc(100vw - 36px)) !important;
+        height: auto !important;
+        max-height: calc(100dvh - 90px);
+        overflow-y: auto;
+
+        margin: 0 !important;
+        padding: 12px !important;
+        gap: 4px;
+        background: #0e1a33;
+        border: 1px solid #28405f;
+        border-radius: 6px;
+
+        &.menu-open {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: stretch !important;
+        }
+
+        a {
+          display: block;
+          padding: 12px !important;
+          font-size: 15px !important;
+          line-height: 1.7;
+          text-align: start;
+          text-decoration: none;
+          color: #f7f3ea;
+
+          &:hover,
+          &:focus-visible {
+            color: #dcb679;
+          }
+        }
+      }
+    }
+
+    /* HERO */
+    .contact-hero {
+      height: auto !important;
+      min-height: 0 !important;
+      padding: 120px 22px 48px !important;
+
+      > div {
+        position: relative !important;
+        inset: auto !important;
+        transform: none !important;
+
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .contact-breadcrumb {
+        margin-bottom: 24px !important;
+        font-size: 13px !important;
+        line-height: 1.8;
+        color: #a8b2c3 !important;
+
+        a {
+          font-size: inherit !important;
+          color: inherit;
+        }
+      }
+
+      .contact-hero-title {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+        margin: 0 0 20px !important;
+        font-size: 36px !important;
+        line-height: 1.3 !important;
+        color: #f7f3ea;
+      }
+
+      .contact-hero-description {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 15px !important;
+        line-height: 1.9 !important;
+        color: #b7c0cf !important;
+      }
+    }
+
+    /* FORM + MAP */
+    .contact-section {
+      padding: 40px 22px !important;
+
+      > .container {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+      }
+
+      .contact-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 32px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .contact-info,
+      .contact-map {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .contact-info h2 {
+        font-size: 26px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 24px;
+      }
+
+      .contact-form {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 14px;
+
+        input,
+        textarea,
+        button {
+          width: 100% !important;
+          max-width: 100% !important;
+          min-width: 0;
+          margin: 0 !important;
+          font-size: 16px !important;
+          box-sizing: border-box;
+        }
+
+        input,
+        textarea {
+          padding: 14px !important;
+        }
+
+        input,
+        button {
+          min-height: 48px;
+        }
+
+        textarea {
+          min-height: 150px;
+          resize: vertical;
+        }
+      }
+
+      .contact-map {
+        height: 300px !important;
+
+        iframe {
+          display: block;
+          width: 100% !important;
+          height: 100% !important;
+          border: 0;
+        }
+      }
+    }
+
+    /* NEWSLETTER */
+    .pages-newsletter {
+      padding: 36px 22px !important;
+
+      > .container {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+      }
+
+      .pages-newsletter-content {
+        h2 {
+          font-size: 26px !important;
+          line-height: 1.6 !important;
+        }
+
+        p {
+          font-size: 14px !important;
+          line-height: 1.9 !important;
+        }
+      }
+
+      .pages-newsletter-form {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 12px;
+
+        input,
+        button {
+          width: 100% !important;
+          min-width: 0;
+          min-height: 48px;
+          font-size: 16px !important;
+        }
+
+        input {
+          border: 1px solid #28405f !important;
+          padding: 12px 14px !important;
+        }
+      }
+    }
+
+    /* ARABIC */
+    &.contact-ar {
+      direction: rtl;
+      text-align: right;
+
+      .pages-navbar,
+      .pages-navbar-brand {
+        direction: rtl !important;
+      }
+
+      .pages-navbar > .pages-navbar-links {
+        left: 18px !important;
+        right: auto !important;
+      }
+
+      .pages-navbar-name a,
+      .pages-navbar-links a,
+      .contact-hero p,
+      .contact-hero a,
+      .contact-info h2,
+      .contact-form input,
+      .contact-form textarea,
+      .contact-form button,
+      .contact-success,
+      .pages-newsletter-content h2,
+      .pages-newsletter-content p,
+      .pages-newsletter-form input,
+      .pages-newsletter-form button {
+        font-family: 'Noto Kufi Arabic', sans-serif !important;
+        letter-spacing: 0 !important;
+      }
+
+      .contact-hero .contact-hero-title {
+        font-size: 28px !important;
+        line-height: 1.8 !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .contact-page .pages-navbar {
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    padding: 14px 28px !important;
+    gap: 18px;
+
+    > app-language-toggle {
+      display: flex !important;
+      flex: 0 0 auto;
+      margin: 0 !important;
+      margin-inline-start: auto !important;
+    }
+
+    > .contact-menu-button {
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 44px;
+
+      width: 44px;
+      height: 44px;
+      padding: 8px;
+      margin: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+
+      img {
+        display: block;
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+      }
+    }
+
+    > .pages-navbar-links {
+      display: none !important;
+      position: absolute !important;
+      top: 100% !important;
+      left: auto !important;
+      right: 28px !important;
+
+      width: 280px !important;
+      height: auto !important;
+      max-height: calc(100dvh - 100px);
+      overflow-y: auto;
+      margin: 0 !important;
+      padding: 14px !important;
+      gap: 4px;
+
+      background: #0e1a33;
+      border: 1px solid #28405f;
+      border-radius: 6px;
+
+      &.menu-open {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+
+      a {
+        display: block;
+        padding: 12px 14px !important;
+        color: #f7f3ea;
+        font-size: 16px !important;
+        text-align: start;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .contact-page.contact-ar .pages-navbar {
+    direction: rtl !important;
+
+    .pages-navbar-brand {
+      direction: rtl !important;
+    }
+
+    > .pages-navbar-links {
+      direction: rtl;
+      left: 28px !important;
+      right: auto !important;
+    }
+  }
+}
+/* التليفون */
+@media (max-width: 767px) {
+  .contact-page .pages-navbar {
+    z-index: 2000 !important;
+    overflow: visible !important;
+  }
+
+  .contact-page .pages-navbar-links {
+    z-index: 2001 !important;
+    pointer-events: auto !important;
+
+    a {
+      position: relative;
+      z-index: 1;
+      pointer-events: auto !important;
+      cursor: pointer;
+    }
+  }
+}
+
+/* التابلت */
+@media (min-width: 768px) and (max-width: 992px) {
+  .contact-page .pages-navbar {
+    z-index: 2000 !important;
+    overflow: visible !important;
+  }
+
+  .contact-page .pages-navbar-links {
+    z-index: 2001 !important;
+    pointer-events: auto !important;
+
+    a {
+      position: relative;
+      z-index: 1;
+      pointer-events: auto !important;
+      cursor: pointer;
+    }
+  }
+}

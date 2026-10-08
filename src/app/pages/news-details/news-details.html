@@ -1,0 +1,159 @@
+<div class="news-details-page" [class.news-details-ar]="lang.language() === 'ar'">
+  <!-- ================= NAVBAR ================= -->
+
+  <header>
+    <section class="pages-navbar">
+      <div class="pages-navbar-brand">
+        <img class="pages-navbar-logo" src="./photos/ewan_logo.png" alt="Ewan Holding" />
+
+        <p class="pages-navbar-name">
+          <a routerLink="/"> Ewan <b>Holding</b> </a>
+        </p>
+      </div>
+
+      <nav class="pages-navbar-links" [class.menu-open]="menuOpen">
+        <a routerLink="/about">
+          {{ 'About' | tr }}
+        </a>
+
+        <a routerLink="/companies">
+          {{ 'Companies' | tr }}
+        </a>
+
+        <a routerLink="/investment">
+          {{ 'Investment' | tr }}
+        </a>
+
+        <a routerLink="/news">
+          {{ 'News' | tr }}
+        </a>
+
+        <a routerLink="/contact">
+          {{ 'Contact' | tr }}
+        </a>
+      </nav>
+
+      <button class="pages-navbar-contact" type="button" (click)="lang.toggle()">
+        {{ lang.language() === 'ar' ? 'EN' : 'عربي' }}
+      </button>
+
+      <button
+        type="button"
+        class="pages-navbar-menu-button"
+        (click)="menuOpen = !menuOpen"
+        [attr.aria-expanded]="menuOpen"
+        aria-label="Toggle navigation menu"
+      >
+        <img class="pages-navbar-menu" src="./photos/menu.png" alt="" />
+      </button>
+    </section>
+  </header>
+
+  @if (item()) {
+    <main>
+      <!-- ================= HERO ================= -->
+
+      <section class="news-detail-hero">
+        <div class="news-detail-hero-background">
+          <img [src]="image()" [alt]="title()" />
+        </div>
+
+        <div class="news-detail-hero-content">
+          <p class="news-detail-breadcrumb">
+            <a routerLink="/">
+              {{ 'Home' | tr }}
+            </a>
+
+            <span>/</span>
+
+            <a routerLink="/news">
+              {{ 'News' | tr }}
+            </a>
+          </p>
+
+          @if (category()) {
+            <p class="news-detail-category">
+              {{ category() }}
+            </p>
+          }
+
+          <h1>
+            {{ title() }}
+          </h1>
+
+          <p class="news-detail-date">
+            {{ publishDate() | date: 'longDate' }}
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= ARTICLE ================= -->
+
+      <section class="news-detail-body">
+        <div class="news-detail-body-inner">
+          <div class="news-detail-meta">
+            <span>
+              {{ publishDate() | date: 'dd' }}
+            </span>
+
+            <i></i>
+
+            <p>
+              {{ publishDate() | date: 'MMMM y' }}
+            </p>
+          </div>
+
+          <article class="news-detail-copy">
+            <h2>
+              {{ title() }}
+            </h2>
+
+            <p>
+              {{ description() }}
+            </p>
+
+            <a routerLink="/news">
+              <span>←</span>
+
+              {{ 'News' | tr }}
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+  }
+
+  <!-- ================= NEWSLETTER ================= -->
+
+  <section class="pages-newsletter">
+    <div class="container col-lg-10">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-7">
+          <div class="pages-newsletter-content">
+            <h2>
+              {{ 'Join our newsletter' | tr }}
+            </h2>
+
+            <p>
+              {{ 'Company news and investment updates, a few times a year — nothing more.' | tr }}
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <form class="pages-newsletter-form">
+            <input type="email" [placeholder]="'Your email address' | tr" />
+
+            <button type="submit">
+              {{ 'Subscribe' | tr }}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DYNAMIC FOOTER ================= -->
+
+  <app-site-footer></app-site-footer>
+</div>

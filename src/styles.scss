@@ -1,0 +1,36 @@
+@import "./styles/00-base";
+@import "./styles/01-home";
+@import "./styles/02-site-footer";
+@import "./styles/03-about";
+@import "./styles/04-contact";
+@import "./styles/05-companies";
+@import "./styles/06-furnished-apartments";
+@import "./styles/07-human-resources";
+@import "./styles/08-investment";
+@import "./styles/09-logistics";
+@import "./styles/10-news";
+@import "./styles/11-maintenance-operations";
+@import "./styles/12-news-details";
+@import "./styles/13-security-services";
+@import "./styles/14-technical-contracting";
+@import "./styles/15-terms";
+@import "./styles/16-pages-footer";
+@import "./styles/17-pages-newsletter";
+@import "./styles/18-pages-navbar";
+// @import "./styles/04-home-ar-mobile-clean";
+// @import "./styles/19-home-ar-mobile-fixes";
+@import "./styles/19-about-tablet-restored";
+
+/* Company details: Arabic mobile overview image alignment only. */
+@media (max-width: 767px) {
+  html[lang="ar"] .company-detail-page .logistics-overview .logistics-overview-visual {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: calc(100% - 48px) !important;
+    max-width: calc(100% - 48px) !important;
+    transform: none !important;
+  }
+}

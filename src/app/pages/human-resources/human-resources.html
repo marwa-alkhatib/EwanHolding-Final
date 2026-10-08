@@ -1,0 +1,407 @@
+<header>
+  <section class="pages-navbar">
+    <div class="pages-navbar-brand">
+      <img class="pages-navbar-logo" src="/photos/ewan_logo.png" alt="Ewan Holding Logo" />
+
+      <p class="pages-navbar-name">
+        <a href="/">
+          {{ 'Ewan' | tr }} <b>{{ 'Holding' | tr }}</b>
+        </a>
+      </p>
+    </div>
+
+    <nav class="pages-navbar-links">
+      <a href="/about" target="_blank">{{ 'About' | tr }}</a>
+
+      <a href="/companies" target="_blank">{{ 'Companies' | tr }}</a>
+
+      <a href="/investment" target="_blank">{{ 'Investment' | tr }}</a>
+
+      <a href="/news" target="_blank">{{ 'News' | tr }}</a>
+
+      <a href="/contact" target="_blank">{{ 'Contact' | tr }}</a>
+    </nav>
+
+    <app-language-toggle></app-language-toggle>
+
+    <img class="pages-navbar-menu" src="/photos/menu.png" alt="Open navigation menu" />
+  </section>
+</header>
+
+<main>
+  <section class="hr-hero">
+    <div class="hr-hero-content">
+      <p class="hr-hero-label">{{ 'EWAN HUMAN RESOURCES' | tr }}</p>
+
+      <h1 class="hr-hero-title">
+        {{ 'People power' | tr }} <br />
+        <span>{{ 'progress.' | tr }}</span>
+      </h1>
+
+      <p class="hr-hero-description">
+        {{
+          'Recruitment, training and workforce solutions built around one belief — when people grow, businesses grow.'
+            | tr
+        }}
+      </p>
+
+      <a href="#hr-services" target="_blank" class="hr-hero-link">
+        {{ 'EXPLORE OUR SERVICES' | tr }}
+        <span>↓</span>
+      </a>
+    </div>
+
+    <div class="hr-hero-visual">
+      <div class="hr-hero-image">
+        <img src="/photos/humanHreo.png" alt="Ewan Human Resources" />
+      </div>
+
+      <div class="hr-hero-note">
+        <span>{{ 'PEOPLE' | tr }}</span>
+        <span>{{ 'OPPORTUNITY' | tr }}</span>
+        <span>{{ 'GROWTH' | tr }}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="hr-approach">
+    <div class="hr-approach-top">
+      <div class="hr-approach-heading">
+        <p class="hr-approach-label">{{ '01 — OUR APPROACH' | tr }}</p>
+
+        <h2>
+          {{ 'More than HR' | tr }}
+          <span>{{ 'A partner in progress' | tr }}</span>
+        </h2>
+      </div>
+
+      <p class="hr-approach-intro">
+        {{
+          'We go beyond traditional HR services to create meaningful opportunities — connecting the right people with the right businesses, and helping both grow.'
+            | tr
+        }}
+      </p>
+    </div>
+
+    <div class="hr-approach-content">
+      <div class="hr-approach-values">
+        <div class="hr-approach-value">
+          <span class="hr-approach-value-number">01</span>
+
+          <h3>{{ 'Attract' | tr }}</h3>
+
+          <p>{{ 'Top Talent' | tr }}</p>
+        </div>
+
+        <div class="hr-approach-value">
+          <span class="hr-approach-value-number">02</span>
+
+          <h3>{{ 'Develop' | tr }}</h3>
+
+          <p>{{ 'Capabilities' | tr }}</p>
+        </div>
+
+        <div class="hr-approach-value">
+          <span class="hr-approach-value-number">03</span>
+
+          <h3>{{ 'Build' | tr }}</h3>
+
+          <p>{{ 'Stronger Teams' | tr }}</p>
+        </div>
+
+        <div class="hr-approach-value">
+          <span class="hr-approach-value-number">04</span>
+
+          <h3>{{ 'Create' | tr }}</h3>
+
+          <p>{{ 'Lasting Impact' | tr }}</p>
+        </div>
+      </div>
+
+      <div class="hr-approach-statement">
+        <span class="hr-approach-big-number"> 01 </span>
+
+        <p>
+          {{ 'PEOPLE' | tr }} <br />
+          {{ 'BUSINESSES' | tr }} <br />
+          {{ 'A BRIGHTER' | tr }} <br />
+          <span>{{ 'TOMORROW' | tr }}</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="hr-services" id="hr-services">
+    <div class="hr-services-head">
+      <div class="hr-services-heading">
+        <p class="hr-services-label">{{ '02 — OUR SERVICES' | tr }}</p>
+
+        <h2 class="hr-services-title">
+          {{ 'Solutions for' | tr }}
+          <span>{{ 'every stage' | tr }}</span>
+        </h2>
+      </div>
+
+      <p class="hr-services-intro">
+        {{
+          'From talent acquisition to development, our services are designed to support individuals and organizations at every step.'
+            | tr
+        }}
+      </p>
+    </div>
+
+    <div class="hr-services-grid">
+      <!-- Recruitment -->
+      <article class="hr-service-card">
+        <div class="hr-service-image">
+          <img src="/photos/hu1.png" alt="Ewan Recruitment Services" />
+
+          <span class="hr-service-number">01</span>
+        </div>
+
+        <div class="hr-service-content">
+          <p class="hr-service-category">{{ 'TALENT ACQUISITION' | tr }}</p>
+
+          <h3>{{ 'Recruitment Services' | tr }}</h3>
+
+          <p class="hr-service-description">
+            {{
+              'Access to a wide range of skilled professionals with a hiring process built for compliance and speed.'
+                | tr
+            }}
+          </p>
+
+          <a href="#" target="_blank"> {{ 'Learn more →' | tr }} </a>
+        </div>
+      </article>
+
+      <!-- Training -->
+      <article class="hr-service-card">
+        <div class="hr-service-image">
+          <img src="/photos/hu2.png" alt="Ewan Training and Development" />
+
+          <span class="hr-service-number">02</span>
+        </div>
+
+        <div class="hr-service-content">
+          <p class="hr-service-category">{{ 'DEVELOPMENT' | tr }}</p>
+
+          <h3>{{ 'Training and Development' | tr }}</h3>
+
+          <p class="hr-service-description">
+            {{ 'Customized programs to equip your workforce with the skills of tomorrow.' | tr }}
+          </p>
+
+          <a href="#" target="_blank"> {{ 'Learn more →' | tr }} </a>
+        </div>
+      </article>
+
+      <!-- Consulting -->
+      <article class="hr-service-card">
+        <div class="hr-service-image">
+          <img src="/photos/hu3.png" alt="Ewan HR Consulting" />
+
+          <span class="hr-service-number">03</span>
+        </div>
+
+        <div class="hr-service-content">
+          <p class="hr-service-category">{{ 'STRATEGY' | tr }}</p>
+
+          <h3>{{ 'HR Consulting' | tr }}</h3>
+
+          <p class="hr-service-description">
+            {{
+              'Strategic guidance to optimize your people operations and drive performance.' | tr
+            }}
+          </p>
+
+          <a href="#" target="_blank"> {{ 'Learn more →' | tr }} </a>
+        </div>
+      </article>
+
+      <!-- Musaned -->
+      <article class="hr-service-card">
+        <div class="hr-service-image">
+          <img src="/photos/hu4.png" alt="Ewan Musaned Partnership" />
+
+          <span class="hr-service-number">04</span>
+        </div>
+
+        <div class="hr-service-content">
+          <p class="hr-service-category">{{ 'PARTNERSHIP' | tr }}</p>
+
+          <h3>{{ 'Musaned Partnership' | tr }}</h3>
+
+          <p class="hr-service-description">
+            {{
+              'Full compliance support for domestic labor recruitment — visas, contracts and worker rights.'
+                | tr
+            }}
+          </p>
+
+          <a href="#" target="_blank"> {{ 'Learn more →' | tr }} </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="hr-impact">
+    <div class="hr-impact-stats">
+      <p class="hr-impact-label">{{ '03 — OUR IMPACT' | tr }}</p>
+
+      <h2 class="hr-impact-title">
+        {{ 'People numbers' | tr }}
+        <span>{{ 'that matter' | tr }}</span>
+      </h2>
+
+      <p class="hr-impact-description">
+        {{
+          'Our impact is measured by the people we connect, the businesses we support and the opportunities we help create.'
+            | tr
+        }}
+      </p>
+
+      <div class="hr-impact-numbers">
+        <div class="hr-impact-number">
+          <h3>{{ '10K+' | tr }}</h3>
+
+          <p>
+            {{ 'Talents' | tr }} <br />
+            {{ 'Placed' | tr }}
+          </p>
+        </div>
+
+        <div class="hr-impact-number">
+          <h3>200+</h3>
+
+          <p>
+            {{ 'Corporate' | tr }} <br />
+            {{ 'Clients' | tr }}
+          </p>
+        </div>
+
+        <div class="hr-impact-number">
+          <h3>95%</h3>
+
+          <p>
+            {{ 'Client' | tr }} <br />
+            {{ 'Satisfaction' | tr }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hr-impact-visual">
+      <img src="/photos/huFainal.png" alt="Ewan Human Resources Impact" />
+
+      <div class="hr-impact-overlay">
+        <p>
+          {{ 'INVEST' | tr }} <br />
+          {{ 'IN PEOPLE' | tr }} <br />
+          <span>{{ 'INVEST' | tr }}</span> <br />
+          {{ 'IN TOMORROW' | tr }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="hr-why">
+    <div class="hr-why-head">
+      <div class="hr-why-heading">
+        <p class="hr-why-label">{{ '04 — WHY EWAN HR' | tr }}</p>
+
+        <h2 class="hr-why-title">
+          {{ 'A human approach' | tr }}
+          <span>{{ 'to real opportunities' | tr }}</span>
+        </h2>
+      </div>
+
+      <div class="hr-why-action">
+        <p>
+          {{
+            'We combine experience, flexibility and a deep understanding of the Saudi market to create HR solutions that make a meaningful difference.'
+              | tr
+          }}
+        </p>
+
+        <a href="/contact" target="_blank">
+          {{ 'START YOUR JOURNEY' | tr }}
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hr-why-values">
+      <article class="hr-why-value">
+        <span class="hr-why-number">01</span>
+
+        <div class="hr-why-icon">✦</div>
+
+        <h3>{{ 'Expertise' | tr }}</h3>
+
+        <p>
+          {{
+            'Years of experience in the HR field, backed by an understanding of people, businesses and the local market.'
+              | tr
+          }}
+        </p>
+      </article>
+
+      <article class="hr-why-value">
+        <span class="hr-why-number">02</span>
+
+        <div class="hr-why-icon">◇</div>
+
+        <h3>{{ 'Flexibility' | tr }}</h3>
+
+        <p>
+          {{
+            'Solutions designed around your needs, adapting to different industries, teams and business goals.'
+              | tr
+          }}
+        </p>
+      </article>
+
+      <article class="hr-why-value">
+        <span class="hr-why-number">03</span>
+
+        <div class="hr-why-icon">↗</div>
+
+        <h3>{{ 'Growth' | tr }}</h3>
+
+        <p>
+          {{
+            'Helping people unlock their potential while giving businesses the talent they need to move forward.'
+              | tr
+          }}
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="pages-newsletter">
+    <div class="container col-lg-10">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-7">
+          <div class="pages-newsletter-content">
+            <h2>{{ 'Join our newsletter' | tr }}</h2>
+
+            <p>
+              {{ 'Company news and investment updates, a few times a year — nothing more.' | tr }}
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <form class="pages-newsletter-form">
+            <input type="email" [placeholder]="'Your email address' | tr" />
+
+            <button type="submit">{{ 'Subscribe' | tr }}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-site-footer></app-site-footer>

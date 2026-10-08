@@ -1,0 +1,309 @@
+@if (company()) {
+  <div class="company-detail-page" [class.company-detail-ar]="lang.language() === 'ar'">
+    <header>
+      <section class="pages-navbar">
+        <div class="pages-navbar-brand">
+          <img class="pages-navbar-logo" src="/photos/ewan_logo.png" alt="Ewan Holding Logo" />
+
+          <p class="pages-navbar-name">
+            <a routerLink="/">
+              {{ 'Ewan' | tr }} <b>{{ 'Holding' | tr }}</b>
+            </a>
+          </p>
+        </div>
+
+        <nav
+          id="company-detail-navigation"
+          class="pages-navbar-links"
+          [class.menu-open]="menuOpen"
+          (keydown.escape)="menuOpen = false"
+        >
+          <a routerLink="/about" (click)="menuOpen = false">
+            {{ 'About' | tr }}
+          </a>
+
+          <a routerLink="/companies" (click)="menuOpen = false">
+            {{ 'Companies' | tr }}
+          </a>
+
+          <a routerLink="/investment" (click)="menuOpen = false">
+            {{ 'Investment' | tr }}
+          </a>
+
+          <a routerLink="/news" (click)="menuOpen = false">
+            {{ 'News' | tr }}
+          </a>
+
+          <a routerLink="/contact" (click)="menuOpen = false">
+            {{ 'Contact' | tr }}
+          </a>
+        </nav>
+
+        <app-language-toggle></app-language-toggle>
+
+        <img
+          class="pages-navbar-menu"
+          src="/photos/menu.png"
+          alt=""
+          role="button"
+          tabindex="0"
+          aria-controls="company-detail-navigation"
+          [attr.aria-expanded]="menuOpen"
+          [attr.aria-label]="
+            lang.language() === 'ar' ? 'فتح وإغلاق القائمة' : 'Toggle navigation menu'
+          "
+          (click)="menuOpen = !menuOpen"
+          (keydown.enter)="menuOpen = !menuOpen"
+          (keydown.space)="$event.preventDefault(); menuOpen = !menuOpen"
+          (keydown.escape)="menuOpen = false"
+        />
+      </section>
+    </header>
+
+    <main>
+      <!-- HERO -->
+
+      <section class="logistics-hero">
+        <div class="logistics-hero-background">
+          @if (heroImage) {
+            <img [src]="heroImage" [alt]="companyName()" />
+          }
+        </div>
+
+        <div class="logistics-hero-content">
+          <p class="logistics-hero-label">
+            {{ companyName() }}
+          </p>
+
+          <h1 class="logistics-hero-title">
+            {{ heroTitle() }}
+          </h1>
+
+          <p class="logistics-hero-description">
+            {{ heroDescription() }}
+          </p>
+
+          <a href="#logistics-overview" class="logistics-hero-link">
+            {{ 'Discover more' | tr }}
+            <span>→</span>
+          </a>
+        </div>
+
+        <div class="logistics-hero-note">
+          <span>{{ 'PEOPLE' | tr }}</span>
+          <span>{{ 'GOODS' | tr }}</span>
+          <span>{{ 'OPPORTUNITIES' | tr }}</span>
+          <span>{{ 'FURTHER' | tr }}</span>
+        </div>
+      </section>
+
+      <!-- OVERVIEW -->
+
+      <section class="logistics-overview" id="logistics-overview">
+        <div class="logistics-overview-content">
+          <p class="logistics-overview-label">
+            {{ '01 — OVERVIEW' | tr }}
+          </p>
+
+          <h2 class="logistics-overview-title">
+            {{ overviewTitle() }}
+          </h2>
+
+          <p class="logistics-overview-description">
+            {{ overviewDescription1() }}
+          </p>
+
+          <p class="logistics-overview-description">
+            {{ overviewDescription2() }}
+          </p>
+
+          @if (company()?.websiteUrl) {
+            <a
+              [href]="company()!.websiteUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="logistics-overview-link"
+            >
+              {{ 'View company' | tr }}
+              <span>→</span>
+            </a>
+          }
+        </div>
+
+        <div class="logistics-overview-visual">
+          @if (overviewImage) {
+            <img [src]="overviewImage" [alt]="companyName()" />
+          }
+
+          <div class="logistics-overview-note">
+            <span>{{ 'FROM' | tr }}</span>
+            <span>{{ 'WAREHOUSE' | tr }}</span>
+            <span>{{ "TO WHAT'S" | tr }}</span>
+            <span>{{ 'NEXT' | tr }}</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+
+      <section class="logistics-services">
+        <div class="logistics-services-head">
+          <div>
+            <p class="logistics-services-label">
+              {{ '02 — OUR SERVICES' | tr }}
+            </p>
+
+            <h2 class="logistics-services-title">
+              {{ 'What we deliver' | tr }}
+            </h2>
+          </div>
+
+          <div class="logistics-services-note">
+            <span>{{ 'SOLUTIONS THAT' | tr }}</span>
+            <span>{{ 'KEEP YOU AHEAD' | tr }}</span>
+          </div>
+        </div>
+
+        <div class="logistics-services-grid">
+          @for (service of services; track service.id; let i = $index) {
+            <div class="logistics-service">
+              <span class="logistics-service-number">
+                {{ number(i) }}
+              </span>
+
+              <div class="logistics-service-icon">◇</div>
+
+              <h3>{{ serviceName(service) }}</h3>
+
+              <p>{{ serviceDescription(service) }}</p>
+            </div>
+          }
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US -->
+
+      <section class="logistics-standard">
+        <div class="logistics-standard-background">
+          @if (whyChooseUsImage) {
+            <img [src]="whyChooseUsImage" [alt]="companyName()" />
+          }
+        </div>
+
+        <div class="logistics-standard-content">
+          <div class="logistics-standard-head">
+            <div>
+              <p class="logistics-standard-label">
+                {{ '03 — WHY CHOOSE US' | tr }}
+              </p>
+
+              <h2 class="logistics-standard-title">
+                {{ whyChooseUsTitle() }}
+              </h2>
+            </div>
+
+            <div class="logistics-standard-note">
+              <span>{{ 'ANY' | tr }}</span>
+              <span>{{ 'DISTANCE' | tr }}</span>
+              <span>{{ 'A CLOSER' | tr }}</span>
+              <span>{{ 'TOMORROW' | tr }}</span>
+            </div>
+          </div>
+
+          <div class="logistics-standard-grid">
+            @for (feature of features; track feature.id; let i = $index) {
+              <div class="logistics-standard-item">
+                <span class="logistics-standard-number">
+                  {{ number(i) }}
+                </span>
+
+                <h3>{{ featureTitle(feature) }}</h3>
+
+                <p>{{ featureDescription(feature) }}</p>
+              </div>
+            }
+          </div>
+        </div>
+      </section>
+
+      <!-- OTHER COMPANIES -->
+
+      <section class="logistics-companies">
+        <div class="logistics-companies-head">
+          <div>
+            <p class="logistics-companies-label">
+              {{ '04 — OUR GROUP' | tr }}
+            </p>
+
+            <h2 class="logistics-companies-title">
+              {{ 'Other companies' | tr }}
+            </h2>
+          </div>
+
+          <a routerLink="/companies" class="logistics-companies-all">
+            {{ 'VIEW ALL COMPANIES' | tr }}
+            <span>→</span>
+          </a>
+        </div>
+
+        <div class="logistics-companies-grid">
+          @for (item of otherCompanies; track item.id; let i = $index) {
+            <a [routerLink]="['/companies', item.id]" class="logistics-company-card">
+              <div class="logistics-company-image">
+                @if (otherCompanyImage(item)) {
+                  <img [src]="otherCompanyImage(item)" [alt]="otherCompanyName(item)" />
+                }
+              </div>
+
+              <div class="logistics-company-content">
+                <span class="logistics-company-number">
+                  {{ number(i) }}
+                </span>
+
+                <p class="logistics-company-category">
+                  {{ 'EWAN HOLDING' | tr }}
+                </p>
+
+                <h3>{{ otherCompanyName(item) }}</h3>
+
+                <span class="logistics-company-arrow">→</span>
+              </div>
+            </a>
+          }
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+
+      <section class="pages-newsletter">
+        <div class="container col-lg-10">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-7">
+              <div class="pages-newsletter-content">
+                <h2>{{ 'Join our newsletter' | tr }}</h2>
+
+                <p>
+                  {{
+                    'Company news and investment updates, a few times a year — nothing more.' | tr
+                  }}
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <form class="pages-newsletter-form">
+                <input type="email" [placeholder]="'Your email address' | tr" />
+
+                <button type="submit">
+                  {{ 'Subscribe' | tr }}
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <app-site-footer></app-site-footer>
+  </div>
+}

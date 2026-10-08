@@ -1,0 +1,1374 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap');
+/* font-family: "Cormorant Garamond", serif; */
+/* font-family: "Montserrat", sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* main section================================================================ */
+
+.hero-section {
+  position: relative;
+  height: 120vh;
+  overflow: hidden;
+
+  /* ================= BACKGROUND ================= */
+
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 120vh;
+
+    object-fit: cover;
+  }
+
+  /* ================= OVERLAY ================= */
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 120vh;
+
+    background: rgba(70, 70, 70, 0.6);
+
+    z-index: 2;
+  }
+
+  /* ================= NAVBAR ================= */
+
+  .hero-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10rem;
+    padding-right: 15rem;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+
+    /* LOGO */
+
+    div {
+      display: flex;
+      gap: 12px;
+      text-decoration: none;
+
+      img {
+        height: 43px;
+        width: 24px;
+
+        padding-top: 1rem;
+      }
+
+      p {
+        padding-top: 1rem;
+        a {
+          color: #f8f7f6;
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 20px;
+          text-decoration: none;
+
+          b {
+            color: #dcb679;
+          }
+        }
+      }
+    }
+
+    /* LINKS */
+
+    nav {
+      display: flex;
+      margin-right: 2rem;
+
+      a {
+        text-decoration: none;
+
+        padding: 18px;
+
+        color: #e4e0d2;
+      }
+    }
+
+    /* CONTACT BUTTON */
+
+    button {
+      background-color: transparent;
+      border-color: #dcb679;
+      a {
+        color: #dcb679;
+        text-decoration: none;
+      }
+    }
+
+    /* SCROLL GOLD LINE */
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: var(--scroll-width, 0%);
+      height: 1px;
+
+      background-color: #dcb679;
+    }
+
+    /* NAVBAR AFTER SCROLL */
+
+    &.scrolled {
+      background-color: #0e1a33;
+    }
+
+    .menu {
+      display: none;
+    }
+  }
+
+  /* ================= HERO CONTENT ================= */
+
+  .hero-content {
+    position: absolute;
+
+    top: 12%;
+    left: 10%;
+
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+
+    .part1 {
+      display: flex;
+      flex-direction: column;
+
+      gap: 10px;
+
+      .p1 {
+        font-size: 15px;
+
+        color: #dcb679;
+      }
+
+      .p2 {
+        color: #f3f0e7;
+
+        font-family: 'Cormorant Garamond', serif;
+
+        font-size: 90px;
+        line-height: 85px;
+
+        i {
+          font-family: 'Cormorant Garamond', serif;
+
+          color: #dcb679;
+
+          font-size: 95px;
+        }
+      }
+    }
+
+    .part2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: #e4e0d2;
+      /* background-color: #0e1a33; */
+
+      .p3 {
+        font-size: large;
+
+        padding-right: 6rem;
+      }
+
+      .p4 {
+        font-size: large;
+
+        padding-right: 3rem;
+        padding-left: 6rem;
+      }
+    }
+  }
+
+  /* ================= MOVING TICKER ================= */
+
+  .hero-ticker {
+    position: absolute;
+    left: 0;
+    bottom: 270px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 3;
+    background-color: #0e1a3388;
+    padding: 1rem 0;
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: tickerMove 10s linear infinite;
+
+      .ticker-content {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        gap: 40px;
+        padding-right: 30px;
+        white-space: nowrap;
+        color: #dcb679;
+        font-size: 13px;
+      }
+    }
+  }
+
+  /* ================= STATS ================= */
+
+  .hero-stats {
+    position: relative;
+
+    z-index: 3;
+
+    .stat-band {
+      /* background-color: #0e1a3388; */
+      position: absolute;
+      top: 852px;
+      /* left:400px; */
+      display: flex;
+      padding: 0 25rem;
+      padding-bottom: 8rem;
+      background-color: #0e1a3370;
+      width: 100%;
+      div {
+        display: flex;
+        flex-direction: column;
+        /* gap: 1rem; */
+        /* background-color: #2a1f0e; */
+        padding: 40px 50px;
+        .stat-num {
+          font-size: 60px;
+          padding: 18px;
+          padding-top: 20px;
+          /* background-color: blue; */
+          color: #dcb679;
+        }
+
+        .stat-label {
+          color: bisque;
+          font-size: 12px;
+          /* background-color: rgb(217, 215, 250); */
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.about-section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 10%;
+  background-color: #f3f0e7;
+  /* min-height: 100vh; */
+
+  .vision-image {
+    position: relative;
+    width: 42%;
+
+    .big-number {
+      position: absolute;
+      top: -190px;
+      left: -80px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 300px;
+      color: #dcb679;
+      opacity: 0.15;
+      z-index: 1;
+    }
+
+    .image-box {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+      border: 1px solid #d8d4ca;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 430px;
+        object-fit: cover;
+        animation: imageZoom 4s ease-in-out infinite alternate;
+      }
+    }
+
+    .image-info {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 20px;
+      color: #5f6270;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+    }
+  }
+
+  .vision-content {
+    width: 46%;
+
+    .small-title {
+      display: block;
+      margin-bottom: 15px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: #5f6270;
+    }
+
+    .vision-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      color: #b4884b;
+    }
+
+    .gold-line {
+      width: 70px;
+      height: 2px;
+      margin: 20px 0 30px;
+      background-color: #b4884b;
+    }
+
+    .vision-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      font-style: italic;
+      line-height: 1.3;
+      color: #0e1a33;
+    }
+  }
+}
+
+.values-section {
+  /* min-height: 100vh; */
+  background-color: #0e1a33;
+  padding: 100px 10%;
+
+  .values-heading {
+    margin-bottom: 70px;
+
+    > p {
+      color: #dcb679;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #f3f0e7;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 55px;
+      font-weight: 700;
+      line-height: 1.05;
+    }
+  }
+
+  .values-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .value-card {
+      position: relative;
+      width: 100%;
+      height: 290px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding: 35px;
+      overflow: hidden;
+
+      border: 1px solid rgba(228, 224, 210, 0.15);
+      background-color: transparent;
+
+      transition:
+        transform 0.35s ease,
+        background-color 0.35s ease;
+
+      span {
+        color: #dcb679;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 32px;
+        font-style: italic;
+        margin-bottom: 30px;
+      }
+
+      h3 {
+        color: #f3f0e7;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+
+      p {
+        color: #e4e0d2;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        width: 0;
+        height: 3px;
+
+        background-color: #dcb679;
+        transition: width 0.35s ease;
+      }
+
+      &:hover {
+        transform: translateY(-8px);
+        background-color: #16223f;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.companies-section {
+  background-color: #f3f0e7;
+  padding: 100px 10%;
+
+  .companies-heading {
+    margin-bottom: 65px;
+
+    > p {
+      color: #b4884b;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #0e1a33;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 60px;
+      line-height: 1;
+    }
+  }
+
+  .companies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    .company-card {
+      position: relative;
+      height: 410px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+
+        transition: transform 0.6s ease;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+
+        background: linear-gradient(to top, rgba(14, 26, 51, 0.75), rgba(14, 26, 51, 0.05) 65%);
+
+        z-index: 1;
+      }
+
+      .company-overlay {
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        z-index: 2;
+
+        transition: bottom 0.4s ease;
+
+        h3 {
+          color: #f3f0e7;
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 28px;
+          margin-bottom: 18px;
+        }
+
+        .company-description {
+          color: #f3f0e7;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 15px;
+          line-height: 1.6;
+
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden;
+          margin-bottom: 0;
+
+          transition:
+            max-height 0.4s ease,
+            opacity 0.3s ease,
+            margin-bottom 0.4s ease;
+        }
+
+        a {
+          display: inline-block;
+
+          color: #dcb679;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 14px;
+
+          text-decoration: none;
+          border-bottom: 1px solid #dcb679;
+          padding-bottom: 4px;
+        }
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+
+        .company-overlay {
+          bottom: 35px;
+
+          .company-description {
+            max-height: 100px;
+            opacity: 1;
+            margin-bottom: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.subscribe-section {
+  position: relative;
+  overflow: hidden;
+
+  /* min-height: 550px; */
+  padding: 60px 12%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #b4884b;
+
+  /* الإضاءة المتحركة */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+
+    width: 45%;
+    height: 100%;
+
+    background: linear-gradient(90deg, transparent, rgba(255, 239, 205, 0.35), transparent);
+
+    animation: subscribeLight 6s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* خط ديكوري كبير على الشمال */
+  &::after {
+    content: '';
+    position: absolute;
+    left: -100px;
+    top: -150px;
+
+    width: 400px;
+    height: 800px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+
+    transform: rotate(-20deg);
+
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .subscribe-left {
+    position: relative;
+    z-index: 2;
+
+    width: 45%;
+
+    .subscribe-label {
+      display: block;
+
+      margin-bottom: 25px;
+
+      color: #f3f0e7;
+
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+
+      letter-spacing: 6px;
+    }
+
+    h2 {
+      color: #0e1a33;
+
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 62px;
+
+      line-height: 0.95;
+
+      margin-bottom: 55px;
+      margin-top: 55px;
+    }
+
+    .subscribe-text {
+      max-width: 530px;
+
+      color: rgba(14, 26, 51, 0.68);
+
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+
+      line-height: 1.7;
+    }
+
+    .small-line {
+      width: 40px;
+      height: 2px;
+
+      margin: 28px 0;
+
+      background-color: #f3f0e7;
+    }
+
+    .subscribe-tags {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+
+      color: rgba(14, 26, 51, 0.65);
+
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+
+      letter-spacing: 4px;
+    }
+  }
+
+  .subscribe-form {
+    position: relative;
+    z-index: 2;
+
+    width: 45%;
+
+    display: flex;
+    align-items: stretch;
+
+    border-bottom: 1px solid rgba(14, 26, 51, 0.45);
+
+    input {
+      flex: 1;
+
+      min-width: 0;
+
+      padding: 18px 10px;
+
+      border: none;
+      outline: none;
+
+      background-color: transparent;
+
+      color: #0e1a33;
+
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+
+      &::placeholder {
+        color: rgba(14, 26, 51, 0.55);
+      }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      padding: 0 18px;
+
+      border: none;
+      border-left: 1px solid rgba(14, 26, 51, 0.45);
+
+      background-color: transparent;
+      color: #0e1a33;
+
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+
+      cursor: pointer;
+
+      span {
+        font-size: 22px;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        span {
+          transform: translateX(6px);
+        }
+      }
+    }
+
+    &:hover {
+      background-color: #162f646c;
+      color: #dcb679;
+
+      transform: translateX(5px);
+    }
+  }
+
+  .subscribe-decor {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+
+    .curve {
+      position: absolute;
+      border: 2px solid rgba(243, 240, 231, 0.22);
+      border-radius: 50%;
+    }
+
+    .curve-one {
+      width: 500px;
+      height: 900px;
+      left: -280px;
+      top: -190px;
+      transform: rotate(-18deg);
+    }
+
+    .curve-two {
+      width: 380px;
+      height: 760px;
+      left: -170px;
+      top: -80px;
+      transform: rotate(-10deg);
+    }
+
+    .circle {
+      position: absolute;
+      border: 2px solid rgba(243, 240, 231, 0.18);
+      border-radius: 50%;
+    }
+
+    .circle-one {
+      width: 420px;
+      height: 420px;
+      right: -120px;
+      bottom: -210px;
+    }
+
+    .circle-two {
+      width: 270px;
+      height: 270px;
+      right: -35px;
+      bottom: -130px;
+    }
+
+    .vertical-line {
+      position: absolute;
+      right: 8%;
+      top: 60px;
+
+      width: 2px;
+      height: 130px;
+
+      background-color: rgba(243, 240, 231, 0.2);
+    }
+  }
+  &.subscribe-ar {
+    flex-direction: row-reverse;
+
+    .subscribe-left {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .subscribe-form {
+      direction: rtl;
+
+      input {
+        direction: rtl;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.news-section {
+  position: relative;
+  overflow: hidden;
+  font-family: 'Cormorant Garamond', serif;
+
+  background-color: #f3f0e7;
+  padding: 110px 10% 90px;
+
+  .news-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 55px;
+
+    .news-heading {
+      > p {
+        margin-bottom: 20px;
+
+        color: #b4884b;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+      }
+
+      h2 {
+        color: #0e1a33;
+
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 58px;
+        line-height: 1;
+
+        font-weight: 700;
+      }
+    }
+
+    .view-all-news {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      padding-bottom: 10px;
+
+      border-bottom: 1px solid #b4884b;
+
+      color: #0e1a33;
+
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+
+      text-decoration: none;
+
+      span {
+        width: 52px;
+        height: 52px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid #b4884b;
+        border-radius: 50%;
+
+        font-size: 20px;
+
+        transition: 0.3s ease;
+      }
+
+      &:hover {
+        span {
+          background-color: #0e1a33;
+          color: #dcb679;
+
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+
+    .news-card {
+      position: relative;
+
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(14, 26, 51, 0.15);
+
+      transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+      .news-image {
+        position: relative;
+
+        width: 100%;
+        height: 195px;
+
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+
+          object-fit: cover;
+          display: block;
+
+          transition: transform 0.6s ease;
+        }
+
+        .news-hover {
+          position: absolute;
+          inset: 0;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          padding: 0 30px;
+
+          background-color: rgba(180, 136, 75, 0.307);
+
+          opacity: 0;
+
+          transition: opacity 0.35s ease;
+
+          > span:first-child {
+            color: #f3f0e7;
+
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+
+            border-bottom: 1px solid rgba(243, 240, 231, 0.7);
+
+            padding-bottom: 6px;
+          }
+
+          .hover-arrow {
+            width: 58px;
+            height: 58px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background-color: #dcb679;
+            color: #0e1a33;
+
+            font-size: 23px;
+
+            transform: translateX(-10px);
+
+            transition: transform 0.35s ease;
+          }
+        }
+      }
+
+      .news-category {
+        margin-top: 18px;
+        margin-bottom: 12px;
+
+        color: #b4884b;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+      }
+
+      h3 {
+        min-height: 58px;
+
+        color: #0e1a33;
+
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 22px;
+        line-height: 1.25;
+
+        font-weight: 700;
+      }
+
+      .news-bottom {
+        margin-top: 35px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .news-date {
+          color: rgba(14, 26, 51, 0.7);
+          font-family: 'Montserrat', sans-serif;
+          font-size: 11px;
+
+          letter-spacing: 4px;
+        }
+
+        a {
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #b4884b;
+          border-radius: 50%;
+          color: #0e1a33;
+          font-size: 20px;
+          text-decoration: none;
+          transition: 0.3s ease;
+        }
+      }
+
+      &:hover {
+        transform: translateY(-8px);
+
+        .news-image {
+          img {
+            transform: scale(1.07);
+          }
+
+          .news-hover {
+            opacity: 1;
+
+            .hover-arrow {
+              transform: translateX(0);
+            }
+          }
+        }
+
+        .news-bottom {
+          a {
+            background-color: #0e1a33;
+            color: #dcb679;
+
+            transform: translateX(4px);
+          }
+        }
+      }
+    }
+  }
+  /* ================= ARABIC NEWS ================= */
+
+  &.news-ar {
+    /* ---------- TOP ---------- */
+
+    .news-top {
+      flex-direction: row-reverse;
+
+      .news-heading {
+        direction: rtl;
+        text-align: right;
+
+        > p {
+          direction: rtl;
+          text-align: right;
+        }
+
+        h2 {
+          direction: rtl;
+          text-align: right;
+        }
+      }
+
+      .view-all-news {
+        direction: rtl;
+      }
+    }
+
+    /* ---------- CARDS ---------- */
+
+    .news-grid {
+      direction: rtl;
+
+      .news-card {
+        direction: rtl;
+        text-align: right;
+
+        .news-category {
+          direction: rtl;
+          text-align: right;
+        }
+
+        h3 {
+          direction: rtl;
+          text-align: right;
+        }
+
+        /* ---------- IMAGE HOVER ---------- */
+
+        .news-hover {
+          direction: rtl;
+
+          .hover-arrow {
+            transform: rotate(180deg) translateX(-10px);
+          }
+        }
+
+        /* ---------- BOTTOM ---------- */
+
+        .news-bottom {
+          direction: rtl;
+
+          .news-date {
+            direction: ltr;
+            text-align: right;
+          }
+
+          a {
+            transform: rotate(180deg);
+          }
+        }
+
+        &:hover {
+          .news-image {
+            .news-hover {
+              .hover-arrow {
+                transform: rotate(180deg) translateX(0);
+              }
+            }
+          }
+
+          .news-bottom {
+            a {
+              transform: rotate(180deg) translateX(4px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+/* HOME ANIMATIONS */
+@keyframes tickerMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+@keyframes imageZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes subscribeLight {
+  from {
+    left: -50%;
+  }
+
+  to {
+    left: 110%;
+  }
+}
+
+/* =====================================
+   ARABIC NAVBAR - DESKTOP
+===================================== */
+
+.hero-section .hero-nav.hero-nav-ar {
+  flex-direction: row-reverse;
+}
+
+.hero-section .hero-nav.hero-nav-ar > div:first-child {
+  direction: rtl;
+}
+
+.hero-section .hero-nav.hero-nav-ar > nav {
+  direction: rtl;
+  margin-right: 0;
+  margin-left: 2rem;
+}
+
+/* ===== NAVBAR SIZE ===== */
+
+/* تكبير أيقونة اللوجو */
+.hero-section .hero-nav > div:first-child img {
+  width: 30px;
+  height: 43px;
+  object-fit: contain;
+  margin-top: 5px;
+  padding-top: 18px;
+}
+
+/* تكبير اسم إيوان القابضة */
+.hero-section .hero-nav > div:first-child p a {
+  font-size: 25px;
+}
+
+/* =====================================
+   ARABIC HERO - DESKTOP FIX
+===================================== */
+
+.hero-section {
+  .hero-content-ar {
+    width: 80%;
+    max-width: 1250px;
+
+    right: 10%;
+    left: auto;
+
+    direction: rtl;
+    text-align: right;
+  }
+
+  .hero-content-ar .hero-ar-heading {
+    width: 100%;
+    max-width: 850px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .hero-ar-heading {
+    width: 600px;
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: auto;
+
+    direction: rtl;
+    text-align: right;
+
+    .hero-ar-title {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+
+      font-family: 'Noto Kufi Arabic', sans-serif;
+      font-size: 43px;
+      font-weight: 700;
+      line-height: 1.7;
+
+      direction: rtl;
+      text-align: right;
+
+      i {
+        display: block;
+        color: #dcb679;
+        font-size: 43px;
+        line-height: 1.7;
+        font-style: normal;
+      }
+    }
+  }
+
+  .hero-content-ar .hero-ar-description {
+    width: 100%;
+    margin-top: 45px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 65px;
+
+    direction: rtl;
+  }
+
+  .hero-content-ar .hero-ar-description p {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 2;
+
+    color: #e4e0d2;
+
+    direction: rtl;
+    text-align: right;
+  }
+}
+
+/* =========================================
+   ARABIC VALUES & COMPANIES - DESKTOP
+========================================= */
+
+@media (min-width: 992px) {
+  .home-ar {
+    /* VALUES SECTION */
+    .values-section {
+      direction: rtl;
+
+      .values-heading {
+        text-align: right;
+      }
+
+      .values-cards {
+        direction: rtl;
+
+        .value-card {
+          text-align: right;
+
+          &::after {
+            left: auto;
+            right: 0;
+          }
+        }
+      }
+    }
+
+    /* COMPANIES SECTION */
+    .companies-section {
+      direction: rtl;
+
+      .companies-heading {
+        text-align: right;
+      }
+
+      .companies-grid {
+        direction: rtl;
+
+        .company-card {
+          .company-overlay {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

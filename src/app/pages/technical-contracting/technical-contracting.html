@@ -1,0 +1,603 @@
+<header>
+  <section class="pages-navbar">
+    <div class="pages-navbar-brand">
+      <img class="pages-navbar-logo" src="/photos/ewan_logo.png" alt="Ewan Holding Logo" />
+
+      <p class="pages-navbar-name">
+        <a href="/">
+          {{ 'Ewan' | tr }} <b>{{ 'Holding' | tr }}</b>
+        </a>
+      </p>
+    </div>
+
+    <nav class="pages-navbar-links">
+      <a href="/about" target="_blank">{{ 'About' | tr }}</a>
+
+      <a href="/companies" target="_blank">{{ 'Companies' | tr }}</a>
+
+      <a href="/investment" target="_blank">{{ 'Investment' | tr }}</a>
+
+      <a href="/news" target="_blank">{{ 'News' | tr }}</a>
+
+      <a href="/contact" target="_blank">{{ 'Contact' | tr }}</a>
+    </nav>
+
+    <app-language-toggle></app-language-toggle>
+
+    <img class="pages-navbar-menu" src="/photos/menu.png" alt="Open navigation menu" />
+  </section>
+</header>
+
+<main>
+  <section class="contracting-hero">
+    <img
+      class="contracting-hero-image"
+      src="/photos/techero.png"
+      alt="Ewan Technical Contracting construction site"
+    />
+
+    <div class="contracting-hero-overlay"></div>
+
+    <div class="contracting-hero-container">
+      <div class="contracting-hero-content">
+        <div class="contracting-hero-label">
+          <span></span>
+
+          <p>
+            {{ 'BUILDING' | tr }} <br />
+            {{ 'POSSIBILITIES' | tr }}
+          </p>
+        </div>
+
+        <h1>
+          {{ 'From Vision' | tr }} <br />
+          {{ 'to Reality' | tr }}
+        </h1>
+
+        <p class="contracting-hero-description">
+          {{
+            'Ewan Technical Contracting delivers construction and contracting solutions engineered for the specifics of your project.'
+              | tr
+          }}
+        </p>
+
+        <a class="contracting-hero-link" href="#contracting-overview">
+          {{ 'Explore our work' | tr }}
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="contracting-hero-words">
+        <span></span>
+
+        <p>
+          {{ 'PEOPLE' | tr }} <br />
+          {{ 'STRUCTURES' | tr }} <br />
+          {{ 'PROGRESS' | tr }}
+        </p>
+      </div>
+
+      <div class="contracting-hero-stats">
+        <div class="contracting-hero-stat">
+          <strong>15+</strong>
+
+          <p>
+            {{ 'Years of' | tr }} <br />
+            {{ 'Experience' | tr }}
+          </p>
+        </div>
+
+        <div class="contracting-hero-stat">
+          <strong>120+</strong>
+
+          <p>
+            {{ 'Projects' | tr }} <br />
+            {{ 'Delivered' | tr }}
+          </p>
+        </div>
+
+        <div class="contracting-hero-stat">
+          <strong>500+</strong>
+
+          <p>
+            {{ 'People' | tr }} <br />
+            {{ 'On Site' | tr }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contracting-overview" id="contracting-overview">
+    <div class="contracting-overview-container">
+      <div class="contracting-overview-label">
+        <span>01</span>
+        <p>{{ 'OVERVIEW' | tr }}</p>
+      </div>
+
+      <div class="contracting-overview-content">
+        <h2>
+          {{ 'Building A Better' | tr }} <br />
+          {{ 'Tomorrow' | tr }}
+        </h2>
+
+        <p>
+          {{
+            'Ewan Technical Contracting delivers construction and contracting solutions engineered for the specifics of your project.'
+              | tr
+          }}
+        </p>
+
+        <p>
+          {{
+            'The same commitment to excellence, safety and innovation runs through every job, however large or small.'
+              | tr
+          }}
+        </p>
+
+        <a href="#">
+          {{ 'Learn more about us' | tr }}
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="contracting-overview-image">
+        <img src="/photos/tec1.png" alt="Ewan Technical Contracting project" />
+      </div>
+
+      <div class="contracting-overview-approach">
+        <div class="contracting-overview-approach-label">
+          <span></span>
+          <p>{{ 'OUR APPROACH' | tr }}</p>
+        </div>
+
+        <h3>
+          {{ 'Plan' | tr }} <br />
+          {{ 'Execute' | tr }} <br />
+          {{ 'Deliver' | tr }} <br />
+          {{ 'Sustain' | tr }}
+        </h3>
+
+        <p class="contracting-overview-approach-text">
+          {{ 'Engineering solutions that create long-term value.' | tr }}
+        </p>
+
+        <span class="contracting-overview-approach-line"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contracting-services">
+    <div class="contracting-services-container">
+      <div class="contracting-services-heading">
+        <div class="contracting-services-label">
+          <span>02</span>
+          <i></i>
+          <p>{{ 'OUR SERVICES' | tr }}</p>
+        </div>
+
+        <div class="contracting-services-title">
+          <h2>
+            {{ 'Comprehensive' | tr }} <br />
+            {{ 'Contracting Solutions' | tr }}
+          </h2>
+
+          <p>
+            {{
+              'From planning through delivery, our teams combine technical expertise, disciplined execution and close project control.'
+                | tr
+            }}
+          </p>
+        </div>
+      </div>
+
+      <div class="contracting-services-grid">
+        <!-- SERVICE 01 -->
+
+        <div class="contracting-service-card">
+          <div class="contracting-service-top">
+            <span class="contracting-service-number">01</span>
+            <span class="contracting-service-arrow">↗</span>
+          </div>
+
+          <div class="contracting-service-icon">
+            <i class="bi bi-buildings"></i>
+          </div>
+
+          <h3>
+            {{ 'Construction' | tr }} <br />
+            {{ 'Management' | tr }}
+          </h3>
+
+          <p>
+            {{
+              'Planning, coordination and supervision across every stage of construction, keeping projects aligned with scope, schedule and quality.'
+                | tr
+            }}
+          </p>
+
+          <div class="contracting-service-line"></div>
+        </div>
+
+        <!-- SERVICE 02 -->
+
+        <div class="contracting-service-card">
+          <div class="contracting-service-top">
+            <span class="contracting-service-number">02</span>
+            <span class="contracting-service-arrow">↗</span>
+          </div>
+
+          <div class="contracting-service-icon">
+            <i class="bi bi-bricks"></i>
+          </div>
+
+          <h3>
+            {{ 'General' | tr }} <br />
+            {{ 'Contracting' | tr }}
+          </h3>
+
+          <p>
+            {{
+              'Complete contracting services delivered through experienced teams, reliable resources and carefully managed site operations.'
+                | tr
+            }}
+          </p>
+
+          <div class="contracting-service-line"></div>
+        </div>
+
+        <!-- SERVICE 03 -->
+
+        <div class="contracting-service-card">
+          <div class="contracting-service-top">
+            <span class="contracting-service-number">03</span>
+            <span class="contracting-service-arrow">↗</span>
+          </div>
+
+          <div class="contracting-service-icon">
+            <i class="bi bi-rulers"></i>
+          </div>
+
+          <h3>
+            {{ 'Civil' | tr }} <br />
+            {{ 'Engineering' | tr }}
+          </h3>
+
+          <p>
+            {{
+              'Practical engineering solutions for structures, infrastructure and civil works, developed around the requirements of each project.'
+                | tr
+            }}
+          </p>
+
+          <div class="contracting-service-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contracting-process">
+    <div class="contracting-process-container">
+      <div class="contracting-process-heading">
+        <div class="contracting-process-label">
+          <span>03</span>
+          <i></i>
+          <p>{{ 'HOW WE WORK' | tr }}</p>
+        </div>
+
+        <h2>
+          {{ 'Built Around' | tr }} <br />
+          {{ 'Your Project' | tr }}
+        </h2>
+
+        <p>
+          {{
+            'Every project begins with understanding the requirements, defining the priorities and building a clear path from planning to final delivery.'
+              | tr
+          }}
+        </p>
+
+        <div class="contracting-process-note">
+          <span></span>
+
+          <p>
+            {{ 'ONE PROCESS' | tr }} <br />
+            {{ 'ONE STANDARD' | tr }} <br />
+            {{ 'ONE COMMITMENT' | tr }}
+          </p>
+        </div>
+      </div>
+
+      <div class="contracting-process-steps">
+        <!-- STEP 01 -->
+
+        <div class="contracting-process-step">
+          <span class="contracting-process-number">01</span>
+
+          <div class="contracting-process-step-content">
+            <h3>{{ 'Plan' | tr }}</h3>
+
+            <p>
+              {{ 'Define project requirements, scope, resources and technical priorities.' | tr }}
+            </p>
+          </div>
+
+          <span class="contracting-process-arrow">→</span>
+        </div>
+
+        <!-- STEP 02 -->
+
+        <div class="contracting-process-step">
+          <span class="contracting-process-number">02</span>
+
+          <div class="contracting-process-step-content">
+            <h3>{{ 'Coordinate' | tr }}</h3>
+
+            <p>
+              {{ 'Align teams, schedules, suppliers and site operations before execution.' | tr }}
+            </p>
+          </div>
+
+          <span class="contracting-process-arrow">→</span>
+        </div>
+
+        <!-- STEP 03 -->
+
+        <div class="contracting-process-step">
+          <span class="contracting-process-number">03</span>
+
+          <div class="contracting-process-step-content">
+            <h3>{{ 'Build' | tr }}</h3>
+
+            <p>
+              {{
+                'Execute the work with disciplined site management, quality control and safety.'
+                  | tr
+              }}
+            </p>
+          </div>
+
+          <span class="contracting-process-arrow">→</span>
+        </div>
+
+        <!-- STEP 04 -->
+
+        <div class="contracting-process-step">
+          <span class="contracting-process-number">04</span>
+
+          <div class="contracting-process-step-content">
+            <h3>{{ 'Deliver' | tr }}</h3>
+
+            <p>
+              {{
+                'Complete, review and hand over the project according to the agreed requirements.'
+                  | tr
+              }}
+            </p>
+          </div>
+
+          <span class="contracting-process-arrow">✓</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contracting-standard">
+    <div class="contracting-standard-container">
+      <div class="contracting-standard-visual">
+        <img src="/photos/tec2.png" alt="Ewan Technical Contracting project" />
+
+        <div class="contracting-standard-image-note">
+          <span></span>
+
+          <p>
+            {{ 'QUALITY' | tr }} <br />
+            {{ 'SAFETY' | tr }} <br />
+            {{ 'PRECISION' | tr }}
+          </p>
+        </div>
+      </div>
+
+      <div class="contracting-standard-content">
+        <div class="contracting-standard-label">
+          <span>04</span>
+          <i></i>
+          <p>{{ 'OUR STANDARD' | tr }}</p>
+        </div>
+
+        <h2>
+          {{ 'Built to' | tr }} <br />
+          {{ 'Perform' | tr }}
+        </h2>
+
+        <p class="contracting-standard-intro">
+          {{
+            'Every project is managed around three priorities: technical quality, safe execution and dependable delivery.'
+              | tr
+          }}
+        </p>
+
+        <div class="contracting-standard-list">
+          <!-- QUALITY -->
+
+          <div class="contracting-standard-item">
+            <span class="contracting-standard-number">01</span>
+
+            <div>
+              <h3>{{ 'Quality' | tr }}</h3>
+
+              <p>
+                {{
+                  'Materials, workmanship and execution controlled against defined project requirements.'
+                    | tr
+                }}
+              </p>
+            </div>
+          </div>
+
+          <!-- SAFETY -->
+
+          <div class="contracting-standard-item">
+            <span class="contracting-standard-number">02</span>
+
+            <div>
+              <h3>{{ 'Safety' | tr }}</h3>
+
+              <p>
+                {{
+                  'Clear procedures and disciplined site practices designed to protect people throughout construction.'
+                    | tr
+                }}
+              </p>
+            </div>
+          </div>
+
+          <!-- DELIVERY -->
+
+          <div class="contracting-standard-item">
+            <span class="contracting-standard-number">03</span>
+
+            <div>
+              <h3>{{ 'Delivery' | tr }}</h3>
+
+              <p>
+                {{
+                  'Careful coordination of teams, resources and schedules to keep work moving toward completion.'
+                    | tr
+                }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contracting-companies">
+    <div class="contracting-companies-container">
+      <div class="contracting-companies-heading">
+        <div class="contracting-companies-label">
+          <span>05</span>
+          <i></i>
+          <p>{{ 'COMPANIES' | tr }}</p>
+        </div>
+
+        <h2>
+          {{ 'Other' | tr }} <br />
+          {{ 'companies' | tr }}
+        </h2>
+
+        <p>
+          {{
+            'Explore the companies that work alongside Ewan Technical Contracting across the Ewan Holding group.'
+              | tr
+          }}
+        </p>
+
+        <a href="/companies" target="_blank">
+          {{ 'Explore all companies' | tr }}
+          <span>→</span>
+        </a>
+
+        <div class="contracting-companies-arrows">
+          <button type="button">←</button>
+          <button type="button">→</button>
+        </div>
+      </div>
+
+      <div class="contracting-companies-grid">
+        <!-- LOGISTICS -->
+
+        <a href="/logistics" class="contracting-company-card" target="_blank">
+          <div class="contracting-company-image">
+            <img src="/photos/tec3.png" alt="Ewan Logistics" />
+          </div>
+
+          <div class="contracting-company-content">
+            <span>01</span>
+
+            <h3>{{ 'Ewan Logistics' | tr }}</h3>
+
+            <p>
+              {{
+                'Last-mile delivery built on routing precision and a fleet that shows up on time.'
+                  | tr
+              }}
+            </p>
+
+            <b>↗</b>
+          </div>
+        </a>
+
+        <!-- HUMAN RESOURCES -->
+
+        <a href="/human-resources" class="contracting-company-card" target="_blank">
+          <div class="contracting-company-image">
+            <img src="/photos/tec4.png" alt="Ewan Human Resources" />
+          </div>
+
+          <div class="contracting-company-content">
+            <span>02</span>
+
+            <h3>{{ 'Ewan Human Resources' | tr }}</h3>
+
+            <p>
+              {{
+                'Recruitment, training and workforce solutions for individuals and businesses across the Kingdom.'
+                  | tr
+              }}
+            </p>
+
+            <b>↗</b>
+          </div>
+        </a>
+
+        <!-- FURNISHED APARTMENTS -->
+
+        <a href="/furnished-apartments" class="contracting-company-card" target="_blank">
+          <div class="contracting-company-image">
+            <img src="/photos/tec5.png" alt="Ewan Furnished Apartments" />
+          </div>
+
+          <div class="contracting-company-content">
+            <span>03</span>
+
+            <h3>{{ 'Ewan Furnished Apartments' | tr }}</h3>
+
+            <p>
+              {{ 'Furnished stays, short or long term, in locations chosen for convenience.' | tr }}
+            </p>
+
+            <b>↗</b>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pages-newsletter">
+    <div class="container col-lg-10">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-7">
+          <div class="pages-newsletter-content">
+            <h2>{{ 'Join our newsletter' | tr }}</h2>
+
+            <p>
+              {{ 'Company news and investment updates, a few times a year — nothing more.' | tr }}
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <form class="pages-newsletter-form">
+            <input type="email" [placeholder]="'Your email address' | tr" />
+
+            <button type="submit">{{ 'Subscribe' | tr }}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-site-footer></app-site-footer>

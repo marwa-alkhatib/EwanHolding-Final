@@ -1,0 +1,1355 @@
+/* technical ================================================================ */
+
+.contracting-hero {
+  min-height: 680px;
+
+  position: relative;
+  overflow: hidden;
+
+  background-color: #0a1628;
+
+  font-family: "Montserrat", sans-serif;
+
+  .contracting-hero-image {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    inset: 0;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 1;
+  }
+
+  .contracting-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+    background: linear-gradient(
+      90deg,
+      rgba(247, 243, 234, 0.72) 0%,
+      rgba(247, 243, 234, 0.58) 28%,
+      rgba(247, 243, 234, 0.08) 52%,
+      rgba(10, 22, 40, 0.25) 68%,
+      rgba(10, 22, 40, 0.9) 100%
+    );
+  }
+
+  .contracting-hero-container {
+    max-width: 1180px;
+    min-height: 680px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    margin: auto;
+    padding-top: 70px;
+
+    z-index: 3;
+
+    .contracting-hero-content {
+      width: 42%;
+
+      .contracting-hero-label {
+        display: flex;
+        flex-direction: column;
+
+        gap: 15px;
+
+        margin-bottom: 1.8rem;
+
+        p {
+          color: #a9812f;
+
+          font-size: 9px;
+          line-height: 1.8;
+          letter-spacing: 5px;
+
+          margin: 0;
+        }
+
+        span {
+          width: 42px;
+          height: 1px;
+
+          display: block;
+
+          background-color: #c6a15b;
+        }
+      }
+
+      h1 {
+        color: #12203a;
+
+        font-family: "Cormorant Garamond", serif;
+
+        font-size: 72px;
+        line-height: 0.9;
+        font-weight: 600;
+
+        margin: 0 0 2rem;
+      }
+
+      .contracting-hero-description {
+        max-width: 410px;
+
+        color: #12203a;
+
+        font-size: 13px;
+        line-height: 1.8;
+
+        margin: 0 0 2rem;
+      }
+
+      .contracting-hero-link {
+        display: inline-flex;
+        align-items: center;
+
+        gap: 18px;
+
+        padding: 13px 18px;
+
+        border: 1px solid #a9812f;
+
+        color: #12203a;
+
+        font-size: 11px;
+        text-decoration: none;
+
+        transition: 0.3s ease;
+
+        span {
+          color: #a9812f;
+
+          transition: transform 0.3s ease;
+        }
+
+        &:hover {
+          background-color: #12203a;
+          border-color: #12203a;
+
+          color: #f7f3ea;
+
+          span {
+            color: #dcb679;
+
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+
+    .contracting-hero-words {
+      position: absolute;
+
+      right: 35px;
+      top: 40%;
+
+      span {
+        width: 30px;
+        height: 1px;
+
+        display: block;
+
+        background-color: #dcb679;
+
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: #f7f3ea;
+
+        font-size: 8px;
+        line-height: 2.3;
+        letter-spacing: 4px;
+
+        margin: 0;
+      }
+    }
+
+    .contracting-hero-stats {
+      position: absolute;
+
+      right: 0;
+      bottom: 55px;
+
+      display: flex;
+
+      .contracting-hero-stat {
+        min-width: 120px;
+
+        padding: 0 25px;
+
+        border-left: 1px solid rgba(220, 182, 121, 0.55);
+
+        strong {
+          display: block;
+
+          color: #dcb679;
+
+          font-family: "Cormorant Garamond", serif;
+
+          font-size: 36px;
+          line-height: 1;
+
+          font-weight: 500;
+
+          margin-bottom: 8px;
+        }
+
+        p {
+          color: rgba(247, 243, 234, 0.8);
+
+          font-size: 8px;
+          line-height: 1.5;
+          text-transform: uppercase;
+
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.contracting-overview {
+  background-color: #f7f3ea;
+
+  padding: 5.5rem 5rem;
+
+  font-family: "Montserrat", sans-serif;
+
+  .contracting-overview-container {
+    max-width: 1180px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 80px 250px 1fr 150px;
+
+    align-items: stretch;
+
+    gap: 2.5rem;
+
+    .contracting-overview-label {
+      padding-top: 15px;
+
+      border-left: 1px solid #dcd2b8;
+
+      padding-left: 18px;
+
+      span {
+        display: block;
+
+        color: #b4884b;
+
+        font-size: 10px;
+        letter-spacing: 2px;
+
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #b4884b;
+
+        font-size: 8px;
+        letter-spacing: 2px;
+
+        margin: 0;
+      }
+    }
+
+    .contracting-overview-content {
+      padding-top: 10px;
+
+      h2 {
+        color: #12203a;
+
+        font-family: "Cormorant Garamond", serif;
+
+        font-size: 46px;
+        line-height: 0.95;
+        font-weight: 600;
+
+        margin: 0 0 1.7rem;
+      }
+
+      > p {
+        color: #4d5a70;
+
+        font-size: 11px;
+        line-height: 1.8;
+
+        margin: 0 0 1.2rem;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+
+        gap: 10px;
+
+        color: #a9812f;
+
+        font-size: 10px;
+
+        text-decoration: none;
+
+        padding-bottom: 5px;
+
+        border-bottom: 1px solid #c6a15b;
+
+        span {
+          transition: transform 0.3s ease;
+        }
+
+        &:hover {
+          span {
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+
+    .contracting-overview-image {
+      height: 360px;
+
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+
+        transition: transform 0.7s ease;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.03);
+        }
+      }
+    }
+
+    .contracting-overview-approach {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+
+      border-left: 1px solid #dcd2b8;
+
+      padding-left: 25px;
+
+      .contracting-overview-approach-label {
+        span {
+          display: block;
+
+          width: 30px;
+          height: 1px;
+
+          background-color: #c6a15b;
+
+          margin-bottom: 15px;
+        }
+
+        p {
+          color: #b4884b;
+
+          font-size: 8px;
+          line-height: 1.6;
+          letter-spacing: 2px;
+
+          margin: 0 0 1.5rem;
+        }
+      }
+
+      h3 {
+        color: #4d5a70;
+
+        font-family: "Cormorant Garamond", serif;
+
+        font-size: 24px;
+        line-height: 1.15;
+        font-weight: 500;
+
+        margin: 0 0 2rem;
+      }
+
+      .contracting-overview-approach-text {
+        color: #7c879a;
+
+        font-size: 9px;
+        line-height: 1.7;
+
+        margin: 0 0 15px;
+      }
+
+      .contracting-overview-approach-line {
+        width: 30px;
+        height: 1px;
+
+        display: block;
+
+        background-color: #c6a15b;
+      }
+    }
+  }
+}
+
+.contracting-services {
+  position: relative;
+
+  overflow: hidden;
+
+  background-color: #0e1a33;
+
+  padding: 5.5rem 5rem;
+
+  font-family: "Montserrat", sans-serif;
+
+  &::before {
+    content: "";
+
+    width: 430px;
+    height: 430px;
+
+    position: absolute;
+
+    right: -170px;
+    top: -190px;
+
+    border: 1px solid rgba(220, 182, 121, 0.12);
+
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+
+    width: 300px;
+    height: 300px;
+
+    position: absolute;
+
+    right: -80px;
+    top: -120px;
+
+    border: 1px solid rgba(220, 182, 121, 0.08);
+
+    border-radius: 50%;
+  }
+
+  .contracting-services-container {
+    max-width: 1180px;
+
+    position: relative;
+
+    margin: auto;
+
+    z-index: 2;
+
+    .contracting-services-heading {
+      margin-bottom: 4rem;
+
+      .contracting-services-label {
+        display: flex;
+        align-items: center;
+
+        gap: 10px;
+
+        margin-bottom: 1.2rem;
+
+        span,
+        p {
+          color: #dcb679;
+
+          font-size: 9px;
+          letter-spacing: 2px;
+
+          margin: 0;
+        }
+
+        i {
+          width: 30px;
+          height: 1px;
+
+          display: block;
+
+          background-color: #dcb679;
+        }
+      }
+
+      .contracting-services-title {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        gap: 4rem;
+
+        h2 {
+          max-width: 600px;
+
+          color: #f7f3ea;
+
+          font-family: "Cormorant Garamond", serif;
+
+          font-size: 52px;
+          line-height: 0.95;
+          font-weight: 500;
+
+          margin: 0;
+        }
+
+        > p {
+          max-width: 380px;
+
+          color: #7c879a;
+
+          font-size: 11px;
+          line-height: 1.8;
+
+          margin: 0;
+        }
+      }
+    }
+
+    .contracting-services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      border-top: 1px solid #28405f;
+
+      .contracting-service-card {
+        min-height: 370px;
+
+        position: relative;
+
+        padding: 2rem 2.5rem 2rem 0;
+
+        border-right: 1px solid #28405f;
+
+        transition:
+          background-color 0.4s ease,
+          padding 0.4s ease;
+
+        &:not(:first-child) {
+          padding-left: 2.5rem;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+
+        .contracting-service-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .contracting-service-number {
+            color: #dcb679;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 16px;
+          }
+
+          .contracting-service-arrow {
+            color: #7c879a;
+
+            font-size: 17px;
+
+            transition:
+              color 0.3s ease,
+              transform 0.3s ease;
+          }
+        }
+
+        .contracting-service-icon {
+          width: 54px;
+          height: 54px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          margin: 3.2rem 0 1.7rem;
+
+          border: 1px solid rgba(220, 182, 121, 0.35);
+
+          border-radius: 50%;
+
+          i {
+            color: #dcb679;
+
+            font-size: 21px;
+          }
+        }
+
+        h3 {
+          color: #f7f3ea;
+
+          font-family: "Cormorant Garamond", serif;
+
+          font-size: 29px;
+          line-height: 1;
+          font-weight: 500;
+
+          margin: 0 0 1.3rem;
+        }
+
+        > p {
+          max-width: 280px;
+
+          color: #7c879a;
+
+          font-size: 10px;
+          line-height: 1.8;
+
+          margin: 0;
+        }
+
+        .contracting-service-line {
+          width: 35px;
+          height: 1px;
+
+          position: absolute;
+
+          left: 0;
+          bottom: 0;
+
+          background-color: #dcb679;
+
+          transition: width 0.4s ease;
+        }
+
+        &:not(:first-child) {
+          .contracting-service-line {
+            left: 2.5rem;
+          }
+        }
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.025);
+
+          .contracting-service-arrow {
+            color: #dcb679;
+
+            transform: rotate(45deg);
+          }
+
+          .contracting-service-line {
+            width: 90px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contracting-process {
+  position: relative;
+
+  overflow: hidden;
+
+  background-color: #efe8d8;
+
+  padding: 5.5rem 5rem;
+
+  font-family: "Montserrat", sans-serif;
+
+  &::after {
+    content: "03";
+
+    position: absolute;
+
+    left: -25px;
+    bottom: -75px;
+
+    color: rgba(18, 32, 58, 0.035);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 280px;
+    line-height: 1;
+
+    pointer-events: none;
+  }
+
+  .contracting-process-container {
+    max-width: 1180px;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+
+    gap: 7rem;
+
+    margin: auto;
+
+    z-index: 2;
+
+    .contracting-process-heading {
+      .contracting-process-label {
+        display: flex;
+        align-items: center;
+
+        gap: 10px;
+
+        margin-bottom: 1.2rem;
+
+        span,
+        p {
+          color: #a9812f;
+
+          font-size: 9px;
+          letter-spacing: 2px;
+
+          margin: 0;
+        }
+
+        i {
+          width: 30px;
+          height: 1px;
+
+          display: block;
+
+          background-color: #c6a15b;
+        }
+      }
+
+      h2 {
+        color: #12203a;
+
+        font-family: "Cormorant Garamond", serif;
+
+        font-size: 52px;
+        line-height: 0.95;
+        font-weight: 600;
+
+        margin: 0 0 1.8rem;
+      }
+
+      > p {
+        max-width: 400px;
+
+        color: #4d5a70;
+
+        font-size: 11px;
+        line-height: 1.9;
+
+        margin: 0;
+      }
+
+      .contracting-process-note {
+        margin-top: 4rem;
+
+        span {
+          width: 45px;
+          height: 1px;
+
+          display: block;
+
+          background-color: #c6a15b;
+
+          margin-bottom: 15px;
+        }
+
+        p {
+          color: #7c879a;
+
+          font-size: 7px;
+          line-height: 2;
+          letter-spacing: 4px;
+
+          margin: 0;
+        }
+      }
+    }
+
+    .contracting-process-steps {
+      border-top: 1px solid #dcd2b8;
+
+      .contracting-process-step {
+        min-height: 115px;
+
+        display: grid;
+        grid-template-columns: 55px 1fr 45px;
+
+        align-items: center;
+
+        gap: 1.5rem;
+
+        border-bottom: 1px solid #dcd2b8;
+
+        transition:
+          padding 0.35s ease,
+          background-color 0.35s ease;
+
+        .contracting-process-number {
+          color: #a9812f;
+
+          font-family: "Cormorant Garamond", serif;
+
+          font-size: 15px;
+        }
+
+        .contracting-process-step-content {
+          display: grid;
+          grid-template-columns: 160px 1fr;
+
+          align-items: center;
+
+          gap: 2rem;
+
+          h3 {
+            color: #12203a;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 27px;
+            font-weight: 600;
+
+            margin: 0;
+
+            transition: transform 0.35s ease;
+          }
+
+          p {
+            max-width: 340px;
+
+            color: #4d5a70;
+
+            font-size: 10px;
+            line-height: 1.7;
+
+            margin: 0;
+          }
+        }
+
+        .contracting-process-arrow {
+          width: 34px;
+          height: 34px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          justify-self: end;
+
+          border: 1px solid #c6a15b;
+          border-radius: 50%;
+
+          color: #a9812f;
+
+          font-size: 13px;
+
+          transition: 0.35s ease;
+        }
+
+        &:hover {
+          padding-left: 15px;
+          padding-right: 15px;
+
+          background-color: rgba(247, 243, 234, 0.65);
+
+          .contracting-process-step-content {
+            h3 {
+              transform: translateX(5px);
+            }
+          }
+
+          .contracting-process-arrow {
+            background-color: #12203a;
+            border-color: #12203a;
+
+            color: #f7f3ea;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contracting-standard {
+  position: relative;
+
+  overflow: hidden;
+
+  background-color: #0a1628;
+
+  padding: 5.5rem 5rem;
+
+  font-family: "Montserrat", sans-serif;
+
+  &::before {
+    content: "";
+
+    width: 450px;
+    height: 450px;
+
+    position: absolute;
+
+    right: -230px;
+    bottom: -260px;
+
+    border: 1px solid rgba(220, 182, 121, 0.08);
+
+    border-radius: 50%;
+  }
+
+  .contracting-standard-container {
+    max-width: 1180px;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+
+    align-items: stretch;
+
+    gap: 6rem;
+
+    margin: auto;
+
+    z-index: 2;
+
+    .contracting-standard-visual {
+      min-height: 560px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        background: linear-gradient(
+          180deg,
+          rgba(10, 22, 40, 0.02) 35%,
+          rgba(10, 22, 40, 0.82) 100%
+        );
+
+        pointer-events: none;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        inset: 0;
+
+        display: block;
+
+        object-fit: cover;
+
+        transition: transform 0.7s ease;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.03);
+        }
+      }
+
+      .contracting-standard-image-note {
+        position: absolute;
+
+        left: 35px;
+        bottom: 35px;
+
+        z-index: 2;
+
+        span {
+          width: 40px;
+          height: 1px;
+
+          display: block;
+
+          background-color: #dcb679;
+
+          margin-bottom: 15px;
+        }
+
+        p {
+          color: #f7f3ea;
+
+          font-size: 7px;
+          line-height: 2.2;
+          letter-spacing: 4px;
+
+          margin: 0;
+        }
+      }
+    }
+
+    .contracting-standard-content {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+
+      .contracting-standard-label {
+        display: flex;
+        align-items: center;
+
+        gap: 10px;
+
+        margin-bottom: 1.2rem;
+
+        span,
+        p {
+          color: #dcb679;
+
+          font-size: 9px;
+          letter-spacing: 2px;
+
+          margin: 0;
+        }
+
+        i {
+          width: 30px;
+          height: 1px;
+
+          display: block;
+
+          background-color: #dcb679;
+        }
+      }
+
+      > h2 {
+        color: #f7f3ea;
+
+        font-family: "Cormorant Garamond", serif;
+
+        font-size: 56px;
+        line-height: 0.9;
+        font-weight: 500;
+
+        margin: 0 0 1.5rem;
+      }
+
+      .contracting-standard-intro {
+        max-width: 430px;
+
+        color: #7c879a;
+
+        font-size: 11px;
+        line-height: 1.8;
+
+        margin: 0 0 2.5rem;
+      }
+
+      .contracting-standard-list {
+        border-top: 1px solid #28405f;
+
+        .contracting-standard-item {
+          min-height: 110px;
+
+          display: grid;
+          grid-template-columns: 60px 1fr;
+
+          align-items: center;
+
+          gap: 1.5rem;
+
+          border-bottom: 1px solid #28405f;
+
+          .contracting-standard-number {
+            color: #dcb679;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 15px;
+          }
+
+          div {
+            h3 {
+              color: #f7f3ea;
+
+              font-family: "Cormorant Garamond", serif;
+
+              font-size: 23px;
+              font-weight: 500;
+
+              margin: 0 0 6px;
+
+              transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+            }
+
+            p {
+              max-width: 390px;
+
+              color: #7c879a;
+
+              font-size: 9px;
+              line-height: 1.7;
+
+              margin: 0;
+            }
+          }
+
+          &:hover {
+            div {
+              h3 {
+                color: #dcb679;
+
+                transform: translateX(5px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.contracting-companies {
+  background-color: #f7f3ea;
+
+  padding: 6rem 5rem;
+
+  font-family: "Montserrat", sans-serif;
+
+  .contracting-companies-container {
+    max-width: 1180px;
+
+    display: grid;
+    grid-template-columns: 260px 1fr;
+
+    gap: 4rem;
+
+    margin: auto;
+
+    .contracting-companies-heading {
+      .contracting-companies-label {
+        display: flex;
+        align-items: center;
+
+        gap: 10px;
+
+        margin-bottom: 1.3rem;
+
+        span,
+        p {
+          color: #a9812f;
+
+          font-size: 9px;
+          letter-spacing: 2px;
+
+          margin: 0;
+        }
+
+        i {
+          width: 30px;
+          height: 1px;
+
+          display: block;
+
+          background-color: #c6a15b;
+        }
+      }
+
+      h2 {
+        color: #12203a;
+
+        font-family: "Cormorant Garamond", serif;
+
+        font-size: 52px;
+        line-height: 0.9;
+        font-weight: 600;
+
+        margin: 0 0 1.7rem;
+      }
+
+      > p {
+        color: #4d5a70;
+
+        font-size: 10px;
+        line-height: 1.8;
+
+        margin-bottom: 1.7rem;
+      }
+
+      > a {
+        display: inline-flex;
+        align-items: center;
+
+        gap: 12px;
+
+        color: #a9812f;
+
+        font-size: 10px;
+
+        text-decoration: none;
+
+        padding-bottom: 5px;
+
+        border-bottom: 1px solid #c6a15b;
+
+        span {
+          transition: transform 0.3s ease;
+        }
+
+        &:hover {
+          span {
+            transform: translateX(5px);
+          }
+        }
+      }
+
+      .contracting-companies-arrows {
+        display: flex;
+
+        gap: 8px;
+
+        margin-top: 4rem;
+
+        button {
+          width: 38px;
+          height: 38px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          background-color: transparent;
+
+          border: 1px solid #dcd2b8;
+
+          color: #12203a;
+
+          transition: 0.3s ease;
+
+          &:hover {
+            background-color: #12203a;
+            border-color: #12203a;
+
+            color: #f7f3ea;
+          }
+        }
+      }
+    }
+
+    .contracting-companies-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 12px;
+
+      .contracting-company-card {
+        min-width: 0;
+
+        display: block;
+
+        background-color: #0e1a33;
+
+        text-decoration: none;
+
+        overflow: hidden;
+
+        .contracting-company-image {
+          height: 290px;
+
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition: transform 0.6s ease;
+          }
+        }
+
+        .contracting-company-content {
+          min-height: 185px;
+
+          position: relative;
+
+          padding: 1.5rem;
+
+          > span {
+            display: block;
+
+            color: #dcb679;
+
+            font-size: 8px;
+
+            margin-bottom: 12px;
+          }
+
+          h3 {
+            color: #f7f3ea;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 21px;
+            line-height: 1.05;
+            font-weight: 500;
+
+            margin: 0 0 12px;
+          }
+
+          p {
+            max-width: 210px;
+
+            color: #7c879a;
+
+            font-size: 8px;
+            line-height: 1.7;
+
+            margin: 0;
+          }
+
+          b {
+            position: absolute;
+
+            right: 18px;
+            bottom: 18px;
+
+            color: #dcb679;
+
+            font-size: 15px;
+
+            font-weight: 400;
+
+            transition: transform 0.3s ease;
+          }
+        }
+
+        &:hover {
+          .contracting-company-image {
+            img {
+              transform: scale(1.05);
+            }
+          }
+
+          .contracting-company-content {
+            b {
+              transform: translate(3px, -3px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

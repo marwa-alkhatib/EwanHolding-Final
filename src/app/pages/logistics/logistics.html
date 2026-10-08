@@ -1,0 +1,347 @@
+<header>
+  <section class="pages-navbar">
+    <div class="pages-navbar-brand">
+      <img class="pages-navbar-logo" src="/photos/ewan_logo.png" alt="Ewan Holding Logo" />
+
+      <p class="pages-navbar-name">
+        <a href="/">
+          {{ 'Ewan' | tr }} <b>{{ 'Holding' | tr }}</b>
+        </a>
+      </p>
+    </div>
+
+    <nav class="pages-navbar-links">
+      <a href="/about" target="_blank">{{ 'About' | tr }}</a>
+
+      <a href="/companies" target="_blank">{{ 'Companies' | tr }}</a>
+
+      <a href="/investment" target="_blank">{{ 'Investment' | tr }}</a>
+
+      <a href="/news" target="_blank">{{ 'News' | tr }}</a>
+
+      <a href="/contact" target="_blank">{{ 'Contact' | tr }}</a>
+    </nav>
+
+    <app-language-toggle></app-language-toggle>
+
+    <img class="pages-navbar-menu" src="/photos/menu.png" alt="Open navigation menu" />
+  </section>
+</header>
+
+<main>
+  <section class="logistics-hero">
+    <div class="logistics-hero-background">
+      <img src="/photos/logHero.png" alt="Ewan Logistics" />
+    </div>
+
+    <div class="logistics-hero-content">
+      <p class="logistics-hero-label">{{ 'EWAN LOGISTICS' | tr }}</p>
+
+      <h1 class="logistics-hero-title">
+        {{ 'Moving business' | tr }} <br />
+        <span>{{ 'forward.' | tr }}</span>
+      </h1>
+
+      <p class="logistics-hero-description">
+        {{
+          'Last-mile delivery solutions built for reliability — connecting businesses, customers and destinations safely and on time.'
+            | tr
+        }}
+      </p>
+
+      <a href="#logistics-overview" class="logistics-hero-link">
+        {{ 'Discover more' | tr }}
+        <span>→</span>
+      </a>
+    </div>
+
+    <div class="logistics-hero-note">
+      <span>{{ 'PEOPLE' | tr }}</span>
+      <span>{{ 'GOODS' | tr }}</span>
+      <span>{{ 'OPPORTUNITIES' | tr }}</span>
+      <span>{{ 'FURTHER' | tr }}</span>
+    </div>
+  </section>
+
+  <section class="logistics-overview" id="logistics-overview">
+    <div class="logistics-overview-content">
+      <p class="logistics-overview-label">{{ '01 — OVERVIEW' | tr }}</p>
+
+      <h2 class="logistics-overview-title">
+        {{ 'More than delivery.' | tr }} <br />
+        <span>{{ 'A smarter tomorrow.' | tr }}</span>
+      </h2>
+
+      <p class="logistics-overview-description">
+        {{
+          'Ewan Logistics focuses on one thing: getting the last mile right, for an e-commerce landscape that moves fast and expects to keep moving.'
+            | tr
+        }}
+      </p>
+
+      <p class="logistics-overview-description">
+        {{
+          "Whether it's parcels, packages or larger products, our drivers and routing technology are built to deliver on time, accurately, every time."
+            | tr
+        }}
+      </p>
+
+      <a href="/contact" class="logistics-overview-link" target="_blank">
+        {{ 'View on map' | tr }}
+        <span>→</span>
+      </a>
+    </div>
+
+    <div class="logistics-overview-visual">
+      <img src="/photos/log2.png" alt="Ewan Logistics delivery operations" />
+
+      <div class="logistics-overview-note">
+        <span>{{ 'FROM' | tr }}</span>
+        <span>{{ 'WAREHOUSE' | tr }}</span>
+        <span>{{ "TO WHAT'S" | tr }}</span>
+        <span>{{ 'NEXT' | tr }}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="logistics-services">
+    <div class="logistics-services-head">
+      <div>
+        <p class="logistics-services-label">{{ '02 — OUR SERVICES' | tr }}</p>
+
+        <h2 class="logistics-services-title">{{ 'What we deliver' | tr }}</h2>
+      </div>
+
+      <div class="logistics-services-note">
+        <span>{{ 'SOLUTIONS THAT' | tr }}</span>
+        <span>{{ 'KEEP YOU AHEAD' | tr }}</span>
+      </div>
+    </div>
+
+    <div class="logistics-services-grid">
+      <!-- 01 -->
+      <div class="logistics-service">
+        <span class="logistics-service-number"> 01 </span>
+
+        <div class="logistics-service-icon">◇</div>
+
+        <h3>{{ 'Last-Mile Delivery' | tr }}</h3>
+
+        <p>
+          {{
+            'Fast, reliable and flexible delivery solutions for e-commerce and retail businesses.'
+              | tr
+          }}
+        </p>
+      </div>
+
+      <!-- 02 -->
+      <div class="logistics-service">
+        <span class="logistics-service-number"> 02 </span>
+
+        <div class="logistics-service-icon">◎</div>
+
+        <h3>{{ 'Real-Time Tracking' | tr }}</h3>
+
+        <p>
+          {{ 'Full visibility at every step, so you and your customers stay informed.' | tr }}
+        </p>
+      </div>
+
+      <!-- 03 -->
+      <div class="logistics-service">
+        <span class="logistics-service-number"> 03 </span>
+
+        <div class="logistics-service-icon">⤴</div>
+
+        <h3>{{ 'Smart Routing' | tr }}</h3>
+
+        <p>
+          {{
+            'Data-driven routing to save time, reduce costs and improve delivery efficiency.' | tr
+          }}
+        </p>
+      </div>
+
+      <!-- 04 -->
+      <div class="logistics-service">
+        <span class="logistics-service-number"> 04 </span>
+
+        <div class="logistics-service-icon">◯</div>
+
+        <h3>{{ 'Customer Support' | tr }}</h3>
+
+        <p>
+          {{ 'A dedicated support team to ensure every delivery experience is seamless.' | tr }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="logistics-standard">
+    <div class="logistics-standard-background">
+      <img src="/photos/log3.png" alt="Ewan Logistics road network" />
+    </div>
+
+    <div class="logistics-standard-content">
+      <div class="logistics-standard-head">
+        <div>
+          <p class="logistics-standard-label">{{ '03 — WHY CHOOSE US' | tr }}</p>
+
+          <h2 class="logistics-standard-title">{{ 'The Logistics standard' | tr }}</h2>
+        </div>
+
+        <div class="logistics-standard-note">
+          <span>{{ 'ANY' | tr }}</span>
+          <span>{{ 'DISTANCE' | tr }}</span>
+          <span>{{ 'A CLOSER' | tr }}</span>
+          <span>{{ 'TOMORROW' | tr }}</span>
+        </div>
+      </div>
+
+      <div class="logistics-standard-grid">
+        <!-- Efficiency -->
+
+        <div class="logistics-standard-item">
+          <span class="logistics-standard-number"> 01 </span>
+
+          <h3>{{ 'Efficiency' | tr }}</h3>
+
+          <p>
+            {{
+              'Routing algorithms and real-time tracking that shorten delivery times and keep customers informed along the way.'
+                | tr
+            }}
+          </p>
+        </div>
+
+        <!-- Reliability -->
+
+        <div class="logistics-standard-item">
+          <span class="logistics-standard-number"> 02 </span>
+
+          <h3>{{ 'Reliability' | tr }}</h3>
+
+          <p>
+            {{
+              'A well-maintained fleet and professional drivers you can count on to deliver safely and on time, every time.'
+                | tr
+            }}
+          </p>
+        </div>
+
+        <!-- Customer Satisfaction -->
+
+        <div class="logistics-standard-item">
+          <span class="logistics-standard-number"> 03 </span>
+
+          <h3>{{ 'Customer Satisfaction' | tr }}</h3>
+
+          <p>
+            {{
+              'Streamlined booking and responsive support, so every delivery is backed by real customer care.'
+                | tr
+            }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="logistics-companies">
+    <div class="logistics-companies-head">
+      <div>
+        <p class="logistics-companies-label">{{ '04 — OUR GROUP' | tr }}</p>
+
+        <h2 class="logistics-companies-title">{{ 'Other companies' | tr }}</h2>
+      </div>
+
+      <a href="/companies" target="_blank" class="logistics-companies-all">
+        {{ 'VIEW ALL COMPANIES' | tr }}
+        <span>→</span>
+      </a>
+    </div>
+
+    <div class="logistics-companies-grid">
+      <!-- Human Resources -->
+
+      <a href="/human-resources" target="_blank" class="logistics-company-card">
+        <div class="logistics-company-image">
+          <img src="/photos/log4.png" alt="Ewan Human Resources" />
+        </div>
+
+        <div class="logistics-company-content">
+          <span class="logistics-company-number"> 01 </span>
+
+          <p class="logistics-company-category">{{ 'HUMAN CAPITAL' | tr }}</p>
+
+          <h3>{{ 'Ewan Human Resources' | tr }}</h3>
+
+          <span class="logistics-company-arrow"> → </span>
+        </div>
+      </a>
+
+      <!-- Furnished Apartments -->
+
+      <a href="/furnished-apartments" target="_blank" class="logistics-company-card">
+        <div class="logistics-company-image">
+          <img src="/photos/log5.png" alt="Ewan Furnished Apartments" />
+        </div>
+
+        <div class="logistics-company-content">
+          <span class="logistics-company-number"> 02 </span>
+
+          <p class="logistics-company-category">{{ 'HOSPITALITY' | tr }}</p>
+
+          <h3>{{ 'Ewan Furnished Apartments' | tr }}</h3>
+
+          <span class="logistics-company-arrow"> → </span>
+        </div>
+      </a>
+
+      <!-- Security Services -->
+
+      <a href="/security-services" target="_blank" class="logistics-company-card">
+        <div class="logistics-company-image">
+          <img src="/photos/log6.png" alt="Ewan Security Services" />
+        </div>
+
+        <div class="logistics-company-content">
+          <span class="logistics-company-number"> 03 </span>
+
+          <p class="logistics-company-category">{{ 'SECURITY' | tr }}</p>
+
+          <h3>{{ 'Ewan Security Services' | tr }}</h3>
+
+          <span class="logistics-company-arrow"> → </span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="pages-newsletter">
+    <div class="container col-lg-10">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-7">
+          <div class="pages-newsletter-content">
+            <h2>{{ 'Join our newsletter' | tr }}</h2>
+
+            <p>
+              {{ 'Company news and investment updates, a few times a year — nothing more.' | tr }}
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <form class="pages-newsletter-form">
+            <input type="email" [placeholder]="'Your email address' | tr" />
+
+            <button type="submit">{{ 'Subscribe' | tr }}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-site-footer></app-site-footer>

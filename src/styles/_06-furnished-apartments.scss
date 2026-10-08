@@ -1,0 +1,498 @@
+/* Furnished Apartments ============================================================= */
+
+.furnished-hero {
+  background-color: #0e1a33;
+  font-family: 'Cormorant Garamond', serif;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 5rem 4rem;
+    padding-left: 10rem;
+    padding-top: 9rem;
+
+    .furnished-breadcrumb {
+      color: #a8adc583;
+      font-size: 16px;
+
+      a {
+        font-size: 16px;
+        color: #a8adc583;
+        text-decoration: none;
+
+        &:hover {
+          color: #dcb679;
+        }
+      }
+    }
+
+    .furnished-hero-title {
+      color: white;
+      font-size: 55px;
+      line-height: 65px;
+      padding: 10px 0;
+    }
+
+    .furnished-hero-description {
+      color: #a8adc583;
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}
+
+.furnished-overview {
+  background-color: #f7f3ea;
+  padding: 4rem 10rem;
+  font-family: 'Montserrat', sans-serif;
+
+  .furnished-overview-content {
+    display: grid;
+    grid-template-columns: 0.9fr 1.4fr;
+    align-items: stretch;
+    gap: 4rem;
+
+    .furnished-overview-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      .furnished-overview-label {
+        color: #b4884b;
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-right: 85px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          width: 70px;
+          height: 1px;
+          background-color: #b4884b;
+        }
+      }
+
+      .furnished-overview-title {
+        font-family: 'Cormorant Garamond', serif;
+        color: #0a1628;
+        font-size: 58px;
+        line-height: 1;
+        font-weight: 500;
+        margin-bottom: 2rem;
+      }
+
+      .furnished-overview-description {
+        color: #4d5a70;
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 1.4rem;
+        max-width: 500px;
+      }
+
+      .furnished-overview-link {
+        margin-top: 0.8rem;
+        background-color: #b4884b;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 14px 24px;
+        font-size: 14px;
+        transition: 0.3s ease;
+
+        &:hover {
+          background-color: #0a1628;
+        }
+      }
+    }
+
+    .furnished-overview-image {
+      position: relative;
+      min-height: 520px;
+      overflow: hidden;
+      border-radius: 35px 35px 35px 35px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        min-height: 520px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .furnished-overview-image-text {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 230px;
+        padding: 30px 32px;
+        background-color: rgba(180, 136, 75, 0.78);
+        backdrop-filter: blur(8px);
+
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+        span {
+          color: #ffffff;
+          font-size: 13px;
+          letter-spacing: 3px;
+
+          &:nth-child(2) {
+            position: relative;
+            padding-right: 45px;
+
+            &::after {
+              content: '';
+              position: absolute;
+              width: 35px;
+              height: 1px;
+              right: 0;
+              top: 50%;
+              background-color: rgba(255, 255, 255, 0.7);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.furnished-services {
+  background-color: #efe8d8;
+  padding: 5rem 10rem;
+  font-family: 'Montserrat', sans-serif;
+
+  .furnished-services-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 5rem;
+    margin-bottom: 3rem;
+
+    div {
+      .furnished-services-label {
+        color: #b4884b;
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        position: relative;
+        padding-right: 85px;
+        width: fit-content;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 70px;
+          height: 1px;
+          background-color: #b4884b;
+          top: 50%;
+          right: 0;
+        }
+      }
+
+      .furnished-services-title {
+        font-family: 'Cormorant Garamond', serif;
+        color: #0a1628;
+        font-size: 55px;
+        font-weight: 500;
+        margin: 0;
+      }
+    }
+
+    .furnished-services-intro {
+      color: #4d5a70;
+      font-size: 15px;
+      line-height: 1.7;
+      max-width: 420px;
+      margin: 0;
+    }
+  }
+
+  .furnished-services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #dcd2b8;
+
+    .furnished-service-card {
+      padding: 2.5rem 2rem;
+      border-right: 1px solid #dcd2b8;
+      transition: 0.3s ease;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &:hover {
+        transform: translateY(-7px);
+      }
+
+      .furnished-service-icon {
+        color: #b4884b;
+        font-size: 35px;
+        margin-bottom: 1.5rem;
+      }
+
+      h3 {
+        font-family: 'Cormorant Garamond', serif;
+        color: #0a1628;
+        font-size: 24px;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: #4d5a70;
+        font-size: 14px;
+        line-height: 1.8;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.furnished-standard {
+  background-color: #0a1628;
+  font-family: 'Montserrat', sans-serif;
+
+  .furnished-standard-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    min-height: 560px;
+
+    .furnished-standard-text {
+      padding: 5rem 5rem 5rem 10rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .furnished-standard-label {
+        color: #dcb679;
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+      }
+
+      .furnished-standard-title {
+        font-family: 'Cormorant Garamond', serif;
+        color: #f7f3ea;
+        font-size: 55px;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      .furnished-standard-description {
+        color: #a8adc5;
+        font-size: 16px;
+        margin-bottom: 3rem;
+      }
+
+      .furnished-standard-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .furnished-standard-card {
+          padding: 0 2rem;
+          border-right: 1px solid #28405f;
+
+          &:first-child {
+            padding-left: 0;
+          }
+
+          &:last-child {
+            border-right: none;
+          }
+
+          h3 {
+            font-family: 'Cormorant Garamond', serif;
+            color: #f7f3ea;
+            font-size: 23px;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            color: #a8adc5;
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .furnished-standard-image {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        min-height: 560px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .furnished-standard-image-text {
+        position: absolute;
+        top: 50%;
+        right: 35px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        span {
+          color: #ffffff;
+          font-size: 13px;
+          letter-spacing: 4px;
+        }
+      }
+    }
+  }
+}
+
+.furnished-companies {
+  background-color: #f7f3ea;
+  padding: 5rem 10rem;
+  font-family: 'Montserrat', sans-serif;
+
+  .furnished-companies-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 3rem;
+    margin-bottom: 3rem;
+
+    div {
+      .furnished-companies-label {
+        color: #b4884b;
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        position: relative;
+        padding-right: 85px;
+        width: fit-content;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          width: 70px;
+          height: 1px;
+          background-color: #b4884b;
+        }
+      }
+
+      .furnished-companies-title {
+        font-family: 'Cormorant Garamond', serif;
+        color: #0a1628;
+        font-size: 55px;
+        line-height: 1;
+        font-weight: 500;
+        margin: 0;
+      }
+    }
+
+    .furnished-companies-all {
+      color: #b4884b;
+      font-size: 14px;
+      text-decoration: none;
+      padding-bottom: 7px;
+      border-bottom: 1px solid #b4884b;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: #0a1628;
+        border-color: #0a1628;
+      }
+    }
+  }
+
+  .furnished-companies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    .furnished-company-card {
+      padding-right: 2rem;
+      border-right: 1px solid #dcd2b8;
+
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+
+      .furnished-company-image {
+        width: 100%;
+        height: 230px;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.6s ease;
+        }
+      }
+
+      &:hover {
+        .furnished-company-image {
+          img {
+            transform: scale(1.05);
+          }
+        }
+      }
+
+      h3 {
+        font-family: 'Cormorant Garamond', serif;
+        color: #0a1628;
+        font-size: 25px;
+        margin-bottom: 0.8rem;
+      }
+
+      p {
+        color: #4d5a70;
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 1.3rem;
+        max-width: 390px;
+      }
+
+      > a {
+        color: #b4884b;
+        font-size: 14px;
+        text-decoration: none;
+        position: relative;
+        padding-bottom: 6px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 1px;
+          background-color: #b4884b;
+        }
+
+        &:hover {
+          color: #0a1628;
+
+          &::after {
+            background-color: #0a1628;
+          }
+        }
+      }
+    }
+  }
+}

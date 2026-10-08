@@ -1,0 +1,1050 @@
+/* Home component only: tablet responsive styles.
+   Candidate extracted from the user-provided source; visually verify before adopting.
+   Other pages remain styled by src/styles.scss global imports. */
+
+@media (max-width: 992px) {
+
+  /* main page =============================================== */
+
+  .hero-section {
+
+    height: 1090px;
+
+
+
+    .hero-background {
+
+      height: 100%;
+
+      object-fit: cover;
+
+    }
+
+
+
+    &::after {
+
+      height: 100%;
+
+    }
+
+
+
+    .hero-nav {
+
+      padding: 6px 50px;
+
+      justify-content: space-between;
+
+
+
+      position: fixed;
+
+
+
+      nav {
+
+        display: none;
+
+
+
+        position: absolute;
+
+        top: 100%;
+
+        right: 50px;
+
+
+
+        width: 260px;
+
+        padding: 20px;
+
+
+
+        flex-direction: column;
+
+        gap: 5px;
+
+
+
+        background-color: #0e1a33;
+
+
+
+        a {
+
+          padding: 12px 15px;
+
+          color: #f3f0e7;
+
+
+
+          &:hover {
+
+            color: #dcb679;
+
+          }
+
+        }
+
+
+
+        &.menu-open {
+
+          display: flex;
+
+        }
+
+      }
+
+
+
+      div {
+
+        img {
+
+          width: 23px;
+
+          height: 28px;
+
+          padding-top: 0;
+
+        }
+
+
+
+        p {
+
+          padding-top: 0;
+
+          font-size: 24px;
+
+        }
+
+      }
+
+
+
+      button {
+
+        display: none;
+
+      }
+
+
+
+      .menu {
+
+        display: block;
+
+        width: 25px;
+
+        height: 25px;
+
+
+
+        object-fit: contain;
+
+        cursor: pointer;
+
+      }
+
+    }
+
+
+
+    .hero-content {
+
+      top: 120px;
+
+      left: 6%;
+
+      right: 8%;
+
+      width: auto;
+
+
+
+      .part1 {
+
+        .p1 {
+
+          font-size: 14px;
+
+        }
+
+
+
+        .p2 {
+
+          font-size: 53px;
+
+          line-height: 1;
+
+
+
+          i {
+
+            font-size: 62px;
+
+          }
+
+        }
+
+      }
+
+
+
+      .part2 {
+
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 28px;
+
+        padding-top: 10px;
+
+
+
+        .p3 {
+
+          /* max-width: 760px; */
+
+          font-size: 17px;
+
+          line-height: 1.7;
+
+        }
+
+
+
+        .p4 {
+
+          /* width: 80%; */
+
+          /* margin-left: auto; */
+
+          padding: 0;
+
+          padding-top: 28px;
+
+          border-top: 1px solid rgba(243, 240, 231, 0.25);
+
+          font-size: 17px;
+
+          line-height: 1.7;
+
+          padding-right: 50px;
+
+        }
+
+      }
+
+    }
+
+
+
+    .hero-ticker {
+
+      bottom: 250px;
+
+
+
+      .ticker-track {
+
+        animation-duration: 18s;
+
+
+
+        .ticker-content {
+
+          gap: 30px;
+
+          padding-right: 30px;
+
+          font-size: 13px;
+
+        }
+
+      }
+
+    }
+
+
+
+    .hero-stats {
+
+      display: block;
+
+      position: absolute;
+
+      top: -15px;
+
+
+
+      width: 100%;
+
+      margin: 0;
+
+      padding: 0;
+
+
+
+      z-index: 3;
+
+
+
+      .stat-band {
+
+        width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
+
+
+        display: grid;
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+
+
+        transform: none;
+
+
+
+        > div {
+
+          position: static;
+
+
+
+          width: auto;
+
+          min-width: 0;
+
+          height: 250px;
+
+
+
+          margin: 0;
+
+          padding: 25px 10px;
+
+
+
+          display: flex;
+
+          flex-direction: column;
+
+          align-items: center;
+
+          justify-content: center;
+
+
+
+          text-align: center;
+
+
+
+          border-right: 1px solid rgba(243, 240, 231, 0.2);
+
+
+
+          transform: none;
+
+
+
+          &:last-child {
+
+            border-right: none;
+
+          }
+
+
+
+          .stat-num {
+
+            display: block;
+
+
+
+            font-size: 42px;
+
+            line-height: 1;
+
+
+
+            color: #dcb679;
+
+          }
+
+
+
+          .stat-label {
+
+            display: block;
+
+
+
+            margin-top: 15px;
+
+
+
+            font-size: 12px;
+
+            line-height: 1.4;
+
+
+
+            color: #f3f0e7;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+  .about-section {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 45px;
+
+
+
+    padding: 70px 6%;
+
+
+
+    .vision-image {
+
+      width: 100%;
+
+
+
+      .big-number {
+
+        font-size: 130px;
+
+        top: -65px;
+
+        left: -25px;
+
+      }
+
+
+
+      .image-box {
+
+        width: 100%;
+
+
+
+        img {
+
+          width: 100%;
+
+          height: 400px;
+
+          object-fit: cover;
+
+        }
+
+      }
+
+
+
+      .image-info {
+
+        width: 100%;
+
+      }
+
+    }
+
+
+
+    .vision-content {
+
+      width: 100%;
+
+
+
+      .small-title {
+
+        font-size: 11px;
+
+      }
+
+
+
+      .vision-title {
+
+        font-size: 15px;
+
+      }
+
+
+
+      .gold-line {
+
+        width: 55px;
+
+        margin: 18px 0 25px;
+
+      }
+
+
+
+      .vision-text {
+
+        font-size: 32px;
+
+        line-height: 1.3;
+
+      }
+
+    }
+
+  }
+
+
+
+  .values-section {
+
+    padding: 70px 4% 90px;
+
+
+
+    .values-heading {
+
+      margin-bottom: 70px;
+
+
+
+      p {
+
+        font-size: 16px;
+
+      }
+
+
+
+      h2 {
+
+        font-size: 46px;
+
+        line-height: 1.05;
+
+
+
+        br {
+
+          display: none;
+
+        }
+
+      }
+
+    }
+
+
+
+    .values-cards {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 0;
+
+      width: 100%;
+
+
+
+      .value-card {
+
+        width: 100%;
+
+        height: 310px;
+
+        min-height: 310px;
+
+        padding: 38px;
+
+
+
+        span {
+
+          font-size: 36px;
+
+          margin-bottom: 28px;
+
+        }
+
+
+
+        h3 {
+
+          font-size: 25px;
+
+          margin-bottom: 14px;
+
+        }
+
+
+
+        p {
+
+          font-size: 16px;
+
+          line-height: 1.6;
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+  .companies-section {
+
+    padding: 70px 4% 90px;
+
+
+
+    .companies-heading {
+
+      margin-bottom: 65px;
+
+
+
+      p {
+
+        font-size: 16px;
+
+      }
+
+
+
+      h2 {
+
+        font-size: 43px;
+
+        line-height: 1.1;
+
+
+
+        br {
+
+          display: none;
+
+        }
+
+      }
+
+    }
+
+
+
+    .companies-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr;
+
+      gap: 28px;
+
+
+
+      .company-card {
+
+        width: 100%;
+
+        height: 450px;
+
+
+
+        img {
+
+          width: 100%;
+
+          height: 100%;
+
+          object-fit: cover;
+
+        }
+
+
+
+        .company-overlay {
+
+          padding: 35px;
+
+
+
+          h3 {
+
+            font-size: 28px;
+
+          }
+
+
+
+          .company-description {
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+          }
+
+
+
+          a {
+
+            font-size: 14px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+  .subscribe-section {
+
+    padding: 70px 6%;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 55px;
+
+
+
+    .subscribe-left {
+
+      width: 100%;
+
+
+
+      .subscribe-label {
+
+        font-size: 11px;
+
+      }
+
+
+
+      h2 {
+
+        font-size: 44px;
+
+        line-height: 1.05;
+
+
+
+        br {
+
+          display: none;
+
+        }
+
+      }
+
+
+
+      .subscribe-text {
+
+        max-width: 600px;
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+      }
+
+
+
+      .small-line {
+
+        margin: 25px 0;
+
+      }
+
+
+
+      .subscribe-tags {
+
+        font-size: 11px;
+
+        gap: 12px;
+
+      }
+
+    }
+
+
+
+    .subscribe-form {
+
+      width: 100%;
+
+
+
+      input {
+
+        font-size: 16px;
+
+        padding: 18px 8px;
+
+      }
+
+
+
+      button {
+
+        padding: 0 20px;
+
+        font-size: 15px;
+
+      }
+
+    }
+
+  }
+
+
+
+  .news-section {
+
+    padding: 70px 4% 90px;
+
+
+
+    .news-top {
+
+      align-items: flex-end;
+
+
+
+      .news-heading {
+
+        p {
+
+          font-size: 16px;
+
+        }
+
+
+
+        h2 {
+
+          font-size: 44px;
+
+          line-height: 1.1;
+
+
+
+          br {
+
+            display: none;
+
+          }
+
+        }
+
+      }
+
+
+
+      .view-all-news {
+
+        font-size: 13px;
+
+      }
+
+    }
+
+
+
+    .news-grid {
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 35px 40px;
+
+
+
+      .news-card {
+
+        .news-image {
+
+          height: 230px;
+
+
+
+          img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+          }
+
+        }
+
+
+
+        .news-category {
+
+          font-size: 14px;
+
+          margin-top: 18px;
+
+        }
+
+
+
+        h3 {
+
+          font-size: 24px;
+
+          line-height: 1.25;
+
+        }
+
+
+
+        .news-bottom {
+
+          margin-top: 18px;
+
+
+
+          .news-date {
+
+            font-size: 11px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+  .site-footer {
+
+    padding: 60px 6% 30px;
+
+
+
+    .footer-content {
+
+      grid-template-columns: repeat(2, 1fr);
+
+
+
+      gap: 50px;
+
+
+
+      padding-bottom: 50px;
+
+
+
+      .footer-brand {
+
+        h2 {
+
+          font-size: 28px;
+
+        }
+
+
+
+        p {
+
+          font-size: 13px;
+
+
+
+          max-width: 350px;
+
+        }
+
+      }
+
+
+
+      .footer-column {
+
+        gap: 17px;
+
+
+
+        h3 {
+
+          font-size: 13px;
+
+        }
+
+
+
+        a {
+
+          font-size: 13px;
+
+        }
+
+      }
+
+    }
+
+
+
+    .footer-bottom {
+
+      padding-top: 25px;
+
+
+
+      p {
+
+        font-size: 11px;
+
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,117 @@
+<div [class.companies-ar]="lang.language() === 'ar'">
+  <header>
+    <section class="pages-navbar" [class.navbar-ar]="lang.language() === 'ar'">
+      <div class="pages-navbar-brand">
+        <img class="pages-navbar-logo" src="/photos/ewan_logo.png" alt="Ewan Holding Logo" />
+
+        <p class="pages-navbar-name">
+          <a routerLink="/">
+            {{ 'Ewan' | tr }} <b>{{ 'Holding' | tr }}</b>
+          </a>
+        </p>
+      </div>
+
+      <nav class="pages-navbar-links">
+        <a routerLink="/about">{{ 'About' | tr }}</a>
+
+        <a routerLink="/companies">{{ 'Companies' | tr }}</a>
+
+        <a routerLink="/investment">{{ 'Investment' | tr }}</a>
+
+        <a routerLink="/news">{{ 'News' | tr }}</a>
+
+        <a routerLink="/contact">{{ 'Contact' | tr }}</a>
+      </nav>
+
+      <app-language-toggle></app-language-toggle>
+
+      <img class="pages-navbar-menu" src="/photos/menu.png" alt="Open navigation menu" />
+    </section>
+  </header>
+
+  <main>
+    <section class="companies-showcase">
+      <div class="companies-showcase-head">
+        <div class="companies-showcase-heading">
+          <p class="companies-showcase-label">{{ 'OUR COMPANIES' | tr }}</p>
+
+          <h2 class="companies-showcase-title">
+            {{ companies.length }} {{ 'businesses' | tr }} <br />
+            {{ 'one vision' | tr }}
+          </h2>
+        </div>
+
+        <p class="companies-showcase-intro">
+          {{
+            'Diverse businesses, a shared commitment. Each Ewan company plays a distinct role in building a stronger, more connected tomorrow.'
+              | tr
+          }}
+        </p>
+
+        <a href="#companies-list" class="companies-showcase-link">
+          {{ 'EXPLORE EWAN →' | tr }}
+        </a>
+      </div>
+
+      <div class="companies-showcase-list" id="companies-list">
+        @for (company of companies; track company.id; let i = $index) {
+          <div class="companies-showcase-item">
+            <div class="companies-showcase-number">
+              {{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}
+            </div>
+
+            <div class="companies-showcase-info">
+              <p class="companies-showcase-category">{{ 'EWAN COMPANY' | tr }}</p>
+
+              <h3>{{ lang.pick(company.name_Ar, company.name_En) }}</h3>
+
+              <p class="companies-showcase-description">
+                {{ lang.pick(company.description_Ar, company.description_En) }}
+              </p>
+
+              <a [routerLink]="['/companies', company.id]">
+                {{ 'Read more →' | tr }}
+              </a>
+            </div>
+
+            <div class="companies-showcase-image">
+              @if (image(company)) {
+                <img [src]="image(company)" [alt]="lang.pick(company.name_Ar, company.name_En)" />
+              }
+
+              <p class="companies-showcase-image-text">
+                {{ lang.pick(company.name_Ar, company.name_En) }}
+              </p>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+
+    <section class="pages-newsletter">
+      <div class="container col-lg-10">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-7">
+            <div class="pages-newsletter-content">
+              <h2>{{ 'Join our newsletter' | tr }}</h2>
+
+              <p>
+                {{ 'Company news and investment updates, a few times a year — nothing more.' | tr }}
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <form class="pages-newsletter-form">
+              <input type="email" [placeholder]="'Your email address' | tr" />
+
+              <button type="submit">{{ 'Subscribe' | tr }}</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <app-site-footer></app-site-footer>
+</div>

@@ -1,0 +1,199 @@
+/* about ==================================================================== */
+
+.about-hero {
+  background-color: #0e1a33;
+  font-family: 'Cormorant Garamond', serif;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 8rem 5rem;
+    padding-left: 12rem;
+
+    .about-breadcrumb {
+      color: #a8adc583;
+      font-size: 20px;
+
+      a {
+        font-size: 20px;
+        color: #a8adc583;
+        text-decoration: none;
+
+        &:hover {
+          color: #dcb679;
+        }
+      }
+    }
+
+    .about-hero-title {
+      color: white;
+      font-size: 60px;
+      line-height: 70px;
+      padding: 10px 0;
+    }
+
+    .about-hero-description {
+      color: #a8adc583;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+.about-story {
+  display: flex;
+  gap: 5rem;
+  padding: 3rem 12rem;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #f7f3ea;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* padding: 1rem 10rem; */
+
+    .about-story-label {
+      i {
+        font-size: 20px;
+        color: #c2a06b;
+      }
+    }
+
+    .about-story-title {
+      font-size: 50px;
+      line-height: 50px;
+      color: #0a1628;
+    }
+
+    .about-story-text {
+      font-size: 17px;
+      line-height: 25px;
+      color: #0a1628;
+    }
+  }
+
+  img {
+    width: 600px;
+  }
+}
+
+.about-vision {
+  background-color: #0a1628;
+  font-family: 'Cormorant Garamond', serif;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 4rem 0;
+    padding-top: 5rem;
+    padding-left: 11rem;
+    /* background-color: #b4884b; */
+    gap: 4px;
+
+    .about-vision-label {
+      i {
+        font-size: 17px;
+        color: #c2a06b;
+      }
+    }
+
+    .about-vision-title {
+      font-size: 55px;
+      line-height: 50px;
+      color: #ffffff;
+    }
+
+    .about-vision-text {
+      color: #a8adc583;
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+}
+
+.about-principles {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #f7f3ea;
+  padding: 4rem 11rem;
+
+  div {
+    .about-principles-label {
+      font-size: 17px;
+      /* color: #c2a06b; */
+      color: #b4884b;
+    }
+
+    .about-principles-title {
+      font-size: 55px;
+      line-height: 45px;
+      color: #0a1628;
+      /* color: #b4884b; */
+    }
+  }
+
+  .about-principles-container {
+    display: flex;
+
+    .about-principle-card {
+      display: flex;
+      flex-wrap: wrap;
+
+      .about-principle-title {
+        color: #b4884b;
+        /* color: #0a1628; */
+        font-size: 25px;
+      }
+
+      p {
+        font-size: 18px;
+        color: #4d5a70;
+      }
+    }
+  }
+}
+
+.about-local-investment {
+  display: flex;
+  gap: 5rem;
+  padding: 3rem 12rem;
+  font-family: 'Cormorant Garamond', serif;
+  /* background-color: #f2e6c8; */
+  background-color: #e8e3d9;
+  align-items: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* padding: 1rem 10rem; */
+
+    .about-investment-label {
+      i {
+        font-size: 20px;
+        color: #c2a06b;
+      }
+    }
+
+    .about-investment-title {
+      font-size: 50px;
+      line-height: 50px;
+      color: #0a1628;
+    }
+
+    .about-investment-text {
+      font-size: 17px;
+      line-height: 25px;
+      color: #0a1628;
+    }
+  }
+
+  img {
+    width: 600px;
+  }
+}

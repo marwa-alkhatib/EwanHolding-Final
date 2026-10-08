@@ -1,0 +1,220 @@
+<header>
+  <section class="pages-navbar">
+    <div class="pages-navbar-brand">
+      <img class="pages-navbar-logo" src="/photos/ewan_logo.png" alt="Ewan Holding Logo" />
+
+      <p class="pages-navbar-name">
+        <a href="/">
+          {{ 'Ewan' | tr }} <b>{{ 'Holding' | tr }}</b>
+        </a>
+      </p>
+    </div>
+
+    <nav class="pages-navbar-links">
+      <a href="/about" target="_blank">{{ 'About' | tr }}</a>
+
+      <a href="/companies" target="_blank">{{ 'Companies' | tr }}</a>
+
+      <a href="/investment" target="_blank">{{ 'Investment' | tr }}</a>
+
+      <a href="/news" target="_blank">{{ 'News' | tr }}</a>
+
+      <a href="/contact" target="_blank">{{ 'Contact' | tr }}</a>
+    </nav>
+
+    <app-language-toggle></app-language-toggle>
+
+    <img class="pages-navbar-menu" src="/photos/menu.png" alt="Open navigation menu" />
+  </section>
+</header>
+
+<main>
+  <section class="terms-hero">
+    <div class="terms-hero-container">
+      <div class="terms-hero-label">
+        <span></span>
+        <p>{{ 'LEGAL' | tr }}</p>
+      </div>
+
+      <h1>{{ 'Terms and Conditions' | tr }}</h1>
+
+      <p class="terms-hero-description">
+        {{ 'Guidelines for using our website and services.' | tr }}
+      </p>
+    </div>
+
+    <div class="terms-hero-decoration"></div>
+  </section>
+
+  <section class="terms-content">
+    <div class="terms-content-container">
+      <!-- LEFT LABEL -->
+
+      <div class="terms-content-side">
+        <span></span>
+
+        <strong>01</strong>
+
+        <p>{{ 'LEGAL' | tr }}</p>
+      </div>
+
+      <!-- RIGHT CONTENT -->
+
+      <div class="terms-content-body">
+        <p class="terms-content-intro">
+          {{
+            'Welcome to Ewan Holding. These Terms and Conditions outline the rules and regulations for the use of our website and services. By accessing this website, you agree to the terms set out below.'
+              | tr
+          }}
+        </p>
+
+        <!-- 01 -->
+
+        <div class="terms-item">
+          <span class="terms-item-number">01</span>
+
+          <div class="terms-item-content">
+            <h2>{{ 'Use of the Website' | tr }}</h2>
+
+            <p>
+              {{
+                'This website is provided for general information about Ewan Holding and its companies. You agree to use the website only for lawful purposes and in a way that does not infringe the rights of others.'
+                  | tr
+              }}
+            </p>
+          </div>
+        </div>
+
+        <!-- 02 -->
+
+        <div class="terms-item">
+          <span class="terms-item-number">02</span>
+
+          <div class="terms-item-content">
+            <h2>{{ 'Intellectual Property' | tr }}</h2>
+
+            <p>
+              {{
+                'All content on this website, including text, images, logos and graphics, is the property of Ewan Holding or its content suppliers and is protected by applicable intellectual property laws.'
+                  | tr
+              }}
+            </p>
+          </div>
+        </div>
+
+        <!-- 03 -->
+
+        <div class="terms-item">
+          <span class="terms-item-number">03</span>
+
+          <div class="terms-item-content">
+            <h2>{{ 'Information Accuracy' | tr }}</h2>
+
+            <p>
+              {{
+                'We strive to ensure that the information on this website is accurate and up to date. However, we make no warranties or representations of any kind, express or implied, about the completeness, accuracy or reliability of the content.'
+                  | tr
+              }}
+            </p>
+          </div>
+        </div>
+
+        <!-- 04 -->
+
+        <div class="terms-item">
+          <span class="terms-item-number">04</span>
+
+          <div class="terms-item-content">
+            <h2>{{ 'Third-Party Links' | tr }}</h2>
+
+            <p>
+              {{
+                'Our website may contain links to third-party websites. We are not responsible for the content, policies or practices of any third-party sites.'
+                  | tr
+              }}
+            </p>
+          </div>
+        </div>
+
+        <!-- 05 -->
+
+        <div class="terms-item">
+          <span class="terms-item-number">05</span>
+
+          <div class="terms-item-content">
+            <h2>{{ 'Limitation of Liability' | tr }}</h2>
+
+            <p>
+              {{
+                'Ewan Holding shall not be liable for any direct, indirect or consequential losses arising from the use of this website or reliance on any information provided herein.'
+                  | tr
+              }}
+            </p>
+          </div>
+        </div>
+
+        <!-- 06 -->
+
+        <div class="terms-item">
+          <span class="terms-item-number">06</span>
+
+          <div class="terms-item-content">
+            <h2>{{ 'Changes to These Terms' | tr }}</h2>
+
+            <p>
+              {{
+                'We may update these Terms and Conditions from time to time. Any changes will be posted on this page with an updated effective date.'
+                  | tr
+              }}
+            </p>
+          </div>
+        </div>
+
+        <!-- 07 -->
+
+        <div class="terms-item">
+          <span class="terms-item-number">07</span>
+
+          <div class="terms-item-content">
+            <h2>{{ 'Contact Us' | tr }}</h2>
+
+            <p>
+              {{
+                'If you have any questions about these Terms and Conditions, please contact us at'
+                  | tr
+              }}
+              <a href="mailto:info@ewanintl.sa"> info@ewanintl.sa </a>
+              {{ 'or through our Contact Us page.' | tr }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pages-newsletter">
+    <div class="container col-lg-10">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-7">
+          <div class="pages-newsletter-content">
+            <h2>{{ 'Join our newsletter' | tr }}</h2>
+
+            <p>
+              {{ 'Company news and investment updates, a few times a year — nothing more.' | tr }}
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <form class="pages-newsletter-form">
+            <input type="email" [placeholder]="'Your email address' | tr" />
+
+            <button type="submit">{{ 'Subscribe' | tr }}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-site-footer></app-site-footer>

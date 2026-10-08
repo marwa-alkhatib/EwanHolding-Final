@@ -1,0 +1,1100 @@
+/* maintenance ============================================================ */
+
+.maintenance-hero {
+  min-height: 720px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background-color: #0a1628;
+
+  font-family: "Montserrat", sans-serif;
+
+  .maintenance-hero-background {
+    position: absolute;
+    inset: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+
+      display: block;
+
+      transition: transform 0.8s ease;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background: linear-gradient(
+        90deg,
+        rgba(10, 22, 40, 0.88) 0%,
+        rgba(10, 22, 40, 0.68) 38%,
+        rgba(10, 22, 40, 0.25) 70%,
+        rgba(10, 22, 40, 0.12) 100%
+      );
+    }
+  }
+
+  .maintenance-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    padding-left: 10rem;
+    padding-top: 5rem;
+
+    .maintenance-hero-label {
+      color: rgba(247, 243, 234, 0.75);
+
+      font-size: 11px;
+      line-height: 1.8;
+      letter-spacing: 5px;
+
+      margin-bottom: 1.5rem;
+    }
+
+    .maintenance-hero-title {
+      color: #f7f3ea;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 70px;
+      line-height: 0.92;
+      font-weight: 500;
+
+      margin-bottom: 1.7rem;
+    }
+
+    .maintenance-hero-line {
+      display: block;
+
+      width: 95px;
+      height: 1px;
+
+      background: linear-gradient(
+        90deg,
+        #dcb679 0%,
+        #dcb679 50%,
+        rgba(220, 182, 121, 0.25) 50%,
+        rgba(220, 182, 121, 0.25) 100%
+      );
+
+      margin-bottom: 1.8rem;
+    }
+
+    .maintenance-hero-description {
+      color: rgba(247, 243, 234, 0.78);
+
+      max-width: 390px;
+
+      font-size: 14px;
+      line-height: 1.8;
+
+      margin-bottom: 2.5rem;
+    }
+
+    .maintenance-hero-scroll {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      width: fit-content;
+
+      gap: 10px;
+
+      color: rgba(247, 243, 234, 0.8);
+
+      font-size: 10px;
+      letter-spacing: 2px;
+
+      text-decoration: none;
+
+      div {
+        width: 48px;
+        height: 48px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid rgba(247, 243, 234, 0.6);
+        border-radius: 50%;
+
+        color: #f7f3ea;
+
+        font-size: 20px;
+
+        transition: 0.3s ease;
+      }
+
+      &:hover {
+        div {
+          background-color: #dcb679;
+
+          border-color: #dcb679;
+
+          color: #0a1628;
+
+          transform: translateY(5px);
+        }
+      }
+    }
+  }
+
+  .maintenance-hero-note {
+    position: absolute;
+
+    right: 5rem;
+    bottom: 3rem;
+
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    span {
+      color: rgba(247, 243, 234, 0.75);
+
+      font-size: 9px;
+      letter-spacing: 4px;
+    }
+
+    i {
+      width: 1px;
+      height: 13px;
+
+      background-color: #dcb679;
+    }
+  }
+
+  &:hover {
+    .maintenance-hero-background {
+      img {
+        transform: scale(1.02);
+      }
+    }
+  }
+}
+
+.maintenance-overview {
+  background-color: #f7f3ea;
+
+  padding: 6rem 10rem;
+
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+
+  gap: 7rem;
+
+  font-family: "Montserrat", sans-serif;
+
+  .maintenance-overview-content {
+    .maintenance-overview-label {
+      color: #b4884b;
+
+      font-size: 11px;
+      letter-spacing: 2px;
+
+      margin-bottom: 1.2rem;
+    }
+
+    .maintenance-overview-title {
+      color: #0a1628;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 52px;
+      line-height: 0.98;
+      font-weight: 600;
+
+      margin-bottom: 1.8rem;
+    }
+
+    .maintenance-overview-description {
+      color: #4d5a70;
+
+      max-width: 470px;
+
+      font-size: 14px;
+      line-height: 1.8;
+
+      margin-bottom: 1.2rem;
+    }
+
+    .maintenance-overview-line {
+      display: block;
+
+      width: 85px;
+      height: 1px;
+
+      background-color: #dcb679;
+
+      margin: 1.8rem 0;
+    }
+
+    .maintenance-overview-link {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 10px;
+
+      color: #b4884b;
+
+      font-size: 13px;
+
+      text-decoration: none;
+
+      padding-bottom: 6px;
+
+      border-bottom: 1px solid #dcb679;
+
+      transition: color 0.3s ease;
+
+      span {
+        font-size: 17px;
+
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        color: #0a1628;
+
+        span {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+
+  .maintenance-overview-visual {
+    height: 430px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    .maintenance-overview-image {
+      width: 100%;
+      height: 100%;
+
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        display: block;
+
+        transition: transform 0.7s ease;
+      }
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background: linear-gradient(
+        90deg,
+        rgba(10, 22, 40, 0.05) 30%,
+        rgba(10, 22, 40, 0.55) 100%
+      );
+
+      pointer-events: none;
+    }
+
+    .maintenance-overview-note {
+      position: absolute;
+
+      right: 2rem;
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      z-index: 2;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      gap: 9px;
+
+      span {
+        color: #f7f3ea;
+
+        font-size: 9px;
+        letter-spacing: 4px;
+      }
+
+      i {
+        width: 50px;
+        height: 1px;
+
+        background-color: #dcb679;
+
+        margin-top: 8px;
+      }
+    }
+
+    &:hover {
+      .maintenance-overview-image {
+        img {
+          transform: scale(1.04);
+        }
+      }
+    }
+  }
+}
+
+.maintenance-services {
+  background-color: #efe8d8;
+
+  padding: 6rem 10rem;
+
+  font-family: "Montserrat", sans-serif;
+
+  .maintenance-services-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+
+    gap: 5rem;
+
+    padding-bottom: 3rem;
+
+    border-bottom: 1px solid #dcd2b8;
+
+    .maintenance-services-label {
+      color: #b4884b;
+
+      font-size: 11px;
+      letter-spacing: 2px;
+
+      margin-bottom: 1rem;
+    }
+
+    .maintenance-services-title {
+      color: #0a1628;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 52px;
+      line-height: 1;
+      font-weight: 600;
+
+      margin: 0;
+    }
+
+    .maintenance-services-intro {
+      color: #7c879a;
+
+      max-width: 500px;
+
+      font-size: 13px;
+      line-height: 1.8;
+
+      margin: 0;
+    }
+  }
+
+  .maintenance-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .maintenance-service {
+      position: relative;
+
+      padding: 3rem 3rem 1rem 0;
+
+      min-height: 310px;
+
+      transition: 0.4s ease;
+
+      &:not(:first-child) {
+        padding-left: 3rem;
+
+        border-left: 1px solid #dcd2b8;
+      }
+
+      .maintenance-service-icon {
+        width: 48px;
+        height: 48px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: 1.8rem;
+
+        border: 1px solid #c6a15b;
+        border-radius: 50%;
+
+        color: #b4884b;
+
+        transition: 0.3s ease;
+
+        i {
+          font-size: 21px;
+        }
+      }
+
+      .maintenance-service-number {
+        position: absolute;
+
+        top: 3rem;
+        right: 2rem;
+
+        color: rgba(169, 129, 47, 0.45);
+
+        font-family: "Cormorant Garamond", serif;
+
+        font-size: 14px;
+      }
+
+      h3 {
+        color: #0a1628;
+
+        font-family: "Cormorant Garamond", serif;
+
+        font-size: 25px;
+        line-height: 1.05;
+        font-weight: 600;
+
+        margin-bottom: 1rem;
+
+        transition: color 0.3s ease;
+      }
+
+      p {
+        color: #4d5a70;
+
+        max-width: 360px;
+
+        font-size: 12px;
+        line-height: 1.8;
+
+        margin: 0;
+      }
+
+      &:hover {
+        .maintenance-service-icon {
+          background-color: #c6a15b;
+
+          color: #0a1628;
+
+          transform: rotate(8deg);
+        }
+
+        h3 {
+          color: #b4884b;
+        }
+      }
+    }
+  }
+}
+
+.maintenance-standard {
+  background-color: #0a1628;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 600px;
+
+  font-family: "Montserrat", sans-serif;
+
+  .maintenance-standard-visual {
+    position: relative;
+
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      min-height: 600px;
+
+      object-fit: cover;
+
+      display: block;
+
+      transition: transform 0.8s ease;
+    }
+
+    .maintenance-standard-overlay {
+      position: absolute;
+      inset: 0;
+
+      background: linear-gradient(
+        180deg,
+        rgba(10, 22, 40, 0.08) 0%,
+        rgba(10, 22, 40, 0.25) 45%,
+        rgba(10, 22, 40, 0.82) 100%
+      );
+    }
+
+    .maintenance-standard-image-text {
+      position: absolute;
+
+      left: 4rem;
+      bottom: 4rem;
+
+      z-index: 2;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 7px;
+
+      span {
+        color: #f7f3ea;
+
+        font-size: 11px;
+        letter-spacing: 5px;
+      }
+
+      i {
+        width: 65px;
+        height: 1px;
+
+        background-color: #dcb679;
+
+        margin-top: 8px;
+      }
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.035);
+      }
+    }
+  }
+
+  .maintenance-standard-content {
+    padding: 5rem 8rem 5rem 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .maintenance-standard-head {
+      padding-bottom: 2.5rem;
+
+      .maintenance-standard-label {
+        color: #dcb679;
+
+        font-size: 10px;
+        letter-spacing: 3px;
+
+        margin-bottom: 1.2rem;
+      }
+
+      .maintenance-standard-title {
+        color: #f7f3ea;
+
+        font-family: "Cormorant Garamond", serif;
+
+        font-size: 51px;
+        line-height: 0.95;
+        font-weight: 500;
+
+        margin-bottom: 1.5rem;
+
+        span {
+          color: #dcb679;
+
+          font-style: italic;
+          font-weight: 400;
+        }
+      }
+
+      .maintenance-standard-description {
+        color: rgba(247, 243, 234, 0.6);
+
+        max-width: 450px;
+
+        font-size: 12px;
+        line-height: 1.8;
+
+        margin: 0;
+      }
+    }
+
+    .maintenance-standard-list {
+      border-top: 1px solid rgba(228, 224, 210, 0.16);
+
+      .maintenance-standard-item {
+        display: grid;
+        grid-template-columns: 70px 1fr;
+
+        gap: 1.5rem;
+
+        padding: 1.7rem 0;
+
+        border-bottom: 1px solid rgba(228, 224, 210, 0.16);
+
+        transition: padding-left 0.3s ease;
+
+        .maintenance-standard-number {
+          color: #dcb679;
+
+          font-family: "Cormorant Garamond", serif;
+
+          font-size: 18px;
+        }
+
+        div {
+          h3 {
+            color: #f7f3ea;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 23px;
+            font-weight: 500;
+
+            margin-bottom: 7px;
+
+            transition: color 0.3s ease;
+          }
+
+          p {
+            color: rgba(247, 243, 234, 0.55);
+
+            max-width: 430px;
+
+            font-size: 11px;
+            line-height: 1.7;
+
+            margin: 0;
+          }
+        }
+
+        &:hover {
+          padding-left: 10px;
+
+          div {
+            h3 {
+              color: #dcb679;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.maintenance-companies {
+  background-color: #f7f3ea;
+
+  padding: 6rem 10rem;
+
+  font-family: "Montserrat", sans-serif;
+
+  .maintenance-companies-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 3rem;
+
+    .maintenance-companies-label {
+      color: #b4884b;
+
+      font-size: 10px;
+      letter-spacing: 3px;
+
+      margin-bottom: 1rem;
+    }
+
+    .maintenance-companies-title {
+      color: #0a1628;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 52px;
+      line-height: 1;
+      font-weight: 600;
+
+      margin: 0;
+    }
+
+    .maintenance-companies-link {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 12px;
+
+      color: #4d5a70;
+
+      font-size: 10px;
+      letter-spacing: 2px;
+
+      text-decoration: none;
+
+      padding-bottom: 7px;
+
+      border-bottom: 1px solid #b4884b;
+
+      transition: color 0.3s ease;
+
+      span {
+        color: #b4884b;
+
+        font-size: 18px;
+
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        color: #b4884b;
+
+        span {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+
+  .maintenance-companies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    .maintenance-company-card {
+      min-height: 400px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      background-color: #0a1628;
+
+      text-decoration: none;
+
+      .maintenance-company-image {
+        position: absolute;
+        inset: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+
+          object-fit: cover;
+
+          display: block;
+
+          transition: transform 0.65s ease;
+        }
+
+        &::after {
+          content: "";
+
+          position: absolute;
+          inset: 0;
+
+          background: linear-gradient(
+            180deg,
+            rgba(10, 22, 40, 0.05) 10%,
+            rgba(10, 22, 40, 0.25) 48%,
+            rgba(10, 22, 40, 0.94) 100%
+          );
+        }
+      }
+
+      .maintenance-company-content {
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        z-index: 2;
+
+        padding: 2rem;
+
+        .maintenance-company-number {
+          position: absolute;
+
+          right: 2rem;
+          bottom: 2rem;
+
+          color: rgba(247, 243, 234, 0.45);
+
+          font-family: "Cormorant Garamond", serif;
+
+          font-size: 14px;
+        }
+
+        .maintenance-company-category {
+          color: #dcb679;
+
+          font-size: 9px;
+          letter-spacing: 3px;
+
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          color: #f7f3ea;
+
+          max-width: 270px;
+
+          font-family: "Cormorant Garamond", serif;
+
+          font-size: 29px;
+          line-height: 1.05;
+          font-weight: 500;
+
+          margin: 0;
+        }
+
+        .maintenance-company-arrow {
+          display: inline-block;
+
+          color: #dcb679;
+
+          font-size: 21px;
+
+          margin-top: 1.2rem;
+
+          transition: transform 0.3s ease;
+        }
+      }
+
+      &::after {
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+
+        z-index: 3;
+
+        width: 0;
+        height: 3px;
+
+        background-color: #dcb679;
+
+        transition: width 0.45s ease;
+      }
+
+      &:hover {
+        .maintenance-company-image {
+          img {
+            transform: scale(1.05);
+          }
+        }
+
+        .maintenance-company-content {
+          .maintenance-company-arrow {
+            transform: translateX(7px);
+          }
+        }
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.maintenance-cta {
+  min-height: 580px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background-color: #0a1628;
+
+  font-family: "Montserrat", sans-serif;
+
+  .maintenance-cta-background {
+    position: absolute;
+    inset: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+
+      display: block;
+
+      transition: transform 0.8s ease;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background: linear-gradient(
+        90deg,
+        rgba(10, 22, 40, 0.92) 0%,
+        rgba(10, 22, 40, 0.72) 42%,
+        rgba(10, 22, 40, 0.3) 75%,
+        rgba(10, 22, 40, 0.2) 100%
+      );
+    }
+  }
+
+  .maintenance-cta-content {
+    position: relative;
+
+    z-index: 2;
+
+    padding-left: 10rem;
+
+    .maintenance-cta-label {
+      color: #dcb679;
+
+      font-size: 10px;
+      line-height: 1.8;
+      letter-spacing: 4px;
+
+      margin-bottom: 1.4rem;
+    }
+
+    h2 {
+      color: #f7f3ea;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 67px;
+      line-height: 0.95;
+      font-weight: 500;
+
+      margin-bottom: 1.5rem;
+
+      span {
+        color: #dcb679;
+
+        font-style: italic;
+        font-weight: 400;
+      }
+    }
+
+    .maintenance-cta-line {
+      display: block;
+
+      width: 90px;
+      height: 1px;
+
+      background-color: #dcb679;
+
+      margin-bottom: 1.7rem;
+    }
+
+    .maintenance-cta-description {
+      color: rgba(247, 243, 234, 0.68);
+
+      max-width: 430px;
+
+      font-size: 13px;
+      line-height: 1.8;
+
+      margin-bottom: 2rem;
+    }
+
+    .maintenance-cta-button {
+      min-width: 145px;
+      height: 48px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 18px;
+
+      padding: 0 22px;
+
+      background-color: #dcb679;
+
+      color: #0a1628;
+
+      font-size: 11px;
+      letter-spacing: 1px;
+
+      text-decoration: none;
+
+      transition: 0.3s ease;
+
+      span {
+        font-size: 18px;
+
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        background-color: #f7f3ea;
+
+        span {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+
+  .maintenance-cta-note {
+    position: absolute;
+
+    z-index: 2;
+
+    right: 5rem;
+    bottom: 3rem;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    span {
+      color: rgba(247, 243, 234, 0.7);
+
+      font-size: 9px;
+      letter-spacing: 3px;
+    }
+
+    i {
+      width: 30px;
+      height: 1px;
+
+      background-color: #dcb679;
+    }
+  }
+
+  &:hover {
+    .maintenance-cta-background {
+      img {
+        transform: scale(1.025);
+      }
+    }
+  }
+}
+

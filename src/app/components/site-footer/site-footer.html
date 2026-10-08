@@ -1,0 +1,76 @@
+@if (variant === 'home') {
+  <footer class="site-footer" [class.footer-ar]="lang.language() === 'ar'">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h2>{{ 'Ewan' | tr }} <span>{{ 'Holding' | tr }}</span></h2>
+        <p>
+          {{ 'A Saudi investment holding group fostering' | tr }}<br />
+          {{ 'innovation, growth and sustainable value' | tr }}<br />
+          {{ 'across every company we build.' | tr }}
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>{{ 'Company' | tr }}</h3>
+        <a routerLink="/about">{{ 'About us' | tr }}</a>
+        <a routerLink="/news">{{ 'News release' | tr }}</a>
+        <a routerLink="/investment">{{ 'Investment opportunities' | tr }}</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>{{ 'Businesses' | tr }}</h3>
+        @for (company of companies; track company.id) {
+          <a [routerLink]="['/companies', company.id]">{{ companyName(company) }}</a>
+        }
+      </div>
+
+      <div class="footer-column">
+        <h3>{{ 'Contact' | tr }}</h3>
+        <a routerLink="/contact">{{ 'Contact us' | tr }}</a>
+        <a routerLink="/terms">{{ 'Terms and conditions' | tr }}</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>{{ '© 2026 Ewan Holding. All rights reserved.' | tr }}</p>
+      <p>{{ 'Riyadh, Saudi Arabia' | tr }}</p>
+    </div>
+  </footer>
+} @else {
+  <footer class="pages-footer">
+    <div class="pages-footer-content">
+      <div class="pages-footer-brand">
+        <h2><span>{{ 'Ewan' | tr }}</span> {{ 'Holding' | tr }}</h2>
+        <p>{{ 'A Saudi group of companies operating across maintenance, contracting, logistics, HR, hospitality and security since 1999.' | tr }}</p>
+      </div>
+
+      <div class="pages-footer-links">
+        <h3>{{ 'Company' | tr }}</h3>
+        <a routerLink="/about">{{ 'About Us' | tr }}</a>
+        <a routerLink="/investment">{{ 'Investment Opportunities' | tr }}</a>
+        <a routerLink="/news">{{ 'News Release' | tr }}</a>
+        <a routerLink="/contact">{{ 'Contact Us' | tr }}</a>
+      </div>
+
+      <div class="pages-footer-links">
+        <h3>{{ 'Companies' | tr }}</h3>
+        @for (company of companies; track company.id) {
+          <a [routerLink]="['/companies', company.id]">{{ companyName(company) }}</a>
+        }
+        <a routerLink="/companies">{{ 'View All Companies' | tr }}</a>
+      </div>
+
+      <div class="pages-footer-office">
+        <h3>{{ 'Head Office' | tr }}</h3>
+        <a href="tel:920007653">920007653</a>
+        <a href="mailto:info@ewanintl.sa">info@ewanintl.sa</a>
+        <p>{{ '7883 Northern Ring Branch Rd, Al Muruj, Riyadh 12283' | tr }}</p>
+      </div>
+    </div>
+
+    <div class="pages-footer-bottom">
+      <p>{{ 'Copyright © 2026 Ewan Holding. All rights reserved.' | tr }}</p>
+      <a routerLink="/terms">{{ 'Terms and Conditions' | tr }}</a>
+    </div>
+  </footer>
+}

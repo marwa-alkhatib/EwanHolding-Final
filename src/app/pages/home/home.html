@@ -1,0 +1,363 @@
+<div [class.home-ar]="lang.language() === 'ar'">
+  <header class="hero-section">
+    <img
+      class="hero-background"
+      src="/photos/heroSectionImage.png"
+      alt="Ewan Holding business operations in Saudi Arabia"
+    />
+
+    <!-- Navbar -->
+    <section
+      class="hero-nav col-lg-12 justify-content-between"
+      [class.hero-nav-ar]="lang.language() === 'ar'"
+    >
+      <div class="p-2">
+        <img src="/photos/ewan_logo.png" alt="Ewan Holding logo" />
+        <p>
+          <a routerLink="/"
+            >{{ 'Ewan' | tr }} <b>{{ 'Holding' | tr }}</b></a
+          >
+        </p>
+      </div>
+
+      <nav class="p-2">
+        <a routerLink="/about">{{ 'About' | tr }}</a>
+        <a routerLink="/companies">{{ 'Companies' | tr }}</a>
+        <a routerLink="/investment">{{ 'Investment' | tr }}</a>
+        <a routerLink="/news">{{ 'News' | tr }}</a>
+        <a routerLink="/contact">{{ 'Contact' | tr }}</a>
+      </nav>
+
+      <app-language-toggle variant="hero"></app-language-toggle>
+
+      <img class="menu" src="/photos/menu.png" alt="Open navigation menu" />
+    </section>
+
+    <!-- Main Hero Content -->
+    <!-- ================= ENGLISH HERO ================= -->
+
+    @if (lang.language() === 'en') {
+      <section class="hero-content container col-lg-9">
+        <div class="part1 col-7">
+          <p class="p1">Riyadh, Saudi Arabia</p>
+
+          <p class="p2">
+            Building enduring value
+            <i>across the Kingdom's industries.</i>
+          </p>
+        </div>
+
+        <div class="part2">
+          <p class="p3">
+            Ewan Holding invests in and operates businesses across logistics, contracting,
+            hospitality, human capital and security — grounded in five decades of market experience.
+          </p>
+
+          <p class="p4">
+            A diversified holding structure that pairs long-term capital with hands-on operating
+            discipline, built to compound value for shareholders and partners across every sector we
+            enter.
+          </p>
+        </div>
+      </section>
+    }
+
+    <!-- ================= ARABIC HERO ================= -->
+    @if (lang.language() === 'ar') {
+      <section class="hero-content-ar">
+        <div class="hero-ar-heading">
+          <p class="hero-ar-location">
+            {{ 'Riyadh, Saudi Arabia' | tr }}
+          </p>
+
+          <p class="hero-ar-title">
+            {{ 'Building enduring value' | tr }}
+            <i>
+              {{ "across the Kingdom's industries." | tr }}
+            </i>
+          </p>
+        </div>
+
+        <div class="hero-ar-description">
+          <p>
+            {{
+              'A diversified holding structure that pairs long-term capital with hands-on operating discipline, built to compound value for shareholders and partners across every sector we enter.'
+                | tr
+            }}
+          </p>
+
+          <p>
+            {{
+              'Ewan Holding invests in and operates businesses across logistics, contracting, hospitality, human capital and security — grounded in five decades of market experience.'
+                | tr
+            }}
+          </p>
+        </div>
+      </section>
+    }
+
+    <!-- Ticker -->
+    <section class="hero-ticker">
+      <div class="ticker-track">
+        <div class="ticker-content">
+          <span>{{ 'LOGISTICS' | tr }}</span>
+          <span>—</span>
+          <span>{{ 'CONTRACTING' | tr }}</span>
+          <span>—</span>
+          <span>{{ 'HOSPITALITY' | tr }}</span>
+          <span>—</span>
+          <span>{{ 'HUMAN CAPITAL' | tr }}</span>
+          <span>—</span>
+          <span>{{ 'SECURITY' | tr }}</span>
+          <span>—</span>
+        </div>
+
+        <div class="ticker-content">
+          <span>{{ 'LOGISTICS' | tr }}</span>
+          <span>—</span>
+          <span>{{ 'CONTRACTING' | tr }}</span>
+          <span>—</span>
+          <span>{{ 'HOSPITALITY' | tr }}</span>
+          <span>—</span>
+          <span>{{ 'HUMAN CAPITAL' | tr }}</span>
+          <span>—</span>
+          <span>{{ 'SECURITY' | tr }}</span>
+          <span>—</span>
+        </div>
+
+        <div class="ticker-content">
+          <span>{{ 'LOGISTICS' | tr }}</span>
+          <span>—</span>
+          <span>{{ 'CONTRACTING' | tr }}</span>
+          <span>—</span>
+          <span>{{ 'HOSPITALITY' | tr }}</span>
+          <span>—</span>
+          <span>{{ 'HUMAN CAPITAL' | tr }}</span>
+          <span>—</span>
+          <span>{{ 'SECURITY' | tr }}</span>
+          <span>—</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Counters -->
+    <section class="hero-stats">
+      <div class="stat-band">
+        <div class="border-end border-top">
+          <span class="stat-num" data-count="50">0+</span>
+          <div class="stat-label">{{ 'Years in the market' | tr }}</div>
+        </div>
+
+        <div class="border-end border-top">
+          <span class="stat-num" data-count="30">0+</span>
+          <div class="stat-label">{{ 'Operating companies' | tr }}</div>
+        </div>
+
+        <div class="border-top">
+          <span class="stat-num" data-count="25">0+</span>
+          <div class="stat-label">{{ 'Branches nationwide' | tr }}</div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="about-section">
+      <div class="vision-image">
+        <span class="big-number">01</span>
+
+        <div class="image-box">
+          <img src="/photos/vision.png" alt="Ewan Holding vision and business footprint" />
+        </div>
+
+        <div class="image-info">
+          <span>{{ 'Our footprint' | tr }}</span>
+          <span>{{ '25 branches' | tr }}</span>
+        </div>
+      </div>
+
+      <div class="vision-content">
+        <span class="small-title">{{ 'EWAN HOLDING' | tr }}</span>
+
+        <p class="vision-title">{{ 'Our vision' | tr }}</p>
+
+        <div class="gold-line"></div>
+
+        <p class="vision-text">
+          {{
+            'To achieve sustainable success and create enduring value for our shareholders and partners — investing in promising opportunities and building strategic partnerships based on trust and excellence.'
+              | tr
+          }}
+        </p>
+      </div>
+    </section>
+
+    <section class="values-section">
+      <div class="values-heading">
+        <p>{{ 'What guides us' | tr }}</p>
+        <h2>{{ 'Four principles behind every' | tr }}<br />{{ 'company we build.' | tr }}</h2>
+      </div>
+
+      <div class="values-cards">
+        <div class="value-card">
+          <span>{{ 'Co.' | tr }}</span>
+          <h3>{{ 'Collaboration' | tr }}</h3>
+          <p>
+            {{
+              'Close partnership with clients and stakeholders, built on shared goals rather than transactions.'
+                | tr
+            }}
+          </p>
+        </div>
+
+        <div class="value-card">
+          <span>{{ 'Em.' | tr }}</span>
+          <h3>{{ 'Empowerment' | tr }}</h3>
+          <p>
+            {{
+              'A culture where our people are trusted to lead, create and grow across every business unit.'
+                | tr
+            }}
+          </p>
+        </div>
+
+        <div class="value-card">
+          <span>{{ 'In.' | tr }}</span>
+          <h3>{{ 'Integrity' | tr }}</h3>
+          <p>
+            {{
+              'Transparent decisions and ethical standards that hold regardless of scale or pressure.'
+                | tr
+            }}
+          </p>
+        </div>
+
+        <div class="value-card">
+          <span>{{ 'Ex.' | tr }}</span>
+          <h3>{{ 'Excellence' | tr }}</h3>
+          <p>
+            {{
+              'A continuous, unhurried pursuit of quality in operations, service and craftsmanship.'
+                | tr
+            }}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="companies-section">
+      <div class="companies-heading">
+        <p>{{ 'Our companies' | tr }}</p>
+        <h2>
+          {{ companies.length }} {{ 'businesses, one operating' | tr }}<br />
+          {{ 'standard.' | tr }}
+        </h2>
+      </div>
+
+      <div class="companies-grid">
+        @for (company of companies; track company.id) {
+          <div class="company-card">
+            @if (companyApi.image(company)) {
+              <img
+                [src]="companyApi.image(company)"
+                [alt]="lang.pick(company.name_Ar, company.name_En)"
+              />
+            }
+            <div class="company-overlay">
+              <h3>{{ lang.pick(company.name_Ar, company.name_En) }}</h3>
+              <p class="company-description">
+                {{ lang.pick(company.description_Ar, company.description_En) }}
+              </p>
+              <a [routerLink]="['/companies', company.id]">{{ 'View company →' | tr }}</a>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+
+    <section class="subscribe-section" [class.subscribe-ar]="lang.language() === 'ar'">
+      <div class="subscribe-left">
+        <span class="subscribe-label">{{ 'STAY CONNECTED' | tr }}</span>
+
+        @if (lang.language() === 'en') {
+          <h2>
+            Stay informed on<br />
+            Ewan Holding’s<br />
+            growth.
+          </h2>
+        }
+
+        @if (lang.language() === 'ar') {
+          <h2>
+            ابقَ على اطلاع على<br />
+            إيوان القابضة ونموها
+          </h2>
+        }
+
+        <p class="subscribe-text">
+          {{
+            'Be the first to receive insights, updates and opportunities across our businesses.'
+              | tr
+          }}
+        </p>
+
+        <div class="small-line"></div>
+
+        <div class="subscribe-tags">
+          <span>{{ 'PEOPLE' | tr }}</span>
+          <span>|</span>
+          <span>{{ 'BUSINESSES' | tr }}</span>
+          <span>|</span>
+          <span>{{ 'A STRONGER TOMORROW' | tr }}</span>
+        </div>
+      </div>
+
+      <form class="subscribe-form">
+        <input type="email" [placeholder]="'Enter your email address' | tr" />
+        <button type="submit">{{ 'Subscribe' | tr }} <span>→</span></button>
+      </form>
+    </section>
+
+    <section class="news-section" [class.news-ar]="lang.language() === 'ar'">
+      <div class="news-top">
+        <div class="news-heading">
+          <p>{{ 'Latest news' | tr }}</p>
+
+          <h2>
+            {{ "What's happening across the" | tr }}<br />
+            {{ 'group.' | tr }}
+          </h2>
+        </div>
+
+        <a routerLink="/news" class="view-all-news">
+          {{ 'View all news' | tr }}
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="news-grid">
+        @for (item of news; track item.id) {
+          <article class="news-card">
+            <div class="news-image">
+              <img [src]="newsApi.image(item)" [alt]="lang.pick(item.title_Ar, item.title_En)" />
+              <div class="news-hover">
+                <span>{{ 'Read more' | tr }}</span
+                ><span class="hover-arrow">→</span>
+              </div>
+            </div>
+            <p class="news-category">
+              {{ item.category || 'Ewan Holding' | tr }}
+            </p>
+            <h3>{{ lang.pick(item.title_Ar, item.title_En) }}</h3>
+            <div class="news-bottom">
+              <span class="news-date">{{ item.publishDate | date: 'MMM d, y' }}</span
+              ><a [routerLink]="['/news', item.id]">→</a>
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+  </main>
+
+  <app-site-footer variant="home"></app-site-footer>
+</div>

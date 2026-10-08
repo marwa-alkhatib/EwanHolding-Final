@@ -1,0 +1,117 @@
+/* contact us ================================================================= */
+
+.contact-hero {
+  background-color: #0e1a33;
+  font-family: 'Cormorant Garamond', serif;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 5rem 4rem;
+    padding-left: 10rem;
+    padding-top: 9rem;
+
+    .contact-breadcrumb {
+      color: #a8adc583;
+      font-size: 16px;
+
+      a {
+        font-size: 18px;
+        color: #a8adc583;
+        text-decoration: none;
+
+        &:hover {
+          color: #dcb679;
+        }
+      }
+    }
+
+    .contact-hero-title {
+      color: white;
+      font-size: 55px;
+      line-height: 65px;
+      padding: 10px 0;
+    }
+
+    .contact-hero-description {
+      color: #a8adc583;
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}
+
+.contact-section {
+  background-color: #f7f3ea;
+  padding: 4rem 0;
+  font-family: 'Cormorant Garamond', serif;
+
+  .contact-wrapper {
+    display: flex;
+    width: 100%;
+
+    .contact-info {
+      width: 42%;
+      background-color: #0e1a33;
+      padding: 3rem;
+
+      h2 {
+        color: #f7f3ea;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 40px;
+        margin-bottom: 2rem;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+
+        input,
+        textarea {
+          width: 100%;
+          background-color: transparent;
+          border: none;
+          font-size: 18px;
+          border-bottom: 1px solid #28405f;
+          padding: 20px 0;
+          color: #f7f3ea;
+          outline: none;
+
+          &::placeholder {
+            color: #7c879a;
+          }
+        }
+
+        textarea {
+          height: 150px;
+          resize: none;
+        }
+
+        button {
+          width: 160px;
+          margin-top: 25px;
+          padding: 14px 20px;
+          background-color: #c6a15b;
+          color: #0a1628;
+          border: none;
+
+          &:hover {
+            background-color: #e2c98a;
+          }
+        }
+      }
+    }
+
+    .contact-map {
+      width: 58%;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 700px;
+        border: 0;
+      }
+    }
+  }
+}

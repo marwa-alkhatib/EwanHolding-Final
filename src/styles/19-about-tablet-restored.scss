@@ -1,0 +1,285 @@
+/* Restored About tablet rules from the original responsive stylesheet. */
+/* Keep this import after other global styles to preserve the cascade. */
+@media (max-width: 992px) {
+.about-navbar {
+
+    padding: 10px 4rem;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    align-items: center;
+
+
+
+    div {
+
+      img {
+
+        height: 33px;
+
+        width: 20px;
+
+        padding-top: 10px;
+
+      }
+
+
+
+      p {
+
+        padding-top: 10px;
+
+
+
+        a {
+
+          font-size: 15px;
+
+        }
+
+      }
+
+    }
+
+
+
+    nav {
+
+      margin-right: 20px;
+
+
+
+      a {
+
+        padding: 8px;
+
+      }
+
+    }
+
+
+
+    button {
+
+      width: 78px;
+
+      height: 40px;
+
+    }
+
+  }
+
+
+
+  .about-hero {
+
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    /* background-color: #b4884b; */
+
+
+
+    div {
+
+      padding: 4rem 5rem;
+
+      padding-top: 8rem;
+
+      .about-breadcrumb {
+
+        font-size: 15px;
+
+
+
+        a {
+
+          font-size: 15px;
+
+        }
+
+      }
+
+
+
+      .about-hero-title {
+
+        font-size: 50px;
+
+        line-height: 60px;
+
+        /* padding: 10px 0; */
+
+      }
+
+
+
+      .about-hero-description {
+
+        font-size: 18px;
+
+        line-height: 20px;
+
+      }
+
+    }
+
+  }
+
+
+
+  .about-story {
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 4rem;
+
+    div {
+
+      gap: 10px;
+
+      .about-story-label {
+
+        i {
+
+          font-size: 25px;
+
+        }
+
+      }
+
+
+
+      .about-story-title {
+
+        font-size: 58px;
+
+      }
+
+
+
+      .about-story-text {
+
+        font-size: 19px;
+
+      }
+
+    }
+
+
+
+    img {
+
+      width: 650px;
+
+    }
+
+  }
+
+
+
+  .about-vision {
+
+    div {
+
+      padding: 4rem 4rem;
+
+    }
+
+  }
+
+
+
+  .about-principles {
+
+    padding: 4rem 6rem;
+
+    div {
+
+      .about-principles-title {
+
+        font-size: 55px;
+
+      }
+
+    }
+
+
+
+    .about-principles-container {
+
+      padding: 0;
+
+    }
+
+  }
+
+
+
+  .about-local-investment {
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 4rem;
+
+
+
+    div {
+
+      gap: 10px;
+
+
+
+      .about-investment-label {
+
+        i {
+
+          font-size: 25px;
+
+        }
+
+      }
+
+
+
+      .about-investment-title {
+
+        font-size: 58px;
+
+      }
+
+
+
+      .about-investment-text {
+
+        font-size: 19px;
+
+      }
+
+    }
+
+
+
+    img {
+
+      width: 600px;
+
+    }
+
+  }
+}
