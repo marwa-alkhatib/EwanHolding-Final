@@ -1,0 +1,127 @@
+
+.setup-email-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #0e1a33;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.setup-email-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 42px 36px;
+  background: #f7f3ea;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.setup-label {
+  color: #b4884b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  color: #0e1a33;
+  margin-bottom: 12px;
+}
+
+.description,
+.note {
+  color: #7c879a;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+}
+
+label {
+  color: #0e1a33;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #d7d2c8;
+  border-radius: 6px;
+  outline: none;
+  background: white;
+  font-size: 14px;
+
+  &:focus {
+    border-color: #b4884b;
+  }
+}
+
+button {
+  background: #b4884b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+
+  &:hover:not(:disabled) {
+    background: #0e1a33;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.error-message {
+  color: #c0392b;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.note {
+  margin-top: 22px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .setup-email-card {
+    padding: 30px 22px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}
+
+.success-message {
+  color: #27805b;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.secondary-button {
+  margin-top: 12px;
+  background: transparent;
+  color: #0e1a33;
+  border: 1px solid #b4884b;
+
+  &:hover:not(:disabled) {
+    background: #e4e0d2;
+  }
+}

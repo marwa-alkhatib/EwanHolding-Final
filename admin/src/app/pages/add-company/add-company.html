@@ -1,0 +1,727 @@
+<section class="add-company-content">
+  <!-- ================= HEADER ================= -->
+
+  <div class="add-company-header">
+    <div class="add-company-title">
+      <p class="breadcrumb">
+        Companies /
+        {{ editId ? 'Edit Company' : 'Add New Company' }}
+      </p>
+
+      <h1>
+        {{ editId ? 'Edit Company' : 'Add New Company' }}
+      </h1>
+
+      <p class="description">
+        {{
+          editId
+            ? 'Update the company information below.'
+            : 'Fill in the details below to add a new company.'
+        }}
+      </p>
+    </div>
+
+    <button type="button" class="back-btn" routerLink="/companies">← Back to Companies</button>
+  </div>
+
+  <div class="company-form">
+    <!-- ================================================== -->
+    <!-- BASIC INFORMATION -->
+    <!-- ================================================== -->
+
+    <h2>Basic Information</h2>
+
+    <div class="form-grid">
+      <!-- Company Name English -->
+      <div class="form-group">
+        <label>
+          Company Name (English)
+          <span>*</span>
+        </label>
+
+        <input
+          type="text"
+          placeholder="Enter company name in English"
+          [(ngModel)]="company.nameEn"
+          name="nameEn"
+        />
+      </div>
+
+      <!-- Company Name Arabic -->
+      <div class="form-group">
+        <label>
+          Company Name (Arabic)
+          <span>*</span>
+        </label>
+
+        <input
+          type="text"
+          placeholder="أدخل اسم الشركة بالعربي"
+          dir="rtl"
+          [(ngModel)]="company.nameAr"
+          name="nameAr"
+        />
+      </div>
+
+      <!-- Website -->
+      <div class="form-group">
+        <label> Website URL </label>
+
+        <input
+          type="url"
+          placeholder="https://www.example.com"
+          [(ngModel)]="company.websiteUrl"
+          name="websiteUrl"
+        />
+      </div>
+
+      <!-- Status -->
+      <div class="form-group">
+        <label>
+          Status
+          <span>*</span>
+        </label>
+
+        <select [(ngModel)]="company.isActive" name="isActive">
+          <option [ngValue]="true">Active</option>
+
+          <option [ngValue]="false">Inactive</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Company Description English -->
+    <div class="form-group full-width">
+      <label>
+        Company Description (English)
+        <span>*</span>
+      </label>
+
+      <textarea
+        rows="5"
+        placeholder="Write the company description in English..."
+        [(ngModel)]="company.descriptionEn"
+        name="descriptionEn"
+      ></textarea>
+    </div>
+
+    <!-- Company Description Arabic -->
+    <div class="form-group full-width">
+      <label>
+        Company Description (Arabic)
+        <span>*</span>
+      </label>
+
+      <textarea
+        rows="5"
+        placeholder="اكتب وصف الشركة بالعربي..."
+        dir="rtl"
+        [(ngModel)]="company.descriptionAr"
+        name="descriptionAr"
+      ></textarea>
+    </div>
+
+    <!-- ================================================== -->
+    <!-- HERO SECTION -->
+    <!-- ================================================== -->
+
+    <h2>Hero Section</h2>
+
+    <div class="form-grid">
+      <!-- Hero Title English -->
+      <div class="form-group">
+        <label> Hero Title (English) </label>
+
+        <input
+          type="text"
+          placeholder="Enter hero title in English"
+          [(ngModel)]="company.heroTitleEn"
+          name="heroTitleEn"
+        />
+      </div>
+
+      <!-- Hero Title Arabic -->
+      <div class="form-group">
+        <label> Hero Title (Arabic) </label>
+
+        <input
+          type="text"
+          placeholder="أدخل عنوان الواجهة بالعربي"
+          dir="rtl"
+          [(ngModel)]="company.heroTitleAr"
+          name="heroTitleAr"
+        />
+      </div>
+    </div>
+
+    <!-- Hero Description English -->
+    <div class="form-group full-width">
+      <label> Hero Description (English) </label>
+
+      <textarea
+        rows="4"
+        placeholder="Write the hero description in English..."
+        [(ngModel)]="company.heroDescriptionEn"
+        name="heroDescriptionEn"
+      ></textarea>
+    </div>
+
+    <!-- Hero Description Arabic -->
+    <div class="form-group full-width">
+      <label> Hero Description (Arabic) </label>
+
+      <textarea
+        rows="4"
+        placeholder="اكتب وصف الواجهة بالعربي..."
+        dir="rtl"
+        [(ngModel)]="company.heroDescriptionAr"
+        name="heroDescriptionAr"
+      ></textarea>
+    </div>
+
+    <!-- ================================================== -->
+    <!-- OVERVIEW SECTION -->
+    <!-- ================================================== -->
+
+    <h2>Overview Section</h2>
+
+    <div class="form-grid">
+      <!-- Overview Title English -->
+      <div class="form-group">
+        <label> Overview Title (English) </label>
+
+        <input
+          type="text"
+          placeholder="Enter overview title in English"
+          [(ngModel)]="company.overviewTitleEn"
+          name="overviewTitleEn"
+        />
+      </div>
+
+      <!-- Overview Title Arabic -->
+      <div class="form-group">
+        <label> Overview Title (Arabic) </label>
+
+        <input
+          type="text"
+          placeholder="أدخل عنوان النبذة بالعربي"
+          dir="rtl"
+          [(ngModel)]="company.overviewTitleAr"
+          name="overviewTitleAr"
+        />
+      </div>
+    </div>
+
+    <!-- Overview First Paragraph English -->
+    <div class="form-group full-width">
+      <label> Overview First Paragraph (English) </label>
+
+      <textarea
+        rows="4"
+        placeholder="Write the first overview paragraph in English..."
+        [(ngModel)]="company.overviewDescription1En"
+        name="overviewDescription1En"
+      ></textarea>
+    </div>
+
+    <!-- Overview First Paragraph Arabic -->
+    <div class="form-group full-width">
+      <label> Overview First Paragraph (Arabic) </label>
+
+      <textarea
+        rows="4"
+        placeholder="اكتب الفقرة الأولى بالعربي..."
+        dir="rtl"
+        [(ngModel)]="company.overviewDescription1Ar"
+        name="overviewDescription1Ar"
+      ></textarea>
+    </div>
+
+    <!-- Overview Second Paragraph English -->
+    <div class="form-group full-width">
+      <label> Overview Second Paragraph (English) </label>
+
+      <textarea
+        rows="4"
+        placeholder="Write the second overview paragraph in English..."
+        [(ngModel)]="company.overviewDescription2En"
+        name="overviewDescription2En"
+      ></textarea>
+    </div>
+
+    <!-- Overview Second Paragraph Arabic -->
+    <div class="form-group full-width">
+      <label> Overview Second Paragraph (Arabic) </label>
+
+      <textarea
+        rows="4"
+        placeholder="اكتب الفقرة الثانية بالعربي..."
+        dir="rtl"
+        [(ngModel)]="company.overviewDescription2Ar"
+        name="overviewDescription2Ar"
+      ></textarea>
+    </div>
+
+    <!-- ================================================== -->
+    <!-- WHY CHOOSE US -->
+    <!-- ================================================== -->
+
+    <h2>Why Choose Us Section</h2>
+
+    <div class="form-grid">
+      <!-- Why Choose Us Title English -->
+      <div class="form-group">
+        <label> Why Choose Us Title (English) </label>
+
+        <input
+          type="text"
+          placeholder="Enter section title in English"
+          [(ngModel)]="company.whyChooseUsTitleEn"
+          name="whyChooseUsTitleEn"
+        />
+      </div>
+
+      <!-- Why Choose Us Title Arabic -->
+      <div class="form-group">
+        <label> Why Choose Us Title (Arabic) </label>
+
+        <input
+          type="text"
+          placeholder="أدخل عنوان لماذا تختارنا بالعربي"
+          dir="rtl"
+          [(ngModel)]="company.whyChooseUsTitleAr"
+          name="whyChooseUsTitleAr"
+        />
+      </div>
+    </div>
+
+    <!-- ================================================== -->
+    <!-- WHY CHOOSE US ITEMS -->
+    <!-- ================================================== -->
+
+    <div class="form-group full-width">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 25px 0 18px;
+        "
+      >
+        <div>
+          <h2 style="margin: 0 0 6px">Why Choose Us Items</h2>
+
+          <p style="margin: 0; color: #7c879a">Add the reasons that make this company stand out.</p>
+        </div>
+
+        <button type="button" class="save-btn" (click)="addFeature()">+ Add Item</button>
+      </div>
+
+      @if (features.length === 0) {
+        <div
+          style="
+            border: 1px dashed #d6c6a5;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 25px;
+            color: #7c879a;
+          "
+        >
+          No items added yet. Click <b>+ Add Item</b> to add one.
+        </div>
+      }
+
+      @for (feature of features; track feature.id || $index; let i = $index) {
+        @if (!feature.isDeleted) {
+          <div
+            style="
+              border: 1px solid #e4dccb;
+              padding: 25px;
+              margin-bottom: 20px;
+              background: #faf8f3;
+            "
+          >
+            <!-- Item Header -->
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 22px;
+              "
+            >
+              <h3 style="margin: 0">Item {{ i + 1 }}</h3>
+
+              <button type="button" class="cancel-btn" (click)="removeFeature(i)">Remove</button>
+            </div>
+
+            <!-- Item Titles -->
+            <div class="form-grid">
+              <div class="form-group">
+                <label>
+                  Title (English)
+                  <span>*</span>
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Example: Efficiency"
+                  [(ngModel)]="feature.titleEn"
+                  [name]="'featureTitleEn' + i"
+                />
+              </div>
+
+              <div class="form-group">
+                <label>
+                  Title (Arabic)
+                  <span>*</span>
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="مثال: الكفاءة"
+                  dir="rtl"
+                  [(ngModel)]="feature.titleAr"
+                  [name]="'featureTitleAr' + i"
+                />
+              </div>
+            </div>
+
+            <!-- Item Description English -->
+            <div class="form-group full-width">
+              <label>
+                Description (English)
+                <span>*</span>
+              </label>
+
+              <textarea
+                rows="4"
+                placeholder="Write the item description in English..."
+                [(ngModel)]="feature.descriptionEn"
+                [name]="'featureDescriptionEn' + i"
+              ></textarea>
+            </div>
+
+            <!-- Item Description Arabic -->
+            <div class="form-group full-width">
+              <label>
+                Description (Arabic)
+                <span>*</span>
+              </label>
+
+              <textarea
+                rows="4"
+                placeholder="اكتب وصف العنصر بالعربي..."
+                dir="rtl"
+                [(ngModel)]="feature.descriptionAr"
+                [name]="'featureDescriptionAr' + i"
+              ></textarea>
+            </div>
+
+            <!-- Display Order -->
+            <div class="form-group">
+              <label> Display Order </label>
+
+              <input
+                type="number"
+                min="1"
+                [(ngModel)]="feature.displayOrder"
+                [name]="'featureDisplayOrder' + i"
+              />
+            </div>
+          </div>
+        }
+      }
+    </div>
+
+    <!-- ================================================== -->
+    <!-- SERVICES -->
+    <!-- ================================================== -->
+
+    <div class="form-group full-width">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 35px 0 18px;
+        "
+      >
+        <div>
+          <h2 style="margin: 0 0 6px">Company Services</h2>
+
+          <p style="margin: 0; color: #7c879a">Add the services provided by this company.</p>
+        </div>
+
+        <button type="button" class="save-btn" (click)="addService()">+ Add Service</button>
+      </div>
+
+      @if (services.length === 0) {
+        <div
+          style="
+            border: 1px dashed #d6c6a5;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 25px;
+            color: #7c879a;
+          "
+        >
+          No services added yet. Click <b>+ Add Service</b> to add one.
+        </div>
+      }
+
+      @for (service of services; track service.id || $index; let i = $index) {
+        @if (!service.isDeleted) {
+          <div
+            style="
+              border: 1px solid #e4dccb;
+              padding: 25px;
+              margin-bottom: 20px;
+              background: #faf8f3;
+            "
+          >
+            <!-- Service Header -->
+
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 22px;
+              "
+            >
+              <h3 style="margin: 0">Service {{ i + 1 }}</h3>
+
+              <button type="button" class="cancel-btn" (click)="removeService(i)">Remove</button>
+            </div>
+
+            <!-- Service Names -->
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label>
+                  Service Name (English)
+                  <span>*</span>
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Example: Last-Mile Delivery"
+                  [(ngModel)]="service.nameEn"
+                  [name]="'serviceNameEn' + i"
+                />
+              </div>
+
+              <div class="form-group">
+                <label>
+                  Service Name (Arabic)
+                  <span>*</span>
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="مثال: التوصيل للميل الأخير"
+                  dir="rtl"
+                  [(ngModel)]="service.nameAr"
+                  [name]="'serviceNameAr' + i"
+                />
+              </div>
+            </div>
+
+            <!-- Description English -->
+
+            <div class="form-group full-width">
+              <label>
+                Service Description (English)
+                <span>*</span>
+              </label>
+
+              <textarea
+                rows="4"
+                placeholder="Write the service description in English..."
+                [(ngModel)]="service.descriptionEn"
+                [name]="'serviceDescriptionEn' + i"
+              ></textarea>
+            </div>
+
+            <!-- Description Arabic -->
+
+            <div class="form-group full-width">
+              <label>
+                Service Description (Arabic)
+                <span>*</span>
+              </label>
+
+              <textarea
+                rows="4"
+                placeholder="اكتب وصف الخدمة بالعربي..."
+                dir="rtl"
+                [(ngModel)]="service.descriptionAr"
+                [name]="'serviceDescriptionAr' + i"
+              ></textarea>
+            </div>
+          </div>
+        }
+      }
+    </div>
+    
+    <!-- ================================================== -->
+    <!-- COMPANY MEDIA -->
+    <!-- ================================================== -->
+
+    <div class="form-group full-width">
+      <div style="margin: 35px 0 20px">
+        <h2 style="margin: 0 0 6px">Company Media</h2>
+
+        <p style="margin: 0; color: #7c879a">
+          Upload the images used across the company details page.
+        </p>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- COMPANY LOGO -->
+      <!-- ============================================== -->
+
+      <div
+        style="border: 1px solid #e4dccb; padding: 25px; margin-bottom: 20px; background: #faf8f3"
+      >
+        <h3 style="margin: 0 0 8px">Company Logo</h3>
+
+        <p style="margin: 0 0 18px; color: #7c879a">Used as the main company logo/card image.</p>
+
+        @if (preview) {
+          <div style="margin-bottom: 18px">
+            <img
+              [src]="preview"
+              alt="Company Logo Preview"
+              style="
+                display: block;
+                width: 220px;
+                height: 150px;
+                object-fit: cover;
+                border: 1px solid #e4dccb;
+              "
+            />
+          </div>
+        }
+
+        <input type="file" accept="image/*" (change)="onFileSelected($event)" />
+      </div>
+
+      <!-- ============================================== -->
+      <!-- HERO IMAGE -->
+      <!-- ============================================== -->
+
+      <div
+        style="border: 1px solid #e4dccb; padding: 25px; margin-bottom: 20px; background: #faf8f3"
+      >
+        <h3 style="margin: 0 0 8px">Hero Image</h3>
+
+        <p style="margin: 0 0 18px; color: #7c879a">
+          Large background image displayed at the top of the company page.
+        </p>
+
+        @if (heroPreview) {
+          <div style="margin-bottom: 18px">
+            <img
+              [src]="heroPreview"
+              alt="Hero Image Preview"
+              style="
+                display: block;
+                width: 100%;
+                max-width: 600px;
+                height: 220px;
+                object-fit: cover;
+                border: 1px solid #e4dccb;
+              "
+            />
+          </div>
+        }
+
+        <input type="file" accept="image/*" (change)="onHeroFileSelected($event)" />
+      </div>
+
+      <!-- ============================================== -->
+      <!-- OVERVIEW IMAGE -->
+      <!-- ============================================== -->
+
+      <div
+        style="border: 1px solid #e4dccb; padding: 25px; margin-bottom: 20px; background: #faf8f3"
+      >
+        <h3 style="margin: 0 0 8px">Overview Image</h3>
+
+        <p style="margin: 0 0 18px; color: #7c879a">Image displayed inside the Overview section.</p>
+
+        @if (overviewPreview) {
+          <div style="margin-bottom: 18px">
+            <img
+              [src]="overviewPreview"
+              alt="Overview Image Preview"
+              style="
+                display: block;
+                width: 100%;
+                max-width: 500px;
+                height: 300px;
+                object-fit: cover;
+                border: 1px solid #e4dccb;
+              "
+            />
+          </div>
+        }
+
+        <input type="file" accept="image/*" (change)="onOverviewFileSelected($event)" />
+      </div>
+
+      <!-- ============================================== -->
+      <!-- WHY CHOOSE US IMAGE -->
+      <!-- ============================================== -->
+
+      <div
+        style="border: 1px solid #e4dccb; padding: 25px; margin-bottom: 25px; background: #faf8f3"
+      >
+        <h3 style="margin: 0 0 8px">Why Choose Us Image</h3>
+
+        <p style="margin: 0 0 18px; color: #7c879a">
+          Background image displayed in the Why Choose Us section.
+        </p>
+
+        @if (whyChooseUsPreview) {
+          <div style="margin-bottom: 18px">
+            <img
+              [src]="whyChooseUsPreview"
+              alt="Why Choose Us Image Preview"
+              style="
+                display: block;
+                width: 100%;
+                max-width: 600px;
+                height: 220px;
+                object-fit: cover;
+                border: 1px solid #e4dccb;
+              "
+            />
+          </div>
+        }
+
+        <input type="file" accept="image/*" (change)="onWhyChooseUsFileSelected($event)" />
+      </div>
+    </div>
+
+    <!-- ================================================== -->
+    <!-- ACTIONS -->
+    <!-- ================================================== -->
+
+    <div class="form-actions">
+      <button type="button" class="cancel-btn" routerLink="/companies">Cancel</button>
+
+      <button type="button" class="save-btn" (click)="saveCompany()" [disabled]="saving">
+        {{ saving ? 'Saving...' : editId ? 'Update Company' : 'Save Company' }}
+      </button>
+    </div>
+
+    @if (error) {
+      <p style="color: #a33; margin-top: 12px">
+        {{ error }}
+      </p>
+    }
+  </div>
+</section>

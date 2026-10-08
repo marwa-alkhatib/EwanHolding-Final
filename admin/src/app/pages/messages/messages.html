@@ -1,0 +1,53 @@
+<section class="companies-content">
+  <div class="companies-header">
+    <div class="companies-title">
+      <p class="companies-breadcrumb">Dashboard / Messages</p>
+      <h1>Contact Messages</h1>
+      <p class="companies-description">Messages submitted from the public website.</p>
+    </div>
+  </div>
+
+  <div class="companies-table-box">
+    <div class="companies-table">
+      <div class="table-row table-head">
+        <div>NAME</div>
+        <div>SUBJECT</div>
+        <div>EMAIL</div>
+        <div>STATUS</div>
+        <div>ACTIONS</div>
+        <div></div>
+      </div>
+
+      @for (x of items(); track x.id) {
+        <div class="table-row">
+          <div class="company-name">
+            <h3>{{ x.fullName }}</h3>
+            <p>{{ x.createdAt | date: 'mediumDate' }}</p>
+          </div>
+
+          <div [title]="x.message">
+            {{ x.subject }}
+          </div>
+
+          <div>{{ x.email }}</div>
+
+          <div>{{ x.status }}</div>
+
+          <div class="company-actions">
+            <button class="edit" type="button" (click)="toggle(x)">
+              {{ x.status === 'Read' ? 'Mark Unread' : 'Mark Read' }}
+            </button>
+
+            <button class="delete" type="button" (click)="remove(x.id)">Delete</button>
+          </div>
+
+          <div></div>
+        </div>
+      } @empty {
+        <div class="table-row">
+          <div>No messages yet.</div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

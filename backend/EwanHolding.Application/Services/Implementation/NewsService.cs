@@ -1,0 +1,153 @@
+using EwanHolding.Application.DTOs;
+using EwanHolding.Application.Services.Interfaces;
+using EwanHolding.Application.UnitOfWork;
+using EwanHolding.Domain.Entities;
+using EwanHolding.Application.Exceptions;
+
+namespace EwanHolding.Application.Services.Implementation
+{
+    public class NewsService : INewsService
+    {
+        private readonly IUnitOfWork _unitOfWork;
+
+        public NewsService(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+
+        private static NewsResponseDto ToDto(News n) => new()
+        {
+            Id = n.Id,
+            Title_Ar = n.Title_Ar,
+            Title_En = n.Title_En,
+            Description_Ar = n.Description_Ar,
+            Description_En = n.Description_En,
+            Category = n.Category,
+            PublishDate = n.PublishDate,
+            Status = n.Status
+        };
+
+        private async Task<NewsResponseDto> ToDtoWithMediaAsync(News n)
+        {
+            var dto = ToDto(n);
+
+            var media = await _unitOfWork.Media.GetByEntityAsync(
+                n.Id,
+                EwanHolding.Domain.Enums.MediaEntityType.News
+            );
+
+            dto.Media = media
+                .Select(m => new MediaResponseDto
+                {
+                    Id = m.Id,
+                    Url = m.Url,
+                    EntityType = m.EntityType,
+                    Type = m.Type,
+                    DisplayOrder = m.DisplayOrder
+                })
+                .OrderBy(m => m.DisplayOrder)
+                .ToList();
+
+            return dto;
+        }
+
+        public async Task<IEnumerable<NewsResponseDto>> GetAllAsync()
+        {
+            var items = await _unitOfWork.News.GetAllAsync();
+
+            var result = new List<NewsResponseDto>();
+
+            foreach (var item in items)
+            {
+                var dto = await ToDtoWithMediaAsync(item);
+                result.Add(dto);
+            }
+
+            return result;
+        }
+
+        public async Task<IEnumerable<NewsResponseDto>> GetPublishedAsync()
+        {
+            var items = await _unitOfWork.News.GetPublishedAsync();
+
+            var result = new List<NewsResponseDto>();
+
+            foreach (var item in items)
+            {
+                var dto = await ToDtoWithMediaAsync(item);
+                result.Add(dto);
+            }
+
+            return result;
+        }
+
+        public async Task<NewsResponseDto> GetByIdAsync(int id)
+        {
+            var news = await _unitOfWork.News.GetByIdAsync(id);
+
+            if (news == null)
+            {
+                throw new NotFoundException($"News with ID {id} not found.");
+            }
+
+            return await ToDtoWithMediaAsync(news);
+        }
+
+        public async Task<int> CreateAsync(CreateNewsDto dto)
+        {
+            var news = new News
+            {
+                Title_Ar = dto.Title_Ar,
+                Title_En = dto.Title_En,
+                Description_Ar = dto.Description_Ar,
+                Description_En = dto.Description_En,
+                Category = dto.Category,
+                PublishDate = dto.PublishDate,
+                Status = dto.Status
+            };
+
+            _unitOfWork.News.Create(news);
+
+            await _unitOfWork.SaveChangesAsync();
+
+            return news.Id;
+        }
+
+        public async Task UpdateAsync(UpdateNewsDto dto)
+        {
+            var news = await _unitOfWork.News.GetByIdAsync(dto.Id);
+
+            if (news == null)
+            {
+                throw new NotFoundException($"News with ID {dto.Id} not found.");
+            }
+
+            news.Title_Ar = dto.Title_Ar;
+            news.Title_En = dto.Title_En;
+            news.Description_Ar = dto.Description_Ar;
+            news.Description_En = dto.Description_En;
+            news.Category = dto.Category;
+            news.PublishDate = dto.PublishDate;
+            news.Status = dto.Status;
+            news.UpdatedAt = DateTime.Now;
+
+            _unitOfWork.News.Update(news);
+
+            await _unitOfWork.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            var news = await _unitOfWork.News.GetByIdAsync(id);
+
+            if (news == null)
+            {
+                throw new NotFoundException($"News with ID {id} not found.");
+            }
+
+            _unitOfWork.News.Delete(news);
+
+            await _unitOfWork.SaveChangesAsync();
+        }
+    }
+}

@@ -1,0 +1,81 @@
+using EwanHolding.Application.DTOs;
+using FluentValidation;
+
+namespace EwanHolding.Application.Validators
+{
+    public class CreateCompanyValidator : AbstractValidator<CreateCompanyDto>
+    {
+        public CreateCompanyValidator()
+        {
+            RuleFor(x => x.Name_En)
+                .NotEmpty().WithMessage("Company name is required.")
+                .MaximumLength(200).WithMessage("Company name must not exceed 200 characters.");
+
+            RuleFor(x => x.Name_Ar)
+                .NotEmpty().WithMessage("اسم الشركة مطلوب.")
+                .MaximumLength(200).WithMessage("اسم الشركة يجب ألا يتجاوز 200 حرف.");
+
+            RuleFor(x => x.Description_En)
+                .NotEmpty().WithMessage("Company description is required.")
+                .MaximumLength(2000).WithMessage("Company description must not exceed 2000 characters.");
+
+            RuleFor(x => x.Description_Ar)
+                .NotEmpty().WithMessage("وصف الشركة مطلوب.")
+                .MaximumLength(2000).WithMessage("وصف الشركة يجب ألا يتجاوز 2000 حرف.");
+
+            RuleFor(x => x.WebsiteUrl)
+                //.NotEmpty().WithMessage("Website URL is required.")
+                .MaximumLength(500).WithMessage("Company Website URL must not exceed 500 characters.")
+                .Must(uri => string.IsNullOrWhiteSpace(uri) || Uri.IsWellFormedUriString(uri, UriKind.Absolute)).WithMessage("Invalid website URL format.");
+
+            RuleFor(x => x.LogoUrl)
+                .MaximumLength(500).WithMessage("Company Logo URL must not exceed 500 characters.")
+                .Must(uri => string.IsNullOrWhiteSpace(uri) || Uri.IsWellFormedUriString(uri, UriKind.Absolute)).WithMessage("Invalid logo URL format.");
+        }
+    }
+
+    public class UpdateCompanyValidator : AbstractValidator<UpdateCompanyDto>
+    {
+        public UpdateCompanyValidator()
+        {
+            RuleFor(x => x.Id)
+                .NotEmpty().WithMessage("Id is required.")
+                .GreaterThan(0).WithMessage("Company Id must be greater than 0.");
+
+            RuleFor(x => x.Name_En)
+                .NotEmpty().WithMessage("Company name is required.")
+                .MaximumLength(200).WithMessage("Company name must not exceed 200 characters.");
+
+            RuleFor(x => x.Name_Ar)
+                .NotEmpty().WithMessage("اسم الشركة مطلوب.")
+                .MaximumLength(200).WithMessage("اسم الشركة يجب ألا يتجاوز 200 حرف.");
+
+            RuleFor(x => x.Description_En)
+                .NotEmpty().WithMessage("Company description is required.")
+                .MaximumLength(2000).WithMessage("Company description must not exceed 2000 characters.");
+
+            RuleFor(x => x.Description_Ar)
+                .NotEmpty().WithMessage("وصف الشركة مطلوب.")
+                .MaximumLength(2000).WithMessage("وصف الشركة يجب ألا يتجاوز 2000 حرف.");
+
+            RuleFor(x => x.WebsiteUrl)
+                //.NotEmpty().WithMessage("Website URL is required.")
+                .MaximumLength(500).WithMessage("Company Website URL must not exceed 500 characters.")
+                .Must(uri => string.IsNullOrWhiteSpace(uri) || Uri.IsWellFormedUriString(uri, UriKind.Absolute)).WithMessage("Invalid website URL format.");
+
+            RuleFor(x => x.LogoUrl)
+                .MaximumLength(500).WithMessage("Company Logo URL must not exceed 500 characters.")
+                .Must(uri => string.IsNullOrWhiteSpace(uri) || Uri.IsWellFormedUriString(uri, UriKind.Absolute)).WithMessage("Invalid logo URL format.");
+        }
+    }
+
+    public class DeleteCompanyValidator : AbstractValidator<int>
+    {
+        public DeleteCompanyValidator()
+        {
+            RuleFor(x => x)
+                .NotEmpty().WithMessage("Id is required.")
+                .GreaterThan(0).WithMessage("Company Id must be greater than 0.");
+        }
+    }
+}

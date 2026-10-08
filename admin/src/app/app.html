@@ -1,0 +1,113 @@
+
+@if (
+  router.url.split('?')[0] === '/login' ||
+  router.url.split('?')[0] === '/setup-email' ||
+  router.url.split('?')[0] === '/change-temporary-password'
+) {
+  <!-- Authentication Pages Without Navbar or Sidebar -->
+  <router-outlet></router-outlet>
+} @else {
+  <!-- Admin Sidebar -->
+  <aside class="admin-sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-logo">E</div>
+
+      <div class="brand-text">
+        <h2>EWAN HOLDING</h2>
+        <p>ADMIN PANEL</p>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="sidebar-link"
+      >
+        <span>Dashboard</span>
+      </a>
+
+      <a
+        routerLink="/companies"
+        routerLinkActive="active"
+        class="sidebar-link"
+      >
+        <span>Companies</span>
+      </a>
+
+      <a
+        routerLink="/investments"
+        routerLinkActive="active"
+        class="sidebar-link"
+      >
+        <span>Investments</span>
+      </a>
+
+      <a
+        routerLink="/news"
+        routerLinkActive="active"
+        class="sidebar-link"
+      >
+        <span>News</span>
+      </a>
+
+      <a
+        routerLink="/content"
+        routerLinkActive="active"
+        class="sidebar-link"
+      >
+        <span>Page Content</span>
+      </a>
+
+      <a
+        routerLink="/messages"
+        routerLinkActive="active"
+        class="sidebar-link"
+      >
+        <span>Messages</span>
+      </a>
+
+      <a
+        class="sidebar-link"
+        style="cursor: pointer"
+        (click)="logout()"
+      >
+        <span>Logout</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <p>BUILDING</p>
+      <p>POSSIBILITIES</p>
+      <p>TOGETHER</p>
+    </div>
+  </aside>
+
+  <!-- Admin Main -->
+  <main class="admin-main">
+    <header class="admin-topbar">
+      <div class="topbar-search">
+        <input
+          type="text"
+          placeholder="Search anything..."
+        />
+      </div>
+
+      <div class="topbar-profile">
+        @if (profile$ | async; as profile) {
+          <div class="profile-avatar">
+            {{ getInitial(profile.fullName) }}
+          </div>
+
+          <div class="profile-info">
+            <h4>{{ profile.fullName }}</h4>
+            <p>{{ profile.role }}</p>
+          </div>
+        }
+      </div>
+    </header>
+
+    <router-outlet></router-outlet>
+  </main>
+}

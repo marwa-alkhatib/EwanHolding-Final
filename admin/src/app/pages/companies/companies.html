@@ -1,0 +1,68 @@
+<section class="companies-content">
+  <div class="companies-header">
+    <div class="companies-title">
+      <p class="companies-breadcrumb">Dashboard / Companies</p>
+      <h1>Companies</h1>
+      <p class="companies-description">Manage all Ewan Holding companies and their information.</p>
+    </div>
+    <button class="add-company-btn" routerLink="/companies/add"><span>+</span>Add Company</button>
+  </div>
+  <div class="companies-stats">
+    <div class="company-stat-card">
+      <div class="company-stat-icon">C</div>
+      <div class="company-stat-info">
+        <h2>{{ companies.length }}</h2>
+        <p>Total Companies</p>
+      </div>
+    </div>
+    <div class="company-stat-card">
+      <div class="company-stat-icon">A</div>
+      <div class="company-stat-info">
+        <h2>{{ activeCount }}</h2>
+        <p>Active</p>
+      </div>
+    </div>
+  </div>
+  <div class="companies-table-box">
+    <div class="companies-table">
+      <div class="table-row table-head">
+        <div>LOGO</div>
+        <div>COMPANY NAME</div>
+        <div>WEBSITE</div>
+        <div>STATUS</div>
+        <div>ACTIONS</div>
+        <div></div>
+      </div>
+      @for (c of companies; track c.id) {
+        <div class="table-row">
+          <div class="company-logo">
+            @if (api.image(c)) {
+              <img
+                [src]="api.image(c)"
+                style="width: 42px; height: 42px; border-radius: 50%; object-fit: cover"
+              />
+            } @else {
+              C
+            }
+          </div>
+          <div class="company-name">
+            <h3>{{ c.name_En }}</h3>
+            <p>{{ c.name_Ar }}</p>
+          </div>
+          <div>{{ c.websiteUrl || '—' }}</div>
+          <div>
+            <span class="status active">{{ c.isActive ? 'Active' : 'Inactive' }}</span>
+          </div>
+          <div class="company-actions">
+            <button class="edit" [routerLink]="['/companies/edit', c.id]">Edit</button
+            ><button class="delete" (click)="delete(c.id)">Delete</button>
+          </div>
+          <div></div>
+        </div>
+      }
+    </div>
+    <div class="table-footer">
+      <p>Showing {{ companies.length }} companies</p>
+    </div>
+  </div>
+</section>

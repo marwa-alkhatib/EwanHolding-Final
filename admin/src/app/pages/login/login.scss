@@ -1,0 +1,303 @@
+.login-page {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  background-color: #f7f3ea;
+
+  .login-brand {
+    width: 30%;
+    min-height: 100vh;
+    background-color: #0e1f38;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      left: -180px;
+      bottom: -220px;
+      border: 1px solid rgba(198, 161, 91, 0.2);
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      right: -180px;
+      top: -160px;
+      border: 1px solid rgba(198, 161, 91, 0.15);
+      transform: rotate(45deg);
+    }
+
+    .brand-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+
+      h1 {
+        margin: 0;
+        color: #c6a15b;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 75px;
+        font-weight: 500;
+        letter-spacing: 14px;
+      }
+
+      > p {
+        margin: 8px 0 0;
+        color: #e2c98a;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        letter-spacing: 6px;
+      }
+
+      > span {
+        width: 50px;
+        height: 2px;
+        margin: 40px auto;
+        display: block;
+        background-color: #a9812f;
+      }
+
+      .brand-values {
+        color: #e2c98a;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        line-height: 2.5;
+        letter-spacing: 7px;
+      }
+    }
+  }
+
+  .login-form-side {
+    width: 70%;
+    min-height: 100vh;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #f7f3ea;
+
+    .login-box {
+      width: 100%;
+      max-width: 520px;
+
+      .gold-line {
+        width: 65px;
+        height: 4px;
+        margin-bottom: 30px;
+        background-color: #a9812f;
+      }
+
+      h2 {
+        margin: 0;
+        color: #12203a;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 52px;
+        font-weight: 600;
+      }
+
+      .login-description {
+        margin: 8px 0 45px;
+        color: #7c879a;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+      }
+
+      .form-group {
+        margin-bottom: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        label {
+          color: #12203a;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 13px;
+          font-weight: 500;
+        }
+
+        input {
+          width: 100%;
+          height: 55px;
+          padding: 0 18px;
+          border: 1px solid #dcd2b8;
+          background-color: #ffffff;
+          color: #12203a;
+          outline: none;
+          box-sizing: border-box;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 13px;
+          transition: 0.3s;
+
+          &::placeholder {
+            color: #7c879a;
+          }
+
+          &:focus {
+            border-color: #a9812f;
+          }
+        }
+      }
+
+      .login-options {
+        margin: 5px 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .remember {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: #12203a;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 12px;
+          cursor: pointer;
+
+          input {
+            width: 16px;
+            height: 16px;
+            accent-color: #a9812f;
+          }
+        }
+
+        a {
+          color: #a9812f;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 12px;
+          text-decoration: underline;
+
+          &:hover {
+            color: #0e1f38;
+          }
+        }
+      }
+
+      .login-btn {
+        width: 100%;
+        height: 58px;
+        border: 1px solid #a9812f;
+        background-color: #a9812f;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        span {
+          font-size: 22px;
+        }
+
+        &:hover {
+          background-color: #0e1f38;
+          border-color: #0e1f38;
+          color: #e2c98a;
+        }
+      }
+
+      .login-footer {
+        margin-top: 55px;
+        text-align: center;
+
+        .footer-title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 15px;
+
+          span {
+            width: 100px;
+            height: 1px;
+            background-color: #dcd2b8;
+          }
+
+          p {
+            margin: 0;
+            color: #7c879a;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            white-space: nowrap;
+          }
+        }
+
+        > p {
+          margin: 12px 0 0;
+          color: #7c879a;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .login-page {
+    display: block;
+
+    .login-brand {
+      width: 100%;
+      min-height: 270px;
+
+      .brand-content {
+        h1 {
+          font-size: 55px;
+          letter-spacing: 10px;
+        }
+
+        > p {
+          font-size: 9px;
+          letter-spacing: 4px;
+        }
+
+        > span {
+          margin: 25px auto;
+        }
+
+        .brand-values {
+          display: none;
+        }
+      }
+    }
+
+    .login-form-side {
+      width: 100%;
+      min-height: auto;
+      padding: 50px 25px;
+
+      .login-box {
+        h2 {
+          font-size: 42px;
+        }
+
+        .login-description {
+          margin-bottom: 35px;
+        }
+      }
+    }
+  }
+}
+.login-error {
+  color: #b42318;
+  font-size: 14px;
+  margin: 12px 0;
+}
+
+.login-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}

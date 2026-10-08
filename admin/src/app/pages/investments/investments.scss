@@ -1,0 +1,97 @@
+.companies-table-box {
+  input,
+  textarea,
+  select {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dcd2b8;
+    background: #ffffff;
+    color: #12203a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 14px 16px;
+    outline: none;
+    transition: 0.2s ease;
+
+    &:focus {
+      border-color: #c6a15b;
+      box-shadow: 0 0 0 2px rgba(198, 161, 91, 0.12);
+    }
+
+    &::placeholder {
+      color: #7c879a;
+    }
+  }
+
+  input,
+  select {
+    height: 50px;
+  }
+
+  textarea {
+    min-height: 110px;
+    resize: vertical;
+    line-height: 1.6;
+  }
+
+  select {
+    cursor: pointer;
+  }
+}
+
+.add-company-btn {
+  margin-top: 20px !important;
+  min-width: 190px;
+  min-height: 48px;
+  padding: 12px 22px;
+  border: none;
+  background: #b4884b;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover:not(:disabled) {
+    background: #a9812f;
+  }
+
+  &:disabled {
+    background: #e4e0d2;
+    color: #9ca3af;
+    cursor: not-allowed;
+  }
+}
+
+.cancel-btn {
+  min-height: 48px;
+  padding: 12px 22px;
+  border: 1px solid #dcd2b8;
+  background: transparent;
+  color: #12203a;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #b4884b;
+    color: #b4884b;
+  }
+}
+
+@media (max-width: 767px) {
+  .companies-table-box {
+    > div:first-child {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  .add-company-btn,
+  .cancel-btn {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .cancel-btn {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,140 @@
+.admin-sidebar {
+    width: 270px;
+    height: 100vh;
+    background-color: #0e1f38;
+    color: #f7f3ea;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .sidebar-brand {
+        padding: 40px 30px;
+        text-align: center;
+
+        .brand-logo {
+            color: #c6a15b;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 55px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .brand-text {
+            h2 {
+                margin: 5px 0;
+                font-family: "Cormorant Garamond", serif;
+                font-size: 22px;
+                letter-spacing: 2px;
+            }
+
+            p {
+                margin: 0;
+                color: #c6a15b;
+                font-family: "Montserrat", sans-serif;
+                font-size: 10px;
+                letter-spacing: 4px;
+            }
+        }
+    }
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+
+        .sidebar-link {
+            padding: 17px 35px;
+            color: #f7f3ea;
+            text-decoration: none;
+            font-family: "Montserrat", sans-serif;
+            font-size: 15px;
+            border-left: 4px solid transparent;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.06);
+                color: #e2c98a;
+            }
+
+            &.active {
+                background-color: rgba(255, 255, 255, 0.08);
+                color: #e2c98a;
+                border-left-color: #c6a15b;
+            }
+        }
+    }
+
+    .sidebar-bottom {
+        margin-top: auto;
+        padding: 30px 45px 40px;
+
+        p {
+            margin: 10px 0;
+            color: #e2c98a;
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            letter-spacing: 5px;
+        }
+    }
+}
+
+.admin-main {
+    margin-left: 270px;
+    min-height: 100vh;
+    background-color: #f7f3ea;
+
+    .admin-topbar {
+        height: 80px;
+        padding: 0 35px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #dcd2b8;
+
+        .topbar-search {
+            input {
+                width: 350px;
+                padding: 12px 18px;
+                border: 1px solid #dcd2b8;
+                background-color: #ffffff;
+                outline: none;
+                font-family: "Montserrat", sans-serif;
+            }
+        }
+
+        .topbar-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .profile-avatar {
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                background-color: #0e1f38;
+                color: #e2c98a;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: "Cormorant Garamond", serif;
+                font-size: 20px;
+            }
+
+            .profile-info {
+                h4 {
+                    margin: 0;
+                    color: #12203a;
+                    font-family: "Cormorant Garamond", serif;
+                    font-size: 17px;
+                }
+
+                p {
+                    margin: 3px 0 0;
+                    color: #7c879a;
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}.company-actions{display:flex;gap:8px;align-items:center}.company-actions .edit{border:1px solid #c6a15b;background:transparent;color:#0e1f38;padding:7px 12px;cursor:pointer}.company-actions .delete{cursor:pointer}

@@ -1,0 +1,14 @@
+@use '../companies/companies.scss';
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #dcd2b8;
+  font-family: Montserrat, sans-serif;
+}
+.add-company-btn {
+  padding: 13px 22px;
+  border: 0;
+  background: #a9812f;
+  color: white;
+  cursor: pointer;
+}

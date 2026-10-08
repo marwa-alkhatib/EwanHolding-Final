@@ -1,0 +1,23 @@
+﻿using EwanHolding.Application.Repositories.Implementation;
+using EwanHolding.Application.Repositories.Interfaces;
+using EwanHolding.Domain.Entities;
+
+namespace EwanHolding.Application.UnitOfWork
+{
+    public interface IUnitOfWork 
+    {
+        IAdminRepository Admins { get; }
+        ICompanyRepository Companies { get; }
+        ICompanyFeatureRepository CompanyFeatures { get; }
+        IServiceRepository Services { get; }
+        ICoreValueRepository CoreValues { get; }
+        IStatRepository Stats { get; }
+        IInvestmentOpportunitiesRepository InvestmentOpportunities { get; }
+        INewsRepository News { get; }
+        IContactRepository Contacts { get; }
+        IMediaRepository Media { get; }
+        ITermsAndConditionsRepository TermsAndConditions { get; }
+        IPageContentRepository PageContents { get; }
+        Task<int> SaveChangesAsync();
+    }
+}

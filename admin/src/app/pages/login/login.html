@@ -1,0 +1,100 @@
+
+<section class="login-page">
+  <!-- Left Side -->
+  <div class="login-brand">
+    <div class="brand-content">
+      <h1>EWAN</h1>
+      <p>FOR A BRIGHTER TOMORROW</p>
+
+      <span></span>
+
+      <div class="brand-values">
+        PEOPLE<br />
+        PARTNERSHIPS<br />
+        PROGRESS
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Side -->
+  <div class="login-form-side">
+    <div class="login-box">
+      <div class="gold-line"></div>
+
+      <h2>Welcome Back</h2>
+
+      <p class="login-description">
+        Sign in to your Ewan Admin account
+      </p>
+
+      <form
+        autocomplete="off"
+        (ngSubmit)="login()"
+      >
+        <!-- Email -->
+        <div class="form-group">
+          <label for="admin-login-email">Email</label>
+
+          <input
+            id="admin-login-email"
+            type="email"
+            placeholder="Enter your email"
+            [(ngModel)]="loginData.email"
+            name="adminLoginEmail"
+            autocomplete="off"
+            autocapitalize="none"
+            spellcheck="false"
+          />
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="admin-login-password">Password</label>
+
+          <input
+            id="admin-login-password"
+            type="password"
+            placeholder="Enter your password"
+            [(ngModel)]="loginData.password"
+            name="adminLoginPassword"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="login-options">
+          <label class="remember">
+            <input type="checkbox" />
+            Remember me
+          </label>
+
+          <span>Contact SuperAdmin for password help</span>
+        </div>
+
+        @if (error) {
+          <p class="login-error">
+            {{ error }}
+          </p>
+        }
+
+        <button
+          type="submit"
+          class="login-btn"
+          [disabled]="loading"
+        >
+          {{ loading ? 'Signing In...' : 'Sign In' }}
+          <span>→</span>
+        </button>
+      </form>
+
+      <div class="login-footer">
+        <div class="footer-title">
+          <span></span>
+          <p>Ewan Admin</p>
+          <span></span>
+        </div>
+
+        <p>Manage Today. Build Tomorrow.</p>
+      </div>
+    </div>
+  </div>
+</section>

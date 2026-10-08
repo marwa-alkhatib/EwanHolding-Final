@@ -1,0 +1,61 @@
+using EwanHolding.Application.DTOs;
+using EwanHolding.Application.Services.Implementation;
+using EwanHolding.Application.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+namespace EwanHolding.Api.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CompanyController : ControllerBase
+    {
+        private readonly ICompanyService _companyService;
+        public CompanyController(ICompanyService companyService)
+        {
+            _companyService = companyService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var companies = await _companyService.GetAllAsync();
+            return Ok(companies);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            if(id <= 0) return BadRequest("Invalid company id, Id must be a positive integer.");
+
+            var company = await _companyService.GetByIdAsync(id);            
+            return Ok(company);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "SuperAdmin,ContentManager")]
+        public async Task<IActionResult> Create(CreateCompanyDto dto)
+        {
+            var companyId = await _companyService.CreateAsync(dto);
+            return Ok(new { id = companyId });
+        }
+
+        [HttpPut("{id}")]
+        [Authorize(Roles = "SuperAdmin,ContentManager")]
+        public async Task<IActionResult> Update(int id, UpdateCompanyDto dto)
+        {
+            if (id != dto.Id) return BadRequest("Id mismatch.");
+
+            await _companyService.UpdateAsync(dto);
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        [Authorize(Roles = "SuperAdmin")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _companyService.DeleteAsync(id);
+            return Ok();
+        }
+    }
+}

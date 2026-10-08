@@ -1,0 +1,112 @@
+
+<section class="companies-content">
+  <div class="companies-header">
+    <div class="companies-title">
+      <p class="companies-breadcrumb">Dashboard / Content</p>
+      <h1>Page Content</h1>
+      <p class="companies-description">
+        Manage bilingual public-site text. Use the exact English text as the key to override
+        existing static text.
+      </p>
+    </div>
+  </div>
+
+  <div class="companies-table-box" style="padding: 20px; margin-bottom: 24px">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
+
+      <input
+        placeholder="Exact English text / content key"
+        [(ngModel)]="form.key"
+        [disabled]="editingId !== null"
+      />
+
+      <input
+        placeholder="Page name"
+        [(ngModel)]="form.pageName"
+        [disabled]="editingId !== null"
+      />
+
+      <textarea
+        placeholder="English value"
+        [(ngModel)]="form.value_En"
+      ></textarea>
+
+      <textarea
+        dir="rtl"
+        placeholder="القيمة بالعربي"
+        [(ngModel)]="form.value_Ar"
+      ></textarea>
+
+    </div>
+
+    <button
+      class="add-company-btn"
+      style="margin-top: 12px"
+      (click)="save()"
+    >
+      {{ editingId !== null ? 'Save Changes' : '+ Add Content' }}
+    </button>
+
+    @if (editingId !== null) {
+      <button
+        class="cancel-btn"
+        style="margin-left: 10px"
+        (click)="reset()"
+      >
+        Cancel
+      </button>
+    }
+  </div>
+
+  <div class="companies-table-box">
+    <div class="companies-table">
+
+      <div class="table-row table-head">
+        <div>ID</div>
+        <div>KEY</div>
+        <div>PAGE</div>
+        <div>ENGLISH</div>
+        <div>ACTIONS</div>
+        <div></div>
+      </div>
+
+      @for (x of items(); track x.id) {
+        <div class="table-row">
+
+          <div>{{ x.id }}</div>
+
+          <div>{{ x.key }}</div>
+
+          <div>{{ x.pageName }}</div>
+
+          <div>{{ x.value_En }}</div>
+
+          <div class="company-actions">
+            <button
+              class="edit"
+              type="button"
+              (click)="edit(x)"
+            >
+              Edit
+            </button>
+
+            <button
+              class="delete"
+              type="button"
+              (click)="remove(x.id)"
+            >
+              Delete
+            </button>
+          </div>
+
+          <div></div>
+        </div>
+      } @empty {
+        <div class="table-row">
+          <div>No content added yet.</div>
+        </div>
+      }
+
+    </div>
+  </div>
+</section>

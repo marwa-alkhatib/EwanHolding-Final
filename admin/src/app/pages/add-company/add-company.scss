@@ -1,0 +1,236 @@
+.add-company-content {
+  padding: 30px 35px;
+
+  .add-company-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    .add-company-title {
+      .breadcrumb {
+        margin: 0 0 10px;
+        color: #a9812f;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+      }
+
+      h1 {
+        margin: 0;
+        color: #12203a;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 42px;
+        font-weight: 600;
+      }
+
+      .description {
+        margin: 6px 0 0;
+        color: #7c879a;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+      }
+    }
+
+    .back-btn {
+      padding: 12px 20px;
+      border: 1px solid #dcd2b8;
+      background-color: #ffffff;
+      color: #12203a;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #0e1f38;
+        border-color: #0e1f38;
+        color: #e2c98a;
+      }
+    }
+  }
+
+  .company-form {
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #efe8d8;
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px 28px;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+
+        label {
+          color: #12203a;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 13px;
+          font-weight: 500;
+
+          span {
+            color: #b94444;
+          }
+        }
+
+        input,
+        select {
+          width: 100%;
+          height: 48px;
+          padding: 0 15px;
+          border: 1px solid #dcd2b8;
+          background-color: #ffffff;
+          color: #12203a;
+          outline: none;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 12px;
+          box-sizing: border-box;
+          transition: 0.3s;
+
+          &::placeholder {
+            color: #7c879a;
+          }
+
+          &:focus {
+            border-color: #a9812f;
+          }
+        }
+
+        select {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .full-width {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+
+      label {
+        color: #12203a;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+
+        span {
+          color: #b94444;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #dcd2b8;
+        background-color: #ffffff;
+        color: #12203a;
+        outline: none;
+        resize: vertical;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        line-height: 1.7;
+
+        &::placeholder {
+          color: #7c879a;
+        }
+
+        &:focus {
+          border-color: #a9812f;
+        }
+      }
+
+      .logo-upload {
+        min-height: 135px;
+        padding: 20px;
+        border: 1px dashed #c6a15b;
+        background-color: #f7f3ea;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        position: relative;
+        cursor: pointer;
+
+        .upload-icon {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          background-color: #ffffff;
+          color: #a9812f;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 25px;
+        }
+
+        .upload-text {
+          h3 {
+            margin: 0 0 5px;
+            color: #12203a;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+          }
+
+          p {
+            margin: 0;
+            color: #7c879a;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+          }
+        }
+
+        input {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .form-actions {
+      margin-top: 30px;
+      padding-top: 22px;
+      border-top: 1px solid #efe8d8;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+
+      button {
+        padding: 13px 24px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .cancel-btn {
+        border: 1px solid #dcd2b8;
+        background-color: #ffffff;
+        color: #12203a;
+
+        &:hover {
+          background-color: #f7f3ea;
+        }
+      }
+
+      .save-btn {
+        border: 1px solid #a9812f;
+        background-color: #a9812f;
+        color: #ffffff;
+
+        &:hover {
+          background-color: #0e1f38;
+          border-color: #0e1f38;
+          color: #e2c98a;
+        }
+      }
+    }
+  }
+}

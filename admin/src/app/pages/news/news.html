@@ -1,0 +1,40 @@
+<section class="companies-content">
+  <div class="companies-header">
+    <div class="companies-title">
+      <p class="companies-breadcrumb">Dashboard / News</p>
+      <h1>News</h1>
+      <p class="companies-description">Publish and remove news shown on the public website.</p>
+    </div>
+    <button class="add-company-btn" routerLink="/news/add"><span>+</span>Add News</button>
+  </div>
+  <div class="companies-table-box">
+    <div class="companies-table">
+      <div class="table-row table-head">
+        <div>#</div>
+        <div>TITLE</div>
+        <div>CATEGORY</div>
+        <div>STATUS</div>
+        <div>ACTIONS</div>
+        <div></div>
+      </div>
+      @for (n of items; track n.id) {
+        <div class="table-row">
+          <div>{{ n.id }}</div>
+          <div class="company-name">
+            <h3>{{ n.title_En }}</h3>
+            <p>{{ n.title_Ar }}</p>
+          </div>
+          <div>{{ n.category || '—' }}</div>
+          <div>
+            <span class="status active">{{ n.status }}</span>
+          </div>
+          <div class="company-actions">
+            <button class="edit" [routerLink]="['/news/edit', n.id]">Edit</button
+            ><button class="delete" (click)="remove(n.id)">Delete</button>
+          </div>
+          <div></div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

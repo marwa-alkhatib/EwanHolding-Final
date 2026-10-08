@@ -1,0 +1,68 @@
+<section class="companies-content">
+  <div class="companies-header">
+    <div class="companies-title">
+      <p class="companies-breadcrumb">Dashboard / Investments</p>
+      <h1>Investment Opportunities</h1>
+      <p class="companies-description">Manage bilingual investment opportunities.</p>
+    </div>
+  </div>
+  <div class="companies-table-box" style="padding: 20px; margin-bottom: 24px">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
+      <input placeholder="English title" [(ngModel)]="f.title_En" /><input
+        dir="rtl"
+        placeholder="العنوان بالعربي"
+        [(ngModel)]="f.title_Ar"
+      /><textarea placeholder="English description" [(ngModel)]="f.description_En"></textarea
+      ><textarea dir="rtl" placeholder="الوصف بالعربي" [(ngModel)]="f.description_Ar"></textarea
+      ><select [(ngModel)]="f.companyId">
+        <option [ngValue]="0">Select company</option>
+        @for (c of companies; track c.id) {
+          <option [ngValue]="c.id">{{ c.name_En }}</option>
+        }</select
+      ><select [(ngModel)]="f.status">
+        <option>Open</option>
+        <option>Closed</option>
+        <option>UnderReview</option>
+      </select>
+    </div>
+    <button
+      class="add-company-btn"
+      style="margin-top: 12px"
+      (click)="save()"
+      [disabled]="!f.companyId"
+    >
+      {{ editId ? 'Save Changes' : '+ Add Opportunity' }}
+    </button>
+    @if (editId) {
+      <button class="cancel-btn" style="margin-left: 10px" (click)="reset()">Cancel</button>
+    }
+  </div>
+  <div class="companies-table-box">
+    <div class="companies-table">
+      <div class="table-row table-head">
+        <div>#</div>
+        <div>TITLE</div>
+        <div>COMPANY</div>
+        <div>STATUS</div>
+        <div>ACTIONS</div>
+        <div></div>
+      </div>
+      @for (x of items; track x.id) {
+        <div class="table-row">
+          <div>{{ x.id }}</div>
+          <div class="company-name">
+            <h3>{{ x.title_En }}</h3>
+            <p>{{ x.title_Ar }}</p>
+          </div>
+          <div>{{ x.companyName_En }}</div>
+          <div>{{ x.status }}</div>
+          <div class="company-actions">
+            <button class="edit" (click)="edit(x)">Edit</button
+            ><button class="delete" (click)="remove(x.id)">Delete</button>
+          </div>
+          <div></div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

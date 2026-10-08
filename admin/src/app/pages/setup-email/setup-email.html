@@ -1,0 +1,98 @@
+
+<section class="setup-email-page">
+  <div class="setup-email-card">
+
+    <div class="setup-label">EWAN HOLDING</div>
+
+    <h1>Verify Your Email</h1>
+
+    <p class="description">
+      Please verify your email address to complete
+      your account setup.
+    </p>
+
+    @if (!codeSent) {
+      <form (ngSubmit)="sendCode()">
+
+        <label for="email">Your Email Address</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          [(ngModel)]="newEmail"
+          placeholder="Enter your email"
+          maxlength="200"
+          required
+        />
+
+        <label for="confirmEmail">
+          Confirm Email Address
+        </label>
+        <input
+          id="confirmEmail"
+          type="email"
+          name="confirmEmail"
+          [(ngModel)]="confirmEmail"
+          placeholder="Confirm your email"
+          maxlength="200"
+          required
+        />
+
+        @if (error) {
+          <p class="error-message">{{ error }}</p>
+        }
+
+        <button type="submit" [disabled]="loading">
+          {{ loading ? 'Sending...' : 'Send Verification Code' }}
+        </button>
+
+      </form>
+    } @else {
+      <form (ngSubmit)="verifyCode()">
+
+        <p class="description">
+          Enter the 6-digit code sent to {{ newEmail }}.
+        </p>
+
+        <label for="code">Verification Code</label>
+        <input
+          id="code"
+          type="text"
+          name="code"
+          [(ngModel)]="verificationCode"
+          placeholder="Enter 6-digit code"
+          maxlength="6"
+          inputmode="numeric"
+          autocomplete="one-time-code"
+          required
+        />
+
+        @if (success) {
+          <p class="success-message">{{ success }}</p>
+        }
+
+        @if (error) {
+          <p class="error-message">{{ error }}</p>
+        }
+
+        <button type="submit" [disabled]="loading">
+          {{ loading ? 'Verifying...' : 'Verify & Complete Setup' }}
+        </button>
+
+        <button
+          type="button"
+          class="secondary-button"
+          (click)="changeEmail()"
+          [disabled]="loading">
+          Change Email / Request New Code
+        </button>
+
+      </form>
+    }
+
+    <p class="note">
+      After verification, sign in using your new email.
+    </p>
+
+  </div>
+</section>

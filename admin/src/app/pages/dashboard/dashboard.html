@@ -1,0 +1,250 @@
+
+<section class="dashboard-content">
+
+  <!-- WELCOME SECTION -->
+  <div class="dashboard-welcome">
+    <div class="welcome-text">
+      <h1>Welcome Back</h1>
+      <p>Here's what's happening with Ewan Holding today.</p>
+    </div>
+
+    <div class="dashboard-account">
+      <div class="welcome-date">
+        <p>{{ today | date: 'EEE, d MMM y' }}</p>
+      </div>
+
+      <button
+        type="button"
+        class="change-password-btn"
+        (click)="showPasswordForm = true; passwordMessage = ''"
+      >
+        Change Password
+      </button>
+    </div>
+  </div>
+
+  <!-- DASHBOARD STATISTICS -->
+  <div class="dashboard-stats">
+
+    <div class="stat-card">
+      <div class="stat-icon">C</div>
+      <div class="stat-info">
+        <h2>{{ companies() }}</h2>
+        <p>Companies</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">I</div>
+      <div class="stat-info">
+        <h2>{{ investments() }}</h2>
+        <p>Investments</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">N</div>
+      <div class="stat-info">
+        <h2>{{ newsTotal() }}</h2>
+        <p>News Articles</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon">M</div>
+      <div class="stat-info">
+        <h2>{{ messages() }}</h2>
+        <p>Messages</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RECENT NEWS -->
+  <div class="dashboard-bottom">
+    <section class="recent-news">
+
+      <div class="section-heading">
+        <h2>Recent News</h2>
+        <a routerLink="/news">View All</a>
+      </div>
+
+      <div class="news-list">
+        @for (x of news(); track x.id) {
+          <div class="news-item">
+
+            <div class="news-date">
+              <span>{{ x.publishDate | date: 'dd' }}</span>
+              <small>{{ x.publishDate | date: 'MMM' }}</small>
+            </div>
+
+            <div class="news-info">
+              <h3>{{ x.title_En }}</h3>
+              <p>{{ x.status }}</p>
+            </div>
+
+            <a
+              class="news-action"
+              [routerLink]="['/news/edit', x.id]"
+            >
+              →
+            </a>
+
+          </div>
+        } @empty {
+          <p>No news yet.</p>
+        }
+      </div>
+
+    </section>
+  </div>
+
+</section>
+
+
+<!-- CHANGE PASSWORD MODAL -->
+@if (showPasswordForm) {
+
+  <div
+    class="password-modal-overlay"
+    (click)="!passwordLoading && (showPasswordForm = false)"
+  >
+
+    <section
+      class="password-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="password-modal-title"
+      (click)="$event.stopPropagation()"
+      (keydown.escape)="!passwordLoading && (showPasswordForm = false)"
+    >
+
+      <!-- MODAL HEADER -->
+      <div class="password-modal-header">
+
+        <div class="password-modal-icon">
+          <span aria-hidden="true">🔒</span>
+        </div>
+
+        <div class="password-modal-heading">
+          <h2 id="password-modal-title">Change Password</h2>
+          <p>Secure your administrator account</p>
+        </div>
+
+        <button
+          type="button"
+          class="password-modal-close"
+          aria-label="Close"
+          [disabled]="passwordLoading"
+          (click)="showPasswordForm = false"
+        >
+          &times;
+        </button>
+
+      </div>
+
+
+      <!-- PASSWORD FORM -->
+      <form
+        class="password-modal-form"
+        (submit)="$event.preventDefault(); changePassword()"
+      >
+
+        <!-- CURRENT PASSWORD -->
+        <div class="password-field">
+          <label for="old-password">Current Password</label>
+
+          <input
+            id="old-password"
+            type="password"
+            name="oldPassword"
+            autocomplete="current-password"
+            placeholder="Enter current password"
+            [value]="oldPassword"
+            (input)="oldPassword = $any($event.target).value"
+            required
+          />
+        </div>
+
+
+        <!-- NEW PASSWORD -->
+        <div class="password-field">
+          <label for="new-password">New Password</label>
+
+          <input
+            id="new-password"
+            type="password"
+            name="newPassword"
+            autocomplete="new-password"
+            placeholder="Enter new password"
+            [value]="newPassword"
+            (input)="newPassword = $any($event.target).value"
+            required
+          />
+        </div>
+
+
+        <!-- CONFIRM NEW PASSWORD -->
+        <div class="password-field">
+          <label for="confirm-password">
+            Confirm New Password
+          </label>
+
+          <input
+            id="confirm-password"
+            type="password"
+            name="confirmPassword"
+            autocomplete="new-password"
+            placeholder="Confirm new password"
+            [value]="confirmPassword"
+            (input)="confirmPassword = $any($event.target).value"
+            required
+          />
+        </div>
+
+
+        <!-- SUCCESS / ERROR MESSAGE -->
+        @if (passwordMessage) {
+          <p
+            class="password-modal-message"
+            [class.is-error]="passwordError"
+            role="status"
+          >
+            {{ passwordMessage }}
+          </p>
+        }
+
+
+        <!-- MODAL BUTTONS -->
+        <div class="password-modal-actions">
+
+          <button
+            type="button"
+            class="password-cancel"
+            [disabled]="passwordLoading"
+            (click)="
+              showPasswordForm = false;
+              passwordMessage = '';
+              oldPassword = '';
+              newPassword = '';
+              confirmPassword = ''
+            "
+          >
+            Cancel
+          </button>
+
+          <button
+            type="submit"
+            class="password-save"
+            [disabled]="passwordLoading"
+          >
+            {{ passwordLoading ? 'Saving...' : 'Update Password' }}
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+  </div>
+}
